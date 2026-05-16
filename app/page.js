@@ -732,8 +732,8 @@ export default function HomePage() {
           {/* Framed quotes — two co-founders side by side */}
           <div style={{ margin: '3rem 0', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             {[
-              { quote: t.storyQuote,  author: t.storyAuthor },
               { quote: t.storyQuote2, author: t.storyAuthor2 },
+              { quote: t.storyQuote,  author: t.storyAuthor },
             ].map(({ quote, author }, i) => (
               <div key={i} style={{ flex: '1 1 260px', padding: '4px',
                                     background: `linear-gradient(135deg, ${gold}cc, #8a6830, ${gold}cc, #6b5025)`,
