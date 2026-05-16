@@ -1,5 +1,3 @@
-'use client'
-
 export const metadata = {
   title: 'Help & Support — MyLifeStory',
   description: 'Get help with MyLifeStory. Find answers to common questions or contact our support team.',
