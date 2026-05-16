@@ -47,6 +47,33 @@ const T = {
     appEye:       'More than a book',
     photoCred:    'Photography by',
     via:          'via',
+    navHow:       'How it works',
+    navBooks:     'Our books',
+    navStory:     'Our story',
+    navFaq:       'FAQ',
+    storyEye:     'Our Story',
+    storyH:       ['Born from a handshake', 'in Atlanta.'],
+    storySub:     'MyLifeStory didn\'t start in a boardroom. It started in a convention hall, between two colleagues who share a passion — and a dream.',
+    storyBody:    [
+      'It was at an industry expo in Atlanta. George and Henri had worked together for years, managing international markets for the same company. That day they coincided at the company\'s booth, greeting visitors and talking business.',
+      'Henri was going on about AI — the things it could do, the doors it was opening. George listened, then said something that changed everything: "Henri, I\'ve had a project in my head for over 8 years. I\'ve told many people about it. Everyone says \'wow, great idea\' — but nobody ever does anything."',
+      'The idea was simple and profound: a way for people to preserve their life story as a real, beautiful book. Something their children and grandchildren could hold in their hands long after they were gone.',
+      'Henri said: "If you help me find the right AI tools, I\'ll help you build it." They shook hands.',
+      'Henri had no computer of his own. No programming experience. Just a fascination with AI and a willingness to learn everything from scratch. George, at 66, had a lifetime of stories and a dream that had waited long enough.',
+      'That handshake became MyLifeStory.',
+    ],
+    storyQuote:   '"I had no computer. No code experience. Just the conviction that this dream deserved to exist."',
+    storyAuthor:  '— Henri, Co-founder',
+    faqEye:       'FAQ',
+    faqH:         'Common questions.',
+    faqs: [
+      { q: 'Do I need any technical experience?', a: 'None at all. MyLifeStory is designed for anyone — you simply speak or type your answers and the app does the rest.' },
+      { q: 'How long does it take to complete my book?', a: 'At your own pace. Some people finish in a weekend, others write a chapter a month. Your story waits for you.' },
+      { q: 'Who owns my story?', a: 'You do. Always. We never share, sell, or use your content for anything other than creating your book.' },
+      { q: 'What does the printed book look like?', a: 'A premium hardcover, 6×9 inches, with a linen-wrap cover and full-color interior. Printed by Lulu Press, the same trusted printer used by professional publishers worldwide.' },
+      { q: 'Can I write in Spanish?', a: 'Yes. MyLifeStory is fully bilingual — English and Spanish. The AI interview adapts to whichever language you choose.' },
+      { q: 'Is there a free version?', a: 'Yes. You can start for free, complete your first chapter, and preview your book. Upgrade to Pro to unlock all chapters and order your hardcover.' },
+    ],
     legalLine1:   (y) => `© ${y} My Legacy Story LLC. All rights reserved. MyLifeStory™ is a trademark of My Legacy Story LLC.`,
     legalLine2:   'MyLifeStory™ and the My Legacy Story logo are trademarks pending registration with the United States Patent and Trademark Office. My Legacy Story LLC is a Florida limited liability company.',
   },
@@ -92,6 +119,33 @@ const T = {
     appEye:       'Más que un libro',
     photoCred:    'Fotografías por',
     via:          'vía',
+    navHow:       'Cómo funciona',
+    navBooks:     'Nuestros libros',
+    navStory:     'Nuestra historia',
+    navFaq:       'FAQ',
+    storyEye:     'Nuestra Historia',
+    storyH:       ['Nació de un apretón de manos', 'en Atlanta.'],
+    storySub:     'MyLifeStory no empezó en una sala de reuniones. Empezó en un stand de exposición, entre dos colegas que comparten una pasión — y un sueño.',
+    storyBody:    [
+      'Era una expo del sector en Atlanta. George y Henri llevaban años trabajando juntos, gestionando mercados internacionales para la misma empresa. Ese día coincidieron en el stand de la compañía, atendiendo a los visitantes.',
+      'Henri hablaba con entusiasmo sobre la IA — lo que podía hacer, las puertas que abría. George escuchó, y entonces dijo algo que lo cambió todo: "Henri, llevo más de 8 años con un proyecto en la cabeza. Se lo he contado a mucha gente. Todos dicen \'qué buena idea\' — pero nadie hace nada."',
+      'La idea era simple y profunda: una forma de que las personas preserven su historia de vida en un libro real y hermoso. Algo que sus hijos y nietos pudieran tener en las manos mucho después de que ellos se fueran.',
+      'Henri respondió: "Si me ayudas a encontrar las herramientas de IA correctas, yo te ayudo a construirlo." Se estrecharon la mano.',
+      'Henri no tenía computadora propia. Sin experiencia en programación. Solo una fascinación por la IA y las ganas de aprenderlo todo desde cero. George, con 66 años, tenía toda una vida de historias y un sueño que había esperado demasiado.',
+      'Ese apretón de manos se convirtió en MyLifeStory.',
+    ],
+    storyQuote:   '"No tenía computadora. No sabía programar. Solo la convicción de que este sueño merecía existir."',
+    storyAuthor:  '— Henri, Co-fundador',
+    faqEye:       'Preguntas',
+    faqH:         'Preguntas frecuentes.',
+    faqs: [
+      { q: '¿Necesito experiencia técnica?', a: 'Para nada. MyLifeStory está diseñado para cualquier persona — simplemente hablas o escribes tus respuestas y la app hace el resto.' },
+      { q: '¿Cuánto tiempo tarda en completarse el libro?', a: 'A tu propio ritmo. Algunos terminan en un fin de semana, otros escriben un capítulo al mes. Tu historia te espera.' },
+      { q: '¿De quién es mi historia?', a: 'Tuya. Siempre. Nunca compartimos, vendemos ni usamos tu contenido para nada que no sea crear tu libro.' },
+      { q: '¿Cómo es el libro impreso?', a: 'Una tapa dura premium, 15×23 cm, con cubierta de lino y interior a todo color. Impreso por Lulu Press, la misma imprenta de confianza de editores profesionales en todo el mundo.' },
+      { q: '¿Puedo escribir en español?', a: 'Sí. MyLifeStory es completamente bilingüe — inglés y español. La entrevista de IA se adapta al idioma que elijas.' },
+      { q: '¿Hay versión gratuita?', a: 'Sí. Puedes comenzar gratis, completar tu primer capítulo y previsualizar tu libro. Actualiza a Pro para desbloquear todos los capítulos y pedir tu tapa dura.' },
+    ],
     legalLine1:   (y) => `© ${y} My Legacy Story LLC. Todos los derechos reservados. MyLifeStory™ es una marca comercial de My Legacy Story LLC.`,
     legalLine2:   'MyLifeStory™ y el logotipo de My Legacy Story son marcas comerciales con registro pendiente en la Oficina de Patentes y Marcas de los EE. UU. My Legacy Story LLC es una sociedad de responsabilidad limitada de Florida.',
   },
@@ -120,13 +174,23 @@ export default function HomePage() {
                     backdropFilter: 'blur(8px)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <LogoBookBranch size="sm" variant="light" showName={true} />
-          <span style={{ fontFamily: sans, fontSize: '12px', color: `${gold}dd`,
-                         letterSpacing: '0.1em', textTransform: 'uppercase',
-                         padding: '4px 12px', borderRadius: '999px',
-                         border: `1px solid ${gold}4d`, background: `${gold}26` }}
-                className="hidden sm:inline">
-            {t.comingSoon}
-          </span>
+        </div>
+        <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+          {[
+            { label: t.navHow,   href: '#how' },
+            { label: t.navBooks, href: '#books' },
+            { label: t.navStory, href: '#story' },
+            { label: t.navFaq,   href: '#faq' },
+          ].map(item => (
+            <a key={item.label} href={item.href}
+               style={{ fontFamily: sans, fontSize: '13px', color: `${cream}99`,
+                        textDecoration: 'none', letterSpacing: '0.02em',
+                        transition: 'color 0.2s' }}
+               onMouseEnter={e => e.target.style.color = cream}
+               onMouseLeave={e => e.target.style.color = `${cream}99`}>
+              {item.label}
+            </a>
+          ))}
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <button onClick={() => setLang(l => l === 'en' ? 'es' : 'en')}
@@ -261,7 +325,7 @@ export default function HomePage() {
       </section>
 
       {/* ── What you'll create ───────────────────────────────────────────── */}
-      <section style={{ background: ink, padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="how" style={{ background: ink, padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
@@ -390,7 +454,8 @@ export default function HomePage() {
       </div>
 
       {/* ── The Book ─────────────────────────────────────────────────────── */}
-      <section style={{ background: '#0A0704', padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
+
+      <section id="books" style={{ background: '#0A0704', padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex',
                       flexWrap: 'wrap', alignItems: 'center', gap: '4rem' }}>
           {/* Mockup */}
@@ -605,6 +670,99 @@ export default function HomePage() {
                                       background: '#48484a' }} />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Our Story ────────────────────────────────────────────────────── */}
+      <section id="story" style={{ background: '#0A0704', padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
+            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+                           letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+              {t.storyEye}
+            </span>
+          </div>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
+                       fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '1rem' }}>
+            {t.storyH[0]}<br />
+            <span style={{ color: gold, fontStyle: 'italic' }}>{t.storyH[1]}</span>
+          </h2>
+          <p style={{ fontFamily: sans, fontSize: '16px', color: `${cream}80`,
+                      lineHeight: 1.7, marginBottom: '3rem' }}>
+            {t.storySub}
+          </p>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
+            {t.storyBody.map((para, i) => (
+              <p key={i} style={{ fontFamily: sans, fontSize: '16px', color: `${cream}99`,
+                                  lineHeight: 1.8 }}>
+                {para}
+              </p>
+            ))}
+          </div>
+
+          <blockquote style={{ borderLeft: `3px solid ${gold}`, paddingLeft: '1.5rem', margin: '3rem 0' }}>
+            <p style={{ fontFamily: serif, fontSize: '1.4rem', fontStyle: 'italic',
+                        color: cream, lineHeight: 1.6, marginBottom: '0.75rem' }}>
+              {t.storyQuote}
+            </p>
+            <p style={{ fontFamily: sans, fontSize: '13px', color: `${gold}99` }}>
+              {t.storyAuthor}
+            </p>
+          </blockquote>
+
+          <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', marginTop: '3rem',
+                        padding: '2rem', border: `1px solid ${gold}1a`, borderRadius: '1rem',
+                        background: `${gold}08` }}>
+            {[
+              { name: 'George', age: '66', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision' : '8 años de visión' },
+              { name: 'Henri',  age: '48', role: lang === 'en' ? 'The Builder' : 'El Constructor', detail: lang === 'en' ? 'Zero code experience' : 'Sin experiencia en código' },
+            ].map(p => (
+              <div key={p.name} style={{ flex: 1, minWidth: 160 }}>
+                <div style={{ width: 48, height: 48, borderRadius: '50%',
+                              background: `${gold}26`, border: `1px solid ${gold}4d`,
+                              display: 'flex', alignItems: 'center', justifyContent: 'center',
+                              fontFamily: serif, fontSize: '1.2rem', color: gold,
+                              marginBottom: '0.75rem' }}>
+                  {p.name[0]}
+                </div>
+                <p style={{ fontFamily: serif, fontSize: '1.1rem', color: cream, marginBottom: '0.25rem' }}>
+                  {p.name} <span style={{ color: `${cream}50`, fontSize: '0.85rem' }}>{p.age}</span>
+                </p>
+                <p style={{ fontFamily: sans, fontSize: '12px', color: gold, textTransform: 'uppercase',
+                            letterSpacing: '0.1em', marginBottom: '0.25rem' }}>{p.role}</p>
+                <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}60` }}>{p.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ──────────────────────────────────────────────────────────── */}
+      <section id="faq" style={{ background: ink, padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+        <div style={{ maxWidth: 720, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
+            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+                           letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+              {t.faqEye}
+            </span>
+          </div>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
+                       fontWeight: 600, color: cream, marginBottom: '3rem' }}>
+            {t.faqH}
+          </h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
+            {t.faqs.map(({ q, a }, i) => (
+              <div key={i} style={{ borderBottom: `1px solid ${gold}1a`, padding: '2rem 0' }}>
+                <p style={{ fontFamily: serif, fontSize: '1.2rem', fontWeight: 600,
+                            color: cream, marginBottom: '0.75rem' }}>{q}</p>
+                <p style={{ fontFamily: sans, fontSize: '15px', color: `${cream}80`,
+                            lineHeight: 1.7 }}>{a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
