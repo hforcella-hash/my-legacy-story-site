@@ -53,6 +53,7 @@ const T = {
     navWhy:       'Why us',
     navStory:     'Our story',
     navFaq:       'FAQ',
+    navPricing:   'Pricing',
     storyEye:     'Our Story',
     storyH:       ['Born from a handshake', 'in Atlanta.'],
     storySub:     'MyLifeStory didn\'t start in a boardroom. It started in a convention hall, between two colleagues who share a passion — and a dream.',
@@ -69,20 +70,35 @@ const T = {
     storyQuote2:  '"A ten year idea finally come true. A dream to write a life story for our loved ones as a legacy of our lives."',
     storyAuthor2: '— The Dreamer, Co-founder',
     vsEye:        'Why MyLifeStory',
-    vsH:          ['See how we compare', 'to the alternatives.'],
-    vsSub:        'We looked at every major memoir app so you don\'t have to. Here\'s an honest side-by-side.',
+    vsH:          ['Not just an app.', 'Not just a book.'],
+    vsSub:        'MyLifeStory is the only platform that combines a guided AI experience with a professional printed memoir — connected end to end.',
     vsRows: [
-      { feature: 'AI writes your full narrative',   mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Guided voice interview',          mls: true,  sw: true,  rm: true,  ms: false },
-      { feature: 'Hardcover book included',         mls: true,  sw: true,  rm: true,  ms: true  },
-      { feature: 'In-app book preview',             mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Unlimited photos per chapter',    mls: true,  sw: true,  rm: false, ms: true  },
-      { feature: 'Native iOS mobile app',           mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Bilingual (EN + ES)',             mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Edit after subscription ends',    mls: true,  sw: true,  rm: false, ms: false },
-      { feature: 'Free to start',                   mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'No page-count surcharges',        mls: true,  sw: true,  rm: false, ms: true  },
+      { feature: 'AI writes your full narrative',        mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Connected app + book experience',      mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Guided voice interview',               mls: true,  sw: true,  rm: true,  ms: false },
+      { feature: 'Hardcover book included',              mls: true,  sw: true,  rm: true,  ms: true  },
+      { feature: 'In-app book preview before ordering',  mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Unlimited photos per chapter',         mls: true,  sw: true,  rm: false, ms: true  },
+      { feature: 'Native iOS mobile app',                mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Bilingual (EN + ES)',                  mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Edit content anytime',                 mls: true,  sw: true,  rm: false, ms: false },
+      { feature: 'No page-count surcharges',             mls: true,  sw: true,  rm: false, ms: true  },
     ],
+    pricingEye:   'Pricing',
+    pricingH:     ['Simple, honest', 'pricing.'],
+    pricingSub:   'Start for free. Upgrade when you\'re ready to unlock your full story.',
+    pricingFree:  'Free',
+    pricingPro:   'Pro',
+    pricingFreeSub: 'Begin your story at no cost.',
+    pricingProSub:  'Everything you need to complete and print your book.',
+    pricingMonth:   '/month',
+    pricingYear:    '/year',
+    pricingOr:      'or',
+    pricingSave:    'Save 2 months',
+    pricingFreeFeatures: ['First chapter free', 'AI interview session', 'Book preview included'],
+    pricingProFeatures:  ['All chapters unlocked', 'Unlimited AI interviews', 'Full book preview', 'Hardcover print & delivery', 'PDF export', 'Priority support'],
+    pricingCta:     'Start Free →',
+    pricingProCta:  'Get Pro →',
     faqEye:       'FAQ',
     faqH:         'Common questions.',
     faqs: [
@@ -144,6 +160,7 @@ const T = {
     navWhy:       'Por qué nosotros',
     navStory:     'Nuestra historia',
     navFaq:       'FAQ',
+    navPricing:   'Precios',
     storyEye:     'Nuestra Historia',
     storyH:       ['Nació de un apretón de manos', 'en Atlanta.'],
     storySub:     'MyLifeStory no empezó en una sala de reuniones. Empezó en un stand de exposición, entre dos colegas que comparten una pasión — y un sueño.',
@@ -160,20 +177,35 @@ const T = {
     storyQuote2:  '"Una idea de diez años finalmente hecha realidad. Un sueño de escribir la historia de vida de nuestros seres queridos como legado de sus vidas."',
     storyAuthor2: '— El Soñador, Co-fundador',
     vsEye:        'Por qué MyLifeStory',
-    vsH:          ['Así nos comparamos', 'con las alternativas.'],
-    vsSub:        'Revisamos cada app importante de memorias para que tú no tengas que hacerlo. Aquí una comparación honesta.',
+    vsH:          ['No solo una app.', 'No solo un libro.'],
+    vsSub:        'MyLifeStory es la única plataforma que combina una experiencia de app guiada por IA con una memoria impresa profesional — conectadas de principio a fin.',
     vsRows: [
-      { feature: 'IA redacta toda tu narrativa',      mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Entrevista guiada por voz',         mls: true,  sw: true,  rm: true,  ms: false },
-      { feature: 'Libro de tapa dura incluido',       mls: true,  sw: true,  rm: true,  ms: true  },
-      { feature: 'Vista previa del libro en la app',  mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Fotos ilimitadas por capítulo',     mls: true,  sw: true,  rm: false, ms: true  },
-      { feature: 'App móvil nativa para iOS',         mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Bilingüe (EN + ES)',                mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Editar tras finalizar suscripción', mls: true,  sw: true,  rm: false, ms: false },
-      { feature: 'Gratis para empezar',               mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Sin cargos por páginas extra',      mls: true,  sw: true,  rm: false, ms: true  },
+      { feature: 'IA redacta toda tu narrativa',           mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Experiencia app + libro conectada',      mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Entrevista guiada por voz',              mls: true,  sw: true,  rm: true,  ms: false },
+      { feature: 'Libro de tapa dura incluido',            mls: true,  sw: true,  rm: true,  ms: true  },
+      { feature: 'Vista previa antes de pedir el libro',   mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Fotos ilimitadas por capítulo',          mls: true,  sw: true,  rm: false, ms: true  },
+      { feature: 'App móvil nativa para iOS',              mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Bilingüe (EN + ES)',                     mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Editar el contenido en cualquier momento', mls: true, sw: true, rm: false, ms: false },
+      { feature: 'Sin cargos por páginas extra',           mls: true,  sw: true,  rm: false, ms: true  },
     ],
+    pricingEye:   'Precios',
+    pricingH:     ['Simple y honesto.', ''],
+    pricingSub:   'Empieza gratis. Actualiza cuando estés listo para desbloquear tu historia completa.',
+    pricingFree:  'Gratis',
+    pricingPro:   'Pro',
+    pricingFreeSub: 'Empieza tu historia sin costo.',
+    pricingProSub:  'Todo lo que necesitas para completar e imprimir tu libro.',
+    pricingMonth:   '/mes',
+    pricingYear:    '/año',
+    pricingOr:      'o',
+    pricingSave:    'Ahorra 2 meses',
+    pricingFreeFeatures: ['Primer capítulo gratis', 'Sesión de entrevista IA', 'Vista previa del libro'],
+    pricingProFeatures:  ['Todos los capítulos', 'Entrevistas IA ilimitadas', 'Vista previa completa', 'Impresión y envío del libro', 'Exportar PDF', 'Soporte prioritario'],
+    pricingCta:     'Comenzar Gratis →',
+    pricingProCta:  'Obtener Pro →',
     faqEye:       'Preguntas',
     faqH:         'Preguntas frecuentes.',
     faqs: [
@@ -203,12 +235,13 @@ export default function HomePage() {
   const appSignin = `${APP_URL}/signin`
 
   const navLinks = [
-    { label: t.navHow,   href: '#how' },
-    { label: t.navBooks, href: '#books' },
-    { label: t.navApp,   href: '#app' },
-    { label: t.navWhy,   href: '#vs' },
-    { label: t.navStory, href: '#story' },
-    { label: t.navFaq,   href: '#faq' },
+    { label: t.navHow,     href: '#how' },
+    { label: t.navBooks,   href: '#books' },
+    { label: t.navApp,     href: '#app' },
+    { label: t.navWhy,     href: '#vs' },
+    { label: t.navPricing, href: '#pricing' },
+    { label: t.navStory,   href: '#story' },
+    { label: t.navFaq,     href: '#faq' },
   ]
 
   return (
@@ -935,6 +968,112 @@ export default function HomePage() {
               ? 'Based on publicly available information. Last reviewed May 2025.'
               : 'Basado en información pública. Última revisión mayo 2025.'}
           </p>
+        </div>
+      </section>
+
+      {/* ── Pricing ──────────────────────────────────────────────────────── */}
+      <section id="pricing" style={{ background: '#07050302', padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
+            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+                           letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+              {t.pricingEye}
+            </span>
+          </div>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
+                       fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '0.75rem' }}>
+            {t.pricingH[0]}<br />
+            {t.pricingH[1] && <span style={{ color: gold, fontStyle: 'italic' }}>{t.pricingH[1]}</span>}
+          </h2>
+          <p style={{ fontFamily: sans, fontSize: '16px', color: `${cream}80`,
+                      lineHeight: 1.7, marginBottom: '3rem' }}>
+            {t.pricingSub}
+          </p>
+
+          <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+
+            {/* Free tier */}
+            <div style={{ flex: '1 1 280px', border: `1px solid ${gold}20`, borderRadius: '16px',
+                          padding: '2rem', background: `${gold}05` }}>
+              <p style={{ fontFamily: sans, fontSize: '11px', color: `${gold}80`,
+                          letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
+                {t.pricingFree}
+              </p>
+              <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: cream,
+                          lineHeight: 1, marginBottom: '0.25rem' }}>$0</p>
+              <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}50`,
+                          marginBottom: '1.75rem' }}>{t.pricingFreeSub}</p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
+                           flexDirection: 'column', gap: '0.75rem' }}>
+                {t.pricingFreeFeatures.map(f => (
+                  <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: `${gold}60`, marginTop: 2, flexShrink: 0 }}>✦</span>
+                    <span style={{ fontFamily: sans, fontSize: '14px', color: `${cream}70` }}>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={appSignup}
+                 style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
+                          border: `1px solid ${gold}40`, borderRadius: '10px', fontFamily: sans,
+                          fontSize: '14px', fontWeight: 600, color: gold, textDecoration: 'none',
+                          transition: 'all 0.2s' }}>
+                {t.pricingCta}
+              </a>
+            </div>
+
+            {/* Pro tier */}
+            <div style={{ flex: '1 1 280px', border: `2px solid ${gold}`, borderRadius: '16px',
+                          padding: '2rem', background: `linear-gradient(135deg, rgba(184,146,74,0.12), rgba(184,146,74,0.04))`,
+                          position: 'relative', overflow: 'hidden' }}>
+              {/* Best value badge */}
+              <div style={{ position: 'absolute', top: 0, right: 0, background: gold,
+                            color: ink, fontFamily: sans, fontSize: '10px', fontWeight: 700,
+                            letterSpacing: '0.15em', textTransform: 'uppercase',
+                            padding: '5px 14px', borderBottomLeftRadius: '10px' }}>
+                {lang === 'en' ? 'Best Value' : 'Mejor Valor'}
+              </div>
+              <p style={{ fontFamily: sans, fontSize: '11px', color: gold,
+                          letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
+                {t.pricingPro}
+              </p>
+              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', marginBottom: '0.1rem' }}>
+                <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: cream, lineHeight: 1 }}>
+                  $9.99
+                </p>
+                <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}60`,
+                            marginBottom: '0.4rem' }}>{t.pricingMonth}</p>
+              </div>
+              <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}50`, marginBottom: '0.5rem' }}>
+                {t.pricingOr}{' '}
+                <strong style={{ color: gold }}>$99.99{t.pricingYear}</strong>
+                {' '}
+                <span style={{ display: 'inline-block', background: `${gold}22`, color: gold,
+                               fontSize: '10px', fontWeight: 700, padding: '2px 8px',
+                               borderRadius: '4px', letterSpacing: '0.05em' }}>
+                  {t.pricingSave}
+                </span>
+              </p>
+              <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}50`,
+                          marginBottom: '1.75rem' }}>{t.pricingProSub}</p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
+                           flexDirection: 'column', gap: '0.75rem' }}>
+                {t.pricingProFeatures.map(f => (
+                  <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                    <span style={{ color: gold, marginTop: 2, flexShrink: 0 }}>✦</span>
+                    <span style={{ fontFamily: sans, fontSize: '14px', color: `${cream}90` }}>{f}</span>
+                  </li>
+                ))}
+              </ul>
+              <a href={appSignup}
+                 style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
+                          background: gold, borderRadius: '10px', fontFamily: sans,
+                          fontSize: '14px', fontWeight: 700, color: ink, textDecoration: 'none' }}>
+                {t.pricingProCta}
+              </a>
+            </div>
+
+          </div>
         </div>
       </section>
 
