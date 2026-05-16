@@ -55,15 +55,27 @@ const T = {
     storyH:       ['Born from a handshake', 'in Atlanta.'],
     storySub:     'MyLifeStory didn\'t start in a boardroom. It started in a convention hall, between two colleagues who share a passion — and a dream.',
     storyBody:    [
-      'It was at an industry expo in Atlanta. George and Henri had worked together for years, managing international markets for the same company. That day they coincided at the company\'s booth, greeting visitors and talking business.',
-      'Henri was going on about AI — the things it could do, the doors it was opening. George listened, then said something that changed everything: "Henri, I\'ve had a project in my head for over 8 years. I\'ve told many people about it. Everyone says \'wow, great idea\' — but nobody ever does anything."',
+      'It was at an industry expo in Atlanta. Two colleagues who had spent years working together managing international markets found themselves at the same company booth, greeting visitors.',
+      'One of them was going on about AI — the things it could do, the doors it was opening. The other listened, then said something that changed everything: "I\'ve had a project in my head for over 8 years. I\'ve told many people about it. Everyone says \'wow, great idea\' — but nobody ever does anything."',
       'The idea was simple and profound: a way for people to preserve their life story as a real, beautiful book. Something their children and grandchildren could hold in their hands long after they were gone.',
-      'Henri said: "If you help me find the right AI tools, I\'ll help you build it." They shook hands.',
-      'Henri had no computer of his own. No programming experience. Just a fascination with AI and a willingness to learn everything from scratch. George, at 66, had a lifetime of stories and a dream that had waited long enough.',
+      '"If you help me find the right AI tools, I\'ll help you build it." They shook hands.',
+      'One of them had no computer of his own. No programming experience. Just a fascination with AI and a willingness to learn everything from scratch. The other had a lifetime of stories and a dream that had waited long enough — over 8 years.',
       'That handshake became MyLifeStory.',
     ],
-    storyQuote:   '"I had no computer. No code experience. Just the conviction that this dream deserved to exist."',
-    storyAuthor:  '— Henri, Co-founder',
+    storyQuote:   '"No computer. No code experience. Just the conviction that this dream deserved to exist."',
+    storyAuthor:  '— Co-founder, MyLifeStory',
+    vsEye:        'Why MyLifeStory',
+    vsH:          ['Not just questions.', 'A real book.'],
+    vsSub:        'Other apps collect your answers. MyLifeStory turns them into a narrative — and delivers a hardcover you can hold.',
+    vsRows: [
+      { feature: 'AI writes your narrative',        mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'In-app book preview',             mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Hardcover printing built-in',     mls: true,  sw: true,  rm: false, ms: false },
+      { feature: 'Native iOS app',                  mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Bilingual (EN + ES)',              mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Voice interview',                 mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Free to start',                   mls: true,  sw: false, rm: true,  ms: true  },
+    ],
     faqEye:       'FAQ',
     faqH:         'Common questions.',
     faqs: [
@@ -127,15 +139,27 @@ const T = {
     storyH:       ['Nació de un apretón de manos', 'en Atlanta.'],
     storySub:     'MyLifeStory no empezó en una sala de reuniones. Empezó en un stand de exposición, entre dos colegas que comparten una pasión — y un sueño.',
     storyBody:    [
-      'Era una expo del sector en Atlanta. George y Henri llevaban años trabajando juntos, gestionando mercados internacionales para la misma empresa. Ese día coincidieron en el stand de la compañía, atendiendo a los visitantes.',
-      'Henri hablaba con entusiasmo sobre la IA — lo que podía hacer, las puertas que abría. George escuchó, y entonces dijo algo que lo cambió todo: "Henri, llevo más de 8 años con un proyecto en la cabeza. Se lo he contado a mucha gente. Todos dicen \'qué buena idea\' — pero nadie hace nada."',
+      'Era una expo del sector en Atlanta. Dos colegas que llevaban años trabajando juntos gestionando mercados internacionales coincidieron en el stand de la empresa, atendiendo a los visitantes.',
+      'Uno de ellos hablaba con entusiasmo sobre la IA — lo que podía hacer, las puertas que abría. El otro escuchó, y entonces dijo algo que lo cambió todo: "Llevo más de 8 años con un proyecto en la cabeza. Se lo he contado a mucha gente. Todos dicen \'qué buena idea\' — pero nadie hace nada."',
       'La idea era simple y profunda: una forma de que las personas preserven su historia de vida en un libro real y hermoso. Algo que sus hijos y nietos pudieran tener en las manos mucho después de que ellos se fueran.',
-      'Henri respondió: "Si me ayudas a encontrar las herramientas de IA correctas, yo te ayudo a construirlo." Se estrecharon la mano.',
-      'Henri no tenía computadora propia. Sin experiencia en programación. Solo una fascinación por la IA y las ganas de aprenderlo todo desde cero. George, con 66 años, tenía toda una vida de historias y un sueño que había esperado demasiado.',
+      '"Si me ayudas a encontrar las herramientas de IA correctas, yo te ayudo a construirlo." Se estrecharon la mano.',
+      'Uno de ellos no tenía computadora propia. Sin experiencia en programación. Solo una fascinación por la IA y las ganas de aprenderlo todo desde cero. El otro tenía toda una vida de historias y un sueño que había esperado más de 8 años.',
       'Ese apretón de manos se convirtió en MyLifeStory.',
     ],
-    storyQuote:   '"No tenía computadora. No sabía programar. Solo la convicción de que este sueño merecía existir."',
-    storyAuthor:  '— Henri, Co-fundador',
+    storyQuote:   '"Sin computadora. Sin código. Solo la convicción de que este sueño merecía existir."',
+    storyAuthor:  '— Co-fundador, MyLifeStory',
+    vsEye:        'Por qué MyLifeStory',
+    vsH:          ['No solo preguntas.', 'Un libro de verdad.'],
+    vsSub:        'Otras apps recopilan tus respuestas. MyLifeStory las convierte en una narrativa — y entrega una tapa dura que puedes sostener.',
+    vsRows: [
+      { feature: 'IA redacta tu narrativa',         mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Vista previa del libro en la app', mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Impresión en tapa dura incluida',  mls: true,  sw: true,  rm: false, ms: false },
+      { feature: 'App nativa para iOS',              mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Bilingüe (EN + ES)',               mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Entrevista por voz',               mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Gratis para empezar',              mls: true,  sw: false, rm: true,  ms: true  },
+    ],
     faqEye:       'Preguntas',
     faqH:         'Preguntas frecuentes.',
     faqs: [
@@ -717,25 +741,94 @@ export default function HomePage() {
                         padding: '2rem', border: `1px solid ${gold}1a`, borderRadius: '1rem',
                         background: `${gold}08` }}>
             {[
-              { name: 'George', age: '66', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision' : '8 años de visión' },
-              { name: 'Henri',  age: '48', role: lang === 'en' ? 'The Builder' : 'El Constructor', detail: lang === 'en' ? 'Zero code experience' : 'Sin experiencia en código' },
+              { icon: '✦', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision, a lifetime of stories' : '8 años de visión, toda una vida de historias' },
+              { icon: '⚡', role: lang === 'en' ? 'The Builder' : 'El Constructor', detail: lang === 'en' ? 'Zero code experience, built with AI' : 'Sin código, construido con IA' },
             ].map(p => (
-              <div key={p.name} style={{ flex: 1, minWidth: 160 }}>
+              <div key={p.role} style={{ flex: 1, minWidth: 160 }}>
                 <div style={{ width: 48, height: 48, borderRadius: '50%',
                               background: `${gold}26`, border: `1px solid ${gold}4d`,
                               display: 'flex', alignItems: 'center', justifyContent: 'center',
-                              fontFamily: serif, fontSize: '1.2rem', color: gold,
-                              marginBottom: '0.75rem' }}>
-                  {p.name[0]}
+                              fontSize: '1.2rem', marginBottom: '0.75rem' }}>
+                  {p.icon}
                 </div>
-                <p style={{ fontFamily: serif, fontSize: '1.1rem', color: cream, marginBottom: '0.25rem' }}>
-                  {p.name} <span style={{ color: `${cream}50`, fontSize: '0.85rem' }}>{p.age}</span>
-                </p>
                 <p style={{ fontFamily: sans, fontSize: '12px', color: gold, textTransform: 'uppercase',
                             letterSpacing: '0.1em', marginBottom: '0.25rem' }}>{p.role}</p>
                 <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}60` }}>{p.detail}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VS Competitors ───────────────────────────────────────────────── */}
+      <section id="vs" style={{ background: '#0A0704', padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+        <div style={{ maxWidth: 800, margin: '0 auto' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
+            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+                           letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+              {t.vsEye}
+            </span>
+          </div>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
+                       fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '0.75rem' }}>
+            {t.vsH[0]}<br />
+            <span style={{ color: gold, fontStyle: 'italic' }}>{t.vsH[1]}</span>
+          </h2>
+          <p style={{ fontFamily: sans, fontSize: '16px', color: `${cream}80`,
+                      lineHeight: 1.7, marginBottom: '3rem' }}>
+            {t.vsSub}
+          </p>
+
+          {/* Table */}
+          <div style={{ overflowX: 'auto' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: sans }}>
+              <thead>
+                <tr>
+                  <th style={{ textAlign: 'left', padding: '0.75rem 1rem', fontSize: '12px',
+                               color: `${cream}50`, fontWeight: 400, borderBottom: `1px solid ${gold}20` }}>
+                    {lang === 'en' ? 'Feature' : 'Característica'}
+                  </th>
+                  {[
+                    { label: 'MyLifeStory', highlight: true },
+                    { label: 'Storyworth', highlight: false },
+                    { label: 'Remento', highlight: false },
+                    { label: 'MyStories', highlight: false },
+                  ].map(col => (
+                    <th key={col.label} style={{ textAlign: 'center', padding: '0.75rem 1rem',
+                                                  fontSize: '12px', fontWeight: 600,
+                                                  color: col.highlight ? gold : `${cream}50`,
+                                                  borderBottom: `1px solid ${gold}20`,
+                                                  background: col.highlight ? `${gold}0a` : 'transparent' }}>
+                      {col.label}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {t.vsRows.map((row, i) => (
+                  <tr key={i} style={{ borderBottom: `1px solid ${gold}10` }}>
+                    <td style={{ padding: '0.875rem 1rem', fontSize: '14px', color: `${cream}90` }}>
+                      {row.feature}
+                    </td>
+                    {[
+                      { val: row.mls, highlight: true },
+                      { val: row.sw,  highlight: false },
+                      { val: row.rm,  highlight: false },
+                      { val: row.ms,  highlight: false },
+                    ].map((cell, j) => (
+                      <td key={j} style={{ textAlign: 'center', padding: '0.875rem 1rem',
+                                           background: cell.highlight ? `${gold}0a` : 'transparent' }}>
+                        {cell.val
+                          ? <span style={{ color: '#4ade80', fontSize: '18px' }}>✓</span>
+                          : <span style={{ color: `${cream}25`, fontSize: '18px' }}>✗</span>
+                        }
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
