@@ -50,6 +50,7 @@ const T = {
     navHow:       'How it works',
     navBooks:     'Our books',
     navApp:       'The app',
+    navWhy:       'Why us',
     navStory:     'Our story',
     navFaq:       'FAQ',
     storyEye:     'Our Story',
@@ -137,6 +138,7 @@ const T = {
     navHow:       'Cómo funciona',
     navBooks:     'Nuestros libros',
     navApp:       'La app',
+    navWhy:       'Por qué nosotros',
     navStory:     'Nuestra historia',
     navFaq:       'FAQ',
     storyEye:     'Nuestra Historia',
@@ -198,6 +200,7 @@ export default function HomePage() {
     { label: t.navHow,   href: '#how' },
     { label: t.navBooks, href: '#books' },
     { label: t.navApp,   href: '#app' },
+    { label: t.navWhy,   href: '#vs' },
     { label: t.navStory, href: '#story' },
     { label: t.navFaq,   href: '#faq' },
   ]
