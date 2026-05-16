@@ -49,6 +49,7 @@ const T = {
     via:          'via',
     navHow:       'How it works',
     navBooks:     'Our books',
+    navApp:       'The app',
     navStory:     'Our story',
     navFaq:       'FAQ',
     storyEye:     'Our Story',
@@ -133,6 +134,7 @@ const T = {
     via:          'vía',
     navHow:       'Cómo funciona',
     navBooks:     'Nuestros libros',
+    navApp:       'La app',
     navStory:     'Nuestra historia',
     navFaq:       'FAQ',
     storyEye:     'Nuestra Historia',
@@ -203,6 +205,7 @@ export default function HomePage() {
           {[
             { label: t.navHow,   href: '#how' },
             { label: t.navBooks, href: '#books' },
+            { label: t.navApp,   href: '#app' },
             { label: t.navStory, href: '#story' },
             { label: t.navFaq,   href: '#faq' },
           ].map(item => (
@@ -601,7 +604,7 @@ export default function HomePage() {
       </section>
 
       {/* ── App section ──────────────────────────────────────────────────── */}
-      <section style={{ background: '#080604', borderTop: `1px solid ${gold}1a`, padding: '5rem 2rem' }}>
+      <section id="app" style={{ background: '#080604', borderTop: `1px solid ${gold}1a`, padding: '5rem 2rem' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex',
                       flexWrap: 'wrap', alignItems: 'center', gap: '3.5rem' }}>
           <div style={{ flex: 1, minWidth: 280 }}>
