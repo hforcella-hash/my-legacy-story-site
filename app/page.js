@@ -28,7 +28,7 @@ const T = {
       { num: '03', title: 'Printed & Delivered',     body: 'Order your hardcover legacy book at any time. Premium color print, linen wrap cover, delivered to your door in 5–10 business days.' },
     ],
     portraitQ:    ['My father was a brilliant man.', 'But I never truly knew his story —', 'until it was too late to ask.'],
-    portraitBody: "MyLegacyStory was built for men and women who have built something worth remembering — a career, a family, a set of values. People who understand that the most lasting gift they can give their children is not money. It's the truth of who they are.",
+    portraitBody: "MyLifeStory was built for men and women who have built something worth remembering — a career, a family, a set of values. People who understand that the most lasting gift they can give their children is not money. It's the truth of who they are.",
     portraitTag:  'For the generation that follows',
     dividerQ:     ['The stories we leave behind become', ' the stories they live by.'],
     bookEye:      'The Legacy Book',
@@ -47,8 +47,8 @@ const T = {
     appEye:       'More than a book',
     photoCred:    'Photography by',
     via:          'via',
-    legalLine1:   (y) => `© ${y} My Legacy Story LLC. All rights reserved. MyLegacyStory™ is a trademark of My Legacy Story LLC.`,
-    legalLine2:   'MyLegacyStory™ and the My Legacy Story logo are trademarks pending registration with the United States Patent and Trademark Office. My Legacy Story LLC is a Florida limited liability company.',
+    legalLine1:   (y) => `© ${y} My Legacy Story LLC. All rights reserved. MyLifeStory™ is a trademark of My Legacy Story LLC.`,
+    legalLine2:   'MyLifeStory™ and the My Legacy Story logo are trademarks pending registration with the United States Patent and Trademark Office. My Legacy Story LLC is a Florida limited liability company.',
   },
   es: {
     comingSoon:  'Próximamente en App Store',
@@ -73,7 +73,7 @@ const T = {
       { num: '03', title: 'Impresa y entregada',     body: 'Pide tu libro de legado en tapa dura cuando quieras. Impresión a color premium, cubierta de lino, entregado en tu puerta en 5–10 días hábiles.' },
     ],
     portraitQ:    ['Mi padre era un hombre brillante.', 'Pero nunca conocí verdaderamente su historia —', 'hasta que fue demasiado tarde para preguntar.'],
-    portraitBody: 'MyLegacyStory fue creado para hombres y mujeres que han construido algo que vale la pena recordar — una carrera, una familia, unos valores. Personas que entienden que el regalo más duradero que pueden dar a sus hijos no es el dinero. Es la verdad de quiénes son.',
+    portraitBody: 'MyLifeStory fue creado para hombres y mujeres que han construido algo que vale la pena recordar — una carrera, una familia, unos valores. Personas que entienden que el regalo más duradero que pueden dar a sus hijos no es el dinero. Es la verdad de quiénes son.',
     portraitTag:  'Para la generación que sigue',
     dividerQ:     ['Las historias que dejamos atrás se convierten en', ' las historias por las que ellos viven.'],
     bookEye:      'El Libro del Legado',
@@ -92,8 +92,8 @@ const T = {
     appEye:       'Más que un libro',
     photoCred:    'Fotografías por',
     via:          'vía',
-    legalLine1:   (y) => `© ${y} My Legacy Story LLC. Todos los derechos reservados. MyLegacyStory™ es una marca comercial de My Legacy Story LLC.`,
-    legalLine2:   'MyLegacyStory™ y el logotipo de My Legacy Story son marcas comerciales con registro pendiente en la Oficina de Patentes y Marcas de los EE. UU. My Legacy Story LLC es una sociedad de responsabilidad limitada de Florida.',
+    legalLine1:   (y) => `© ${y} My Legacy Story LLC. Todos los derechos reservados. MyLifeStory™ es una marca comercial de My Legacy Story LLC.`,
+    legalLine2:   'MyLifeStory™ y el logotipo de My Legacy Story son marcas comerciales con registro pendiente en la Oficina de Patentes y Marcas de los EE. UU. My Legacy Story LLC es una sociedad de responsabilidad limitada de Florida.',
   },
 }
 
@@ -328,8 +328,8 @@ export default function HomePage() {
                   ? ['"I built a business, raised a family,', 'and almost let my story', 'disappear with me."']
                   : ['"Construí un negocio, crié a mi familia,', 'y casi dejo que mi historia', 'desapareciera conmigo."'],
                 body: lang === 'en'
-                  ? 'MyLegacyStory is for every person who has lived a life worth remembering — and who wants their children and grandchildren to truly know who they were, what they stood for, and what they loved.'
-                  : 'MyLegacyStory es para toda persona que ha vivido una vida que vale la pena recordar — y que quiere que sus hijos y nietos sepan de verdad quién fue, en qué creyó y qué amó.',
+                  ? 'MyLifeStory is for every person who has lived a life worth remembering — and who wants their children and grandchildren to truly know who they were, what they stood for, and what they loved.'
+                  : 'MyLifeStory es para toda persona que ha vivido una vida que vale la pena recordar — y que quiere que sus hijos y nietos sepan de verdad quién fue, en qué creyó y qué amó.',
                 tag: lang === 'en' ? 'For every generation' : 'Para cada generación',
                 italic: false,
               },
@@ -422,7 +422,7 @@ export default function HomePage() {
                 </div>
                 <p style={{ fontFamily: sans, fontSize: '7px', color: `${cream}33`,
                             letterSpacing: '0.2em', textTransform: 'uppercase' }}>
-                  MyLegacyStory™
+                  MyLifeStory™
                 </p>
               </div>
               <div style={{ position: 'absolute', top: 0, right: 0, width: 12, height: '100%',
@@ -527,8 +527,8 @@ export default function HomePage() {
             <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}66`,
                         lineHeight: 1.7, maxWidth: 400, marginBottom: '1.5rem' }}>
               {lang === 'en'
-                ? 'Answer guided questions, review your chapters, and order your printed book — all from the MyLegacyStory app.'
-                : 'Responde preguntas guiadas, revisa tus capítulos y pide tu libro impreso — todo desde la app MyLegacyStory.'}
+                ? 'Answer guided questions, review your chapters, and order your printed book — all from the MyLifeStory app.'
+                : 'Responde preguntas guiadas, revisa tus capítulos y pide tu libro impreso — todo desde la app MyLifeStory.'}
             </p>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
               {t.appFeatures.map(item => (
@@ -657,7 +657,7 @@ export default function HomePage() {
               <BookBranchIcon size={16} />
               <span style={{ fontFamily: sans, fontSize: '12px', color: `${cream}4d`,
                              fontWeight: 600, letterSpacing: '0.05em' }}>
-                MyLegacyStory™
+                MyLifeStory™
               </span>
             </div>
             <div style={{ display: 'flex', gap: '1.5rem' }}>

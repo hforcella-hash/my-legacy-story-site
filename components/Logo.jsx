@@ -38,7 +38,7 @@ export function LogoBookBranch({ variant = 'light', size = 'md', showName = true
             color: variant === 'light' ? cream : ink,
             letterSpacing: '0.02em',
           }}>
-            MyLegacyStory
+            MyLifeStory
             <sup style={{ fontSize: '0.45em', color: accent, marginLeft: '1px' }}>™</sup>
           </span>
         </div>
