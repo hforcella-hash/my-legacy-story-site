@@ -1159,7 +1159,7 @@ export default function HomePage() {
               {[
                 { label: 'Help',     href: '/help' },
                 { label: 'Privacy',  href: '/privacy' },
-                { label: 'Terms',    href: `${APP_URL}/app/terms` },
+                { label: 'Terms',    href: '/terms' },
                 { label: 'Contact',  href: 'mailto:hello@mylegacystoryapp.com' },
               ].map(l => (
                 <a key={l.label} href={l.href}
