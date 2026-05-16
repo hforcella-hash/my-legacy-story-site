@@ -64,7 +64,9 @@ const T = {
       'That handshake became MyLifeStory.',
     ],
     storyQuote:   '"No computer. No code experience. Just the conviction that this dream deserved to exist."',
-    storyAuthor:  '— Co-founder, MyLifeStory',
+    storyAuthor:  '— The Builder, Co-founder',
+    storyQuote2:  '"A ten year idea finally come true. A dream to write a story for our loved ones as a legacy of our lives."',
+    storyAuthor2: '— The Dreamer, Co-founder',
     vsEye:        'Why MyLifeStory',
     vsH:          ['Not just questions.', 'A real book.'],
     vsSub:        'Other apps collect your answers. MyLifeStory turns them into a narrative — and delivers a hardcover you can hold.',
@@ -149,7 +151,9 @@ const T = {
       'Ese apretón de manos se convirtió en MyLifeStory.',
     ],
     storyQuote:   '"Sin computadora. Sin código. Solo la convicción de que este sueño merecía existir."',
-    storyAuthor:  '— Co-fundador, MyLifeStory',
+    storyAuthor:  '— El Constructor, Co-fundador',
+    storyQuote2:  '"Una idea de diez años finalmente hecha realidad. Un sueño de escribir la historia de vida para nuestros seres queridos como legado."',
+    storyAuthor2: '— El Soñador, Co-fundador',
     vsEye:        'Por qué MyLifeStory',
     vsH:          ['No solo preguntas.', 'Un libro de verdad.'],
     vsSub:        'Otras apps recopilan tus respuestas. MyLifeStory las convierte en una narrativa — y entrega una tapa dura que puedes sostener.',
@@ -725,29 +729,41 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Framed quote — looks like a painting on the wall */}
-          <div style={{ margin: '3rem 0', padding: '4px', background: `linear-gradient(135deg, ${gold}cc, #8a6830, ${gold}cc, #6b5025)`, borderRadius: '6px', boxShadow: '0 12px 48px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4)' }}>
-            <div style={{ background: '#110e09', borderRadius: '3px', padding: '2.5rem 2.5rem 2rem' }}>
-              {/* Inner mat */}
-              <div style={{ border: `1px solid ${gold}30`, borderRadius: '2px', padding: '2rem 2rem 1.5rem' }}>
-                {/* Corner ornaments */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
-                  <span style={{ color: `${gold}60`, fontSize: '10px', letterSpacing: '0.2em' }}>✦</span>
-                  <span style={{ color: `${gold}60`, fontSize: '10px', letterSpacing: '0.2em' }}>✦</span>
-                </div>
-                <p style={{ fontFamily: serif, fontSize: 'clamp(1.15rem,2.5vw,1.45rem)', fontStyle: 'italic',
-                            color: cream, lineHeight: 1.7, textAlign: 'center', marginBottom: '1.5rem' }}>
-                  {t.storyQuote}
-                </p>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.5rem' }}>
-                  <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
-                  <p style={{ fontFamily: sans, fontSize: '12px', color: `${gold}80`, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-                    {t.storyAuthor}
-                  </p>
-                  <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+          {/* Framed quotes — two co-founders side by side */}
+          <div style={{ margin: '3rem 0', display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+            {[
+              { quote: t.storyQuote,  author: t.storyAuthor },
+              { quote: t.storyQuote2, author: t.storyAuthor2 },
+            ].map(({ quote, author }, i) => (
+              <div key={i} style={{ flex: '1 1 260px', padding: '4px',
+                                    background: `linear-gradient(135deg, ${gold}cc, #8a6830, ${gold}cc, #6b5025)`,
+                                    borderRadius: '6px',
+                                    boxShadow: '0 12px 48px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4)' }}>
+                <div style={{ background: '#110e09', borderRadius: '3px', padding: '2rem 2rem 1.5rem', height: '100%' }}>
+                  <div style={{ border: `1px solid ${gold}30`, borderRadius: '2px', padding: '1.75rem 1.75rem 1.25rem', height: '100%',
+                                display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                    <div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                        <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                        <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                      </div>
+                      <p style={{ fontFamily: serif, fontSize: 'clamp(1rem,2vw,1.2rem)', fontStyle: 'italic',
+                                  color: cream, lineHeight: 1.7, textAlign: 'center', marginBottom: '1.25rem' }}>
+                        {quote}
+                      </p>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                      <p style={{ fontFamily: sans, fontSize: '11px', color: `${gold}80`,
+                                  letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'center' }}>
+                        {author}
+                      </p>
+                      <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
 
           <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', marginTop: '3rem',
