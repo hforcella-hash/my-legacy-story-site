@@ -632,72 +632,8 @@ export default function HomePage() {
             </ul>
           </div>
 
-          {/* iPhone */}
-          <div style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
-            <div style={{ position: 'relative', width: 240, height: 490 }}>
-              <div style={{ position: 'absolute', inset: 0, borderRadius: 44,
-                            background: 'linear-gradient(to bottom, #3a3a3c, #1c1c1e, #3a3a3c)',
-                            boxShadow: '0 30px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.12), 0 0 0 1.5px #48484a' }} />
-              <div style={{ position: 'absolute', top: 6, left: 6, right: 6, bottom: 6,
-                            borderRadius: 38, background: 'black', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', top: 12, left: '50%', transform: 'translateX(-50%)',
-                              width: 90, height: 25, background: 'black', borderRadius: 999, zIndex: 10 }} />
-                <div style={{ position: 'absolute', inset: 0, background: ink,
-                              display: 'flex', flexDirection: 'column', paddingTop: 48 }}>
-                  <div style={{ display: 'flex', alignItems: 'center', padding: '8px 16px',
-                                borderBottom: `1px solid ${gold}26` }}>
-                    <LogoBookBranch size="sm" variant="light" showName={true} />
-                  </div>
-                  <div style={{ margin: '12px 12px 0', borderRadius: 16, padding: '1rem',
-                                background: '#1a1510', border: `1px solid ${gold}33` }}>
-                    <p style={{ fontFamily: sans, fontSize: '9px', color: `${gold}99`,
-                                textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.25rem' }}>
-                      Chapter 3
-                    </p>
-                    <p style={{ fontFamily: serif, fontSize: '13px', color: cream, lineHeight: 1.4 }}>
-                      My years building<br />the company…
-                    </p>
-                    <div style={{ marginTop: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                      <div style={{ flex: 1, height: 4, borderRadius: 2, background: `${gold}26` }}>
-                        <div style={{ width: '67%', height: '100%', borderRadius: 2, background: `${gold}b3` }} />
-                      </div>
-                      <span style={{ fontFamily: sans, fontSize: '8px', color: `${gold}66` }}>67%</span>
-                    </div>
-                  </div>
-                  <div style={{ margin: '8px 12px 0', borderRadius: 16, padding: '1rem',
-                                background: '#0d0a06', border: `1px solid ${cream}14` }}>
-                    <p style={{ fontFamily: sans, fontSize: '8px', color: `${cream}4d`,
-                                textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '0.5rem' }}>
-                      Today's question
-                    </p>
-                    <p style={{ fontFamily: serif, fontSize: '11px', fontStyle: 'italic',
-                                color: `${cream}b3`, lineHeight: 1.5 }}>
-                      "What was the hardest decision you ever made as a leader?"
-                    </p>
-                  </div>
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0,
-                                display: 'flex', justifyContent: 'space-around', alignItems: 'center',
-                                padding: '0.75rem 1rem', borderTop: `1px solid ${gold}1a`, background: ink }}>
-                    {['📖','✍️','📦','👤'].map((icon, i) => (
-                      <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center',
-                                           gap: 2, opacity: i === 1 ? 1 : 0.3 }}>
-                        <span style={{ fontSize: 16 }}>{icon}</span>
-                        <div style={{ width: 4, height: 4, borderRadius: '50%',
-                                      background: i === 1 ? gold : 'transparent' }} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              {[{l:true,t:100,h:32},{l:true,t:145,h:54},{l:true,t:210,h:54},{l:false,t:155,h:72}].map((b,i) => (
-                <div key={i} style={{ position: 'absolute',
-                                      [b.l ? 'left' : 'right']: -3, top: b.t,
-                                      width: 3, height: b.h,
-                                      borderRadius: b.l ? '4px 0 0 4px' : '0 4px 4px 0',
-                                      background: '#48484a' }} />
-              ))}
-            </div>
-          </div>
+          {/* iPhone carousel */}
+          <ScreenshotCarousel />
         </div>
       </section>
 
@@ -966,6 +902,84 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+    </div>
+  )
+}
+
+const SCREENS = [
+  '/screen-1.png',
+  '/screen-2.png',
+  '/screen-3.png',
+  '/screen-4.png',
+  '/screen-5.png',
+]
+
+function ScreenshotCarousel() {
+  const [idx, setIdx] = useState(0)
+  const prev = () => setIdx(i => (i - 1 + SCREENS.length) % SCREENS.length)
+  const next = () => setIdx(i => (i + 1) % SCREENS.length)
+
+  const btnStyle = {
+    width: 36, height: 36,
+    borderRadius: '50%',
+    border: '1.5px solid rgba(184,146,74,0.4)',
+    background: 'rgba(28,24,20,0.8)',
+    color: '#B8924A',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    cursor: 'pointer',
+    fontSize: 18,
+    flexShrink: 0,
+    transition: 'border-color 0.15s',
+  }
+
+  return (
+    <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <button onClick={prev} style={btnStyle} aria-label="Previous screenshot">&#8249;</button>
+
+        {/* iPhone frame */}
+        <div style={{ position: 'relative', width: 240, height: 490 }}>
+          {/* Body */}
+          <div style={{ position: 'absolute', inset: 0, borderRadius: 44,
+                        background: 'linear-gradient(to bottom, #3a3a3c, #1c1c1e, #3a3a3c)',
+                        boxShadow: '0 30px 80px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,255,255,0.12), 0 0 0 1.5px #48484a' }} />
+          {/* Screen area */}
+          <div style={{ position: 'absolute', top: 6, left: 6, right: 6, bottom: 6,
+                        borderRadius: 38, background: 'black', overflow: 'hidden' }}>
+            {/* Dynamic island */}
+            <div style={{ position: 'absolute', top: 12, left: '50%', transform: 'translateX(-50%)',
+                          width: 90, height: 25, background: 'black', borderRadius: 999, zIndex: 10 }} />
+            {/* Screenshot */}
+            <img
+              key={idx}
+              src={SCREENS[idx]}
+              alt={`App screenshot ${idx + 1}`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            />
+          </div>
+          {/* Side buttons */}
+          {[{l:true,t:100,h:32},{l:true,t:145,h:54},{l:true,t:210,h:54},{l:false,t:155,h:72}].map((b,i) => (
+            <div key={i} style={{ position: 'absolute',
+                                  [b.l ? 'left' : 'right']: -3, top: b.t,
+                                  width: 3, height: b.h,
+                                  borderRadius: b.l ? '4px 0 0 4px' : '0 4px 4px 0',
+                                  background: '#48484a' }} />
+          ))}
+        </div>
+
+        <button onClick={next} style={btnStyle} aria-label="Next screenshot">&#8250;</button>
+      </div>
+
+      {/* Dot indicators */}
+      <div style={{ display: 'flex', gap: 6 }}>
+        {SCREENS.map((_, i) => (
+          <div key={i} onClick={() => setIdx(i)} style={{
+            width: i === idx ? 16 : 6, height: 6, borderRadius: 3,
+            background: i === idx ? '#B8924A' : 'rgba(184,146,74,0.3)',
+            cursor: 'pointer', transition: 'all 0.2s',
+          }} />
+        ))}
+      </div>
     </div>
   )
 }
