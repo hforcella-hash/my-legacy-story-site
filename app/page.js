@@ -185,58 +185,117 @@ const serif = '"Cormorant Garamond", Georgia, serif'
 
 export default function HomePage() {
   const [lang, setLang] = useState('en')
+  const [menuOpen, setMenuOpen] = useState(false)
   const t = T[lang]
   const appSignup = `${APP_URL}/signup`
   const appSignin = `${APP_URL}/signin`
 
+  const navLinks = [
+    { label: t.navHow,   href: '#how' },
+    { label: t.navBooks, href: '#books' },
+    { label: t.navApp,   href: '#app' },
+    { label: t.navStory, href: '#story' },
+    { label: t.navFaq,   href: '#faq' },
+  ]
+
   return (
     <div style={{ minHeight: '100vh', background: ink, color: cream, fontFamily: serif, overflowX: 'hidden' }}>
+      <style>{`
+        @media (min-width: 768px) {
+          .md-nav-links { display: flex !important; align-items: center; gap: 2rem; }
+          .hamburger-btn { display: none !important; }
+          .desktop-signin { display: inline !important; }
+        }
+        @media (max-width: 767px) {
+          .desktop-signin { display: none !important; }
+        }
+      `}</style>
 
       {/* ── Nav ──────────────────────────────────────────────────────────── */}
       <nav style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-                    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-                    padding: '1rem 2rem',
-                    background: 'linear-gradient(to bottom, rgba(15,12,8,0.95), transparent)',
                     backdropFilter: 'blur(8px)' }}>
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
-          <LogoBookBranch size="sm" variant="light" showName={true} />
-        </a>
-        <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-          {[
-            { label: t.navHow,   href: '#how' },
-            { label: t.navBooks, href: '#books' },
-            { label: t.navApp,   href: '#app' },
-            { label: t.navStory, href: '#story' },
-            { label: t.navFaq,   href: '#faq' },
-          ].map(item => (
-            <a key={item.label} href={item.href}
-               style={{ fontFamily: sans, fontSize: '13px', color: `${cream}99`,
-                        textDecoration: 'none', letterSpacing: '0.02em',
-                        transition: 'color 0.2s' }}
-               onMouseEnter={e => e.target.style.color = cream}
-               onMouseLeave={e => e.target.style.color = `${cream}99`}>
-              {item.label}
-            </a>
-          ))}
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <button onClick={() => setLang(l => l === 'en' ? 'es' : 'en')}
-                  style={{ display: 'flex', alignItems: 'center', gap: '6px',
-                           padding: '6px 12px', borderRadius: '8px',
-                           border: `1px solid ${cream}26`, background: 'transparent',
-                           cursor: 'pointer' }}>
-            <span style={{ fontFamily: sans, fontSize: '11px', fontWeight: 600,
-                           letterSpacing: '0.15em', color: lang === 'en' ? gold : `${cream}59` }}>EN</span>
-            <span style={{ color: `${cream}33`, fontSize: '10px' }}>/</span>
-            <span style={{ fontFamily: sans, fontSize: '11px', fontWeight: 600,
-                           letterSpacing: '0.15em', color: lang === 'es' ? gold : `${cream}59` }}>ES</span>
-          </button>
-          <a href={appSignin}
-             style={{ fontFamily: sans, fontSize: '11px', color: `${cream}80`,
-                      textDecoration: 'none', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
-            {t.signIn}
+        {/* Main bar */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                      padding: '1rem 1.5rem',
+                      background: menuOpen ? 'rgba(15,12,8,0.98)' : 'linear-gradient(to bottom, rgba(15,12,8,0.95), transparent)' }}>
+          <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
+            <LogoBookBranch size="sm" variant="light" showName={true} />
           </a>
+
+          {/* Desktop links */}
+          <div style={{ display: 'none' }} className="md-nav-links">
+            {navLinks.map(item => (
+              <a key={item.label} href={item.href}
+                 style={{ fontFamily: sans, fontSize: '13px', color: `${cream}99`,
+                          textDecoration: 'none', letterSpacing: '0.02em', transition: 'color 0.2s' }}
+                 onMouseEnter={e => e.target.style.color = cream}
+                 onMouseLeave={e => e.target.style.color = `${cream}99`}>
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+            {/* Lang toggle */}
+            <button onClick={() => setLang(l => l === 'en' ? 'es' : 'en')}
+                    style={{ display: 'flex', alignItems: 'center', gap: '5px',
+                             padding: '5px 10px', borderRadius: '8px',
+                             border: `1px solid ${cream}26`, background: 'transparent', cursor: 'pointer' }}>
+              <span style={{ fontFamily: sans, fontSize: '11px', fontWeight: 600,
+                             letterSpacing: '0.15em', color: lang === 'en' ? gold : `${cream}59` }}>EN</span>
+              <span style={{ color: `${cream}33`, fontSize: '10px' }}>/</span>
+              <span style={{ fontFamily: sans, fontSize: '11px', fontWeight: 600,
+                             letterSpacing: '0.15em', color: lang === 'es' ? gold : `${cream}59` }}>ES</span>
+            </button>
+
+            {/* Sign in — hidden on mobile */}
+            <a href={appSignin} className="desktop-signin"
+               style={{ fontFamily: sans, fontSize: '11px', color: `${cream}80`,
+                        textDecoration: 'none', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+              {t.signIn}
+            </a>
+
+            {/* Hamburger */}
+            <button onClick={() => setMenuOpen(o => !o)} className="hamburger-btn"
+                    style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center',
+                             gap: 5, width: 36, height: 36, padding: '6px',
+                             background: 'transparent', border: 'none', cursor: 'pointer' }}
+                    aria-label="Menu">
+              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : cream,
+                             borderRadius: 2, transition: 'all 0.25s',
+                             transform: menuOpen ? 'translateY(6.5px) rotate(45deg)' : 'none' }} />
+              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : cream,
+                             borderRadius: 2, transition: 'all 0.25s',
+                             opacity: menuOpen ? 0 : 1 }} />
+              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : cream,
+                             borderRadius: 2, transition: 'all 0.25s',
+                             transform: menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none' }} />
+            </button>
+          </div>
         </div>
+
+        {/* Mobile drawer */}
+        {menuOpen && (
+          <div style={{ background: 'rgba(12,9,6,0.98)', borderTop: `1px solid ${gold}20`,
+                        padding: '1.5rem 2rem 2rem', display: 'flex', flexDirection: 'column', gap: '0' }}>
+            {navLinks.map((item, i) => (
+              <a key={item.label} href={item.href}
+                 onClick={() => setMenuOpen(false)}
+                 style={{ fontFamily: sans, fontSize: '16px', color: `${cream}cc`,
+                          textDecoration: 'none', padding: '1rem 0',
+                          borderBottom: i < navLinks.length - 1 ? `1px solid ${gold}15` : 'none',
+                          letterSpacing: '0.02em', display: 'block' }}>
+                {item.label}
+              </a>
+            ))}
+            <a href={appSignin} onClick={() => setMenuOpen(false)}
+               style={{ fontFamily: sans, fontSize: '14px', color: gold,
+                        textDecoration: 'none', padding: '1.25rem 0 0',
+                        letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block' }}>
+              {t.signIn} →
+            </a>
+          </div>
+        )}
       </nav>
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
