@@ -198,9 +198,9 @@ export default function HomePage() {
                     padding: '1rem 2rem',
                     background: 'linear-gradient(to bottom, rgba(15,12,8,0.95), transparent)',
                     backdropFilter: 'blur(8px)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
           <LogoBookBranch size="sm" variant="light" showName={true} />
-        </div>
+        </a>
         <div className="hidden md:flex" style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
           {[
             { label: t.navHow,   href: '#how' },
@@ -666,15 +666,30 @@ export default function HomePage() {
             ))}
           </div>
 
-          <blockquote style={{ borderLeft: `3px solid ${gold}`, paddingLeft: '1.5rem', margin: '3rem 0' }}>
-            <p style={{ fontFamily: serif, fontSize: '1.4rem', fontStyle: 'italic',
-                        color: cream, lineHeight: 1.6, marginBottom: '0.75rem' }}>
-              {t.storyQuote}
-            </p>
-            <p style={{ fontFamily: sans, fontSize: '13px', color: `${gold}99` }}>
-              {t.storyAuthor}
-            </p>
-          </blockquote>
+          {/* Framed quote — looks like a painting on the wall */}
+          <div style={{ margin: '3rem 0', padding: '4px', background: `linear-gradient(135deg, ${gold}cc, #8a6830, ${gold}cc, #6b5025)`, borderRadius: '6px', boxShadow: '0 12px 48px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4)' }}>
+            <div style={{ background: '#110e09', borderRadius: '3px', padding: '2.5rem 2.5rem 2rem' }}>
+              {/* Inner mat */}
+              <div style={{ border: `1px solid ${gold}30`, borderRadius: '2px', padding: '2rem 2rem 1.5rem' }}>
+                {/* Corner ornaments */}
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+                  <span style={{ color: `${gold}60`, fontSize: '10px', letterSpacing: '0.2em' }}>✦</span>
+                  <span style={{ color: `${gold}60`, fontSize: '10px', letterSpacing: '0.2em' }}>✦</span>
+                </div>
+                <p style={{ fontFamily: serif, fontSize: 'clamp(1.15rem,2.5vw,1.45rem)', fontStyle: 'italic',
+                            color: cream, lineHeight: 1.7, textAlign: 'center', marginBottom: '1.5rem' }}>
+                  {t.storyQuote}
+                </p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.5rem' }}>
+                  <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                  <p style={{ fontFamily: sans, fontSize: '12px', color: `${gold}80`, letterSpacing: '0.15em', textTransform: 'uppercase' }}>
+                    {t.storyAuthor}
+                  </p>
+                  <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', marginTop: '3rem',
                         padding: '2rem', border: `1px solid ${gold}1a`, borderRadius: '1rem',
