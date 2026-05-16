@@ -8,7 +8,7 @@ const T = {
   en: {
     comingSoon:  'Coming soon to App Store',
     signIn:      'Sign In',
-    eyebrow:     'My Legacy Story',
+    eyebrow:     'MyLifeStory',
     headline:    ['The most', 'important book', "you'll ever write."],
     sub:         "Your children will ask about your life long after you're gone. Leave them more than memories — leave them your story, in your own words, bound in a hardcover book that lasts generations.",
     features:    [
@@ -17,7 +17,7 @@ const T = {
       'Printed as a premium hardcover book to pass down',
     ],
     quoteText:   'An intellectual and cultural legacy to inspire and educate those that follow.',
-    btnBegin:    'Begin My Legacy Story →',
+    btnBegin:    'Begin Your Legacy Story →',
     btnSignIn:   'Sign In →',
     section2Eye: "What You'll Create",
     section2H:   ['A book your family will treasure', 'for generations.'],
@@ -53,7 +53,7 @@ const T = {
   es: {
     comingSoon:  'Próximamente en App Store',
     signIn:      'Iniciar sesión',
-    eyebrow:     'My Legacy Story',
+    eyebrow:     'MyLifeStory',
     headline:    ['El libro más', 'importante que', 'jamás escribirás.'],
     sub:         'Tus hijos preguntarán sobre tu vida mucho después de que te hayas ido. Déjales algo más que recuerdos — déjales tu historia, en tus propias palabras, en un libro de tapa dura que dure generaciones.',
     features:    [
@@ -62,7 +62,7 @@ const T = {
       'Impreso como un libro de tapa dura premium para transmitir',
     ],
     quoteText:   'Un legado intelectual y cultural para inspirar y educar a quienes nos siguen.',
-    btnBegin:    'Comenzar Mi Historia →',
+    btnBegin:    'Comenzar Tu Historia de Legado →',
     btnSignIn:   'Iniciar Sesión →',
     section2Eye: 'Lo que crearás',
     section2H:   ['Un libro que tu familia atesorará', 'por generaciones.'],
