@@ -770,8 +770,8 @@ export default function HomePage() {
                         padding: '2rem', border: `1px solid ${gold}1a`, borderRadius: '1rem',
                         background: `${gold}08` }}>
             {[
-              { icon: '✦', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision, a lifetime of stories' : '8 años de visión, toda una vida de historias' },
               { icon: '⚡', role: lang === 'en' ? 'The Builder' : 'El Constructor', detail: lang === 'en' ? 'Zero code experience, built with AI' : 'Sin código, construido con IA' },
+              { icon: '✦', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision, a lifetime of stories' : '8 años de visión, toda una vida de historias' },
             ].map(p => (
               <div key={p.role} style={{ flex: 1, minWidth: 160 }}>
                 <div style={{ width: 48, height: 48, borderRadius: '50%',
