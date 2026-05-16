@@ -69,16 +69,19 @@ const T = {
     storyQuote2:  '"A ten year idea finally come true. A dream to write a life story for our loved ones as a legacy of our lives."',
     storyAuthor2: '— The Dreamer, Co-founder',
     vsEye:        'Why MyLifeStory',
-    vsH:          ['Not just questions.', 'A real book.'],
-    vsSub:        'Other apps collect your answers. MyLifeStory turns them into a narrative — and delivers a hardcover you can hold.',
+    vsH:          ['See how we compare', 'to the alternatives.'],
+    vsSub:        'We looked at every major memoir app so you don\'t have to. Here\'s an honest side-by-side.',
     vsRows: [
-      { feature: 'AI writes your narrative',        mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'AI writes your full narrative',   mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Guided voice interview',          mls: true,  sw: true,  rm: true,  ms: false },
+      { feature: 'Hardcover book included',         mls: true,  sw: true,  rm: true,  ms: true  },
       { feature: 'In-app book preview',             mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Hardcover printing built-in',     mls: true,  sw: true,  rm: false, ms: false },
-      { feature: 'Native iOS app',                  mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Bilingual (EN + ES)',              mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Voice interview',                 mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Free to start',                   mls: true,  sw: false, rm: true,  ms: true  },
+      { feature: 'Unlimited photos per chapter',    mls: true,  sw: true,  rm: false, ms: true  },
+      { feature: 'Native iOS mobile app',           mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Bilingual (EN + ES)',             mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Edit after subscription ends',    mls: true,  sw: true,  rm: false, ms: false },
+      { feature: 'Free to start',                   mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'No page-count surcharges',        mls: true,  sw: true,  rm: false, ms: true  },
     ],
     faqEye:       'FAQ',
     faqH:         'Common questions.',
@@ -157,16 +160,19 @@ const T = {
     storyQuote2:  '"Una idea de diez años finalmente hecha realidad. Un sueño de escribir la historia de vida de nuestros seres queridos como legado de sus vidas."',
     storyAuthor2: '— El Soñador, Co-fundador',
     vsEye:        'Por qué MyLifeStory',
-    vsH:          ['No solo preguntas.', 'Un libro de verdad.'],
-    vsSub:        'Otras apps recopilan tus respuestas. MyLifeStory las convierte en una narrativa — y entrega una tapa dura que puedes sostener.',
+    vsH:          ['Así nos comparamos', 'con las alternativas.'],
+    vsSub:        'Revisamos cada app importante de memorias para que tú no tengas que hacerlo. Aquí una comparación honesta.',
     vsRows: [
-      { feature: 'IA redacta tu narrativa',         mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Vista previa del libro en la app', mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Impresión en tapa dura incluida',  mls: true,  sw: true,  rm: false, ms: false },
-      { feature: 'App nativa para iOS',              mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Bilingüe (EN + ES)',               mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Entrevista por voz',               mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Gratis para empezar',              mls: true,  sw: false, rm: true,  ms: true  },
+      { feature: 'IA redacta toda tu narrativa',      mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Entrevista guiada por voz',         mls: true,  sw: true,  rm: true,  ms: false },
+      { feature: 'Libro de tapa dura incluido',       mls: true,  sw: true,  rm: true,  ms: true  },
+      { feature: 'Vista previa del libro en la app',  mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Fotos ilimitadas por capítulo',     mls: true,  sw: true,  rm: false, ms: true  },
+      { feature: 'App móvil nativa para iOS',         mls: true,  sw: false, rm: true,  ms: false },
+      { feature: 'Bilingüe (EN + ES)',                mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Editar tras finalizar suscripción', mls: true,  sw: true,  rm: false, ms: false },
+      { feature: 'Gratis para empezar',               mls: true,  sw: false, rm: false, ms: false },
+      { feature: 'Sin cargos por páginas extra',      mls: true,  sw: true,  rm: false, ms: true  },
     ],
     faqEye:       'Preguntas',
     faqH:         'Preguntas frecuentes.',
@@ -813,34 +819,55 @@ export default function HomePage() {
           </p>
 
           {/* Table */}
-          <div style={{ overflowX: 'auto' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: sans }}>
+          <div style={{ overflowX: 'auto', borderRadius: '16px', border: `1px solid ${gold}25`,
+                        boxShadow: '0 8px 40px rgba(0,0,0,0.4)' }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: sans, minWidth: 520 }}>
               <thead>
-                <tr>
-                  <th style={{ textAlign: 'left', padding: '0.75rem 1rem', fontSize: '12px',
-                               color: `${cream}50`, fontWeight: 400, borderBottom: `1px solid ${gold}20` }}>
+                <tr style={{ background: '#0d0a06' }}>
+                  <th style={{ textAlign: 'left', padding: '1.1rem 1.25rem', fontSize: '11px',
+                               color: `${cream}40`, fontWeight: 500, letterSpacing: '0.1em',
+                               textTransform: 'uppercase', borderBottom: `1px solid ${gold}20`,
+                               width: '38%' }}>
                     {lang === 'en' ? 'Feature' : 'Característica'}
                   </th>
                   {[
                     { label: 'MyLifeStory', highlight: true },
-                    { label: 'Storyworth', highlight: false },
-                    { label: 'Remento', highlight: false },
-                    { label: 'MyStories', highlight: false },
+                    { label: 'Storyworth',  highlight: false },
+                    { label: 'Remento',     highlight: false },
+                    { label: 'MemoryGram',  highlight: false },
                   ].map(col => (
-                    <th key={col.label} style={{ textAlign: 'center', padding: '0.75rem 1rem',
-                                                  fontSize: '12px', fontWeight: 600,
-                                                  color: col.highlight ? gold : `${cream}50`,
-                                                  borderBottom: `1px solid ${gold}20`,
-                                                  background: col.highlight ? `${gold}0a` : 'transparent' }}>
-                      {col.label}
+                    <th key={col.label} style={{
+                      textAlign: 'center', padding: '1.1rem 0.75rem',
+                      fontSize: col.highlight ? '13px' : '12px',
+                      fontWeight: col.highlight ? 700 : 500,
+                      color: col.highlight ? gold : `${cream}50`,
+                      borderBottom: `1px solid ${gold}20`,
+                      background: col.highlight ? `rgba(184,146,74,0.12)` : 'transparent',
+                      borderLeft: col.highlight ? `2px solid ${gold}60` : 'none',
+                      borderRight: col.highlight ? `2px solid ${gold}60` : 'none',
+                      position: 'relative',
+                    }}>
+                      {col.highlight && (
+                        <div style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em',
+                                      color: '#0d0a06', background: gold, borderRadius: '4px',
+                                      padding: '2px 6px', display: 'inline-block',
+                                      marginBottom: '4px', textTransform: 'uppercase' }}>
+                          {lang === 'en' ? 'Best' : 'Mejor'}
+                        </div>
+                      )}
+                      <div>{col.label}</div>
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
                 {t.vsRows.map((row, i) => (
-                  <tr key={i} style={{ borderBottom: `1px solid ${gold}10` }}>
-                    <td style={{ padding: '0.875rem 1rem', fontSize: '14px', color: `${cream}90` }}>
+                  <tr key={i} style={{
+                    borderBottom: `1px solid ${gold}0f`,
+                    background: i % 2 === 0 ? 'rgba(255,255,255,0.01)' : 'transparent',
+                  }}>
+                    <td style={{ padding: '1rem 1.25rem', fontSize: '14px',
+                                 color: `${cream}cc`, fontWeight: 400, lineHeight: 1.4 }}>
                       {row.feature}
                     </td>
                     {[
@@ -849,19 +876,65 @@ export default function HomePage() {
                       { val: row.rm,  highlight: false },
                       { val: row.ms,  highlight: false },
                     ].map((cell, j) => (
-                      <td key={j} style={{ textAlign: 'center', padding: '0.875rem 1rem',
-                                           background: cell.highlight ? `${gold}0a` : 'transparent' }}>
+                      <td key={j} style={{
+                        textAlign: 'center', padding: '1rem 0.75rem',
+                        background: cell.highlight ? `rgba(184,146,74,0.07)` : 'transparent',
+                        borderLeft:  cell.highlight ? `2px solid ${gold}40` : 'none',
+                        borderRight: cell.highlight ? `2px solid ${gold}40` : 'none',
+                      }}>
                         {cell.val
-                          ? <span style={{ color: '#4ade80', fontSize: '18px' }}>✓</span>
-                          : <span style={{ color: `${cream}25`, fontSize: '18px' }}>✗</span>
+                          ? <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                                           width: 26, height: 26, borderRadius: '50%',
+                                           background: cell.highlight ? `${gold}22` : 'rgba(74,222,128,0.1)',
+                                           color: cell.highlight ? gold : '#4ade80',
+                                           fontSize: '13px', fontWeight: 700 }}>✓</span>
+                          : <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+                                           width: 26, height: 26, borderRadius: '50%',
+                                           background: 'transparent',
+                                           color: `${cream}20`, fontSize: '13px' }}>✗</span>
                         }
                       </td>
                     ))}
                   </tr>
                 ))}
               </tbody>
+              {/* Score row */}
+              <tfoot>
+                <tr style={{ background: '#0d0a06', borderTop: `1px solid ${gold}25` }}>
+                  <td style={{ padding: '1rem 1.25rem', fontSize: '12px',
+                               color: `${cream}40`, fontWeight: 600, letterSpacing: '0.05em',
+                               textTransform: 'uppercase' }}>
+                    {lang === 'en' ? 'Total' : 'Total'}
+                  </td>
+                  {[
+                    { count: t.vsRows.filter(r => r.mls).length, highlight: true },
+                    { count: t.vsRows.filter(r => r.sw).length,  highlight: false },
+                    { count: t.vsRows.filter(r => r.rm).length,  highlight: false },
+                    { count: t.vsRows.filter(r => r.ms).length,  highlight: false },
+                  ].map((cell, j) => (
+                    <td key={j} style={{
+                      textAlign: 'center', padding: '1rem 0.75rem',
+                      background: cell.highlight ? `rgba(184,146,74,0.12)` : 'transparent',
+                      borderLeft:  cell.highlight ? `2px solid ${gold}60` : 'none',
+                      borderRight: cell.highlight ? `2px solid ${gold}60` : 'none',
+                      borderBottom: cell.highlight ? `2px solid ${gold}60` : 'none',
+                    }}>
+                      <span style={{ fontFamily: serif, fontSize: cell.highlight ? '1.4rem' : '1.1rem',
+                                     fontWeight: 700, color: cell.highlight ? gold : `${cream}30` }}>
+                        {cell.count}<span style={{ fontSize: '0.7em', opacity: 0.6 }}>/{t.vsRows.length}</span>
+                      </span>
+                    </td>
+                  ))}
+                </tr>
+              </tfoot>
             </table>
           </div>
+          <p style={{ fontFamily: sans, fontSize: '11px', color: `${cream}30`,
+                      marginTop: '1rem', textAlign: 'right', letterSpacing: '0.03em' }}>
+            {lang === 'en'
+              ? 'Based on publicly available information. Last reviewed May 2025.'
+              : 'Basado en información pública. Última revisión mayo 2025.'}
+          </p>
         </div>
       </section>
 
