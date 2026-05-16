@@ -662,7 +662,8 @@ export default function HomePage() {
             </div>
             <div style={{ display: 'flex', gap: '1.5rem' }}>
               {[
-                { label: 'Privacy',  href: `${APP_URL}/app/privacy` },
+                { label: 'Help',     href: '/help' },
+                { label: 'Privacy',  href: '/privacy' },
                 { label: 'Terms',    href: `${APP_URL}/app/terms` },
                 { label: 'Contact',  href: 'mailto:hello@mylegacystoryapp.com' },
               ].map(l => (
