@@ -226,6 +226,9 @@ const cream = '#F5F0E8'
 const ink   = '#0F0C08'
 const sans  = '"DM Sans", system-ui, sans-serif'
 const serif = '"Cormorant Garamond", Georgia, serif'
+const inkText = '#1C1814'   // dark text for light backgrounds
+const muted   = '#6B5A4E'   // muted text for light backgrounds
+const subtle  = '#EDE8DF'   // subtle card/section variant
 
 export default function HomePage() {
   const [lang, setLang] = useState('en')
@@ -245,7 +248,7 @@ export default function HomePage() {
   ]
 
   return (
-    <div style={{ minHeight: '100vh', background: ink, color: cream, fontFamily: serif, overflowX: 'hidden' }}>
+    <div style={{ minHeight: '100vh', background: cream, color: inkText, fontFamily: serif, overflowX: 'hidden' }}>
       <style>{`
         @media (min-width: 768px) {
           .md-nav-links { display: flex !important; align-items: center; gap: 2rem; }
@@ -263,19 +266,26 @@ export default function HomePage() {
         {/* Main bar */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                       padding: '1rem 1.5rem',
-                      background: menuOpen ? 'rgba(15,12,8,0.98)' : 'linear-gradient(to bottom, rgba(15,12,8,0.95), transparent)' }}>
+                      background: menuOpen ? 'rgba(245,240,232,0.99)' : 'rgba(245,240,232,0.97)' }}>
           <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
-            <LogoBookBranch size="sm" variant="light" showName={true} />
+            <LogoBookBranch size="sm" variant="dark" showName={true} />
+            <span style={{ fontFamily: sans, fontSize: '9px', fontWeight: 700,
+                           padding: '2px 6px', borderRadius: '5px',
+                           background: `${gold}26`, color: gold,
+                           border: `1px solid ${gold}44`, letterSpacing: '0.08em',
+                           textTransform: 'uppercase', lineHeight: 1.2 }}>
+              Beta
+            </span>
           </a>
 
           {/* Desktop links */}
           <div style={{ display: 'none' }} className="md-nav-links">
             {navLinks.map(item => (
               <a key={item.label} href={item.href}
-                 style={{ fontFamily: sans, fontSize: '13px', color: `${cream}99`,
+                 style={{ fontFamily: sans, fontSize: '15px', color: `${inkText}80`,
                           textDecoration: 'none', letterSpacing: '0.02em', transition: 'color 0.2s' }}
-                 onMouseEnter={e => e.target.style.color = cream}
-                 onMouseLeave={e => e.target.style.color = `${cream}99`}>
+                 onMouseEnter={e => e.target.style.color = inkText}
+                 onMouseLeave={e => e.target.style.color = `${inkText}80`}>
                 {item.label}
               </a>
             ))}
@@ -286,17 +296,17 @@ export default function HomePage() {
             <button onClick={() => setLang(l => l === 'en' ? 'es' : 'en')}
                     style={{ display: 'flex', alignItems: 'center', gap: '5px',
                              padding: '5px 10px', borderRadius: '8px',
-                             border: `1px solid ${cream}26`, background: 'transparent', cursor: 'pointer' }}>
-              <span style={{ fontFamily: sans, fontSize: '11px', fontWeight: 600,
-                             letterSpacing: '0.15em', color: lang === 'en' ? gold : `${cream}59` }}>EN</span>
-              <span style={{ color: `${cream}33`, fontSize: '10px' }}>/</span>
-              <span style={{ fontFamily: sans, fontSize: '11px', fontWeight: 600,
-                             letterSpacing: '0.15em', color: lang === 'es' ? gold : `${cream}59` }}>ES</span>
+                             border: `1px solid ${inkText}20`, background: 'transparent', cursor: 'pointer' }}>
+              <span style={{ fontFamily: sans, fontSize: '13px', fontWeight: 600,
+                             letterSpacing: '0.15em', color: lang === 'en' ? gold : `${inkText}50` }}>EN</span>
+              <span style={{ color: `${inkText}40`, fontSize: '12px' }}>/</span>
+              <span style={{ fontFamily: sans, fontSize: '13px', fontWeight: 600,
+                             letterSpacing: '0.15em', color: lang === 'es' ? gold : `${inkText}50` }}>ES</span>
             </button>
 
             {/* Sign in — hidden on mobile */}
             <a href={appSignin} className="desktop-signin"
-               style={{ fontFamily: sans, fontSize: '11px', color: `${cream}80`,
+               style={{ fontFamily: sans, fontSize: '13px', color: `${inkText}70`,
                         textDecoration: 'none', letterSpacing: '0.15em', textTransform: 'uppercase' }}>
               {t.signIn}
             </a>
@@ -307,13 +317,13 @@ export default function HomePage() {
                              gap: 5, width: 36, height: 36, padding: '6px',
                              background: 'transparent', border: 'none', cursor: 'pointer' }}
                     aria-label="Menu">
-              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : cream,
+              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : inkText,
                              borderRadius: 2, transition: 'all 0.25s',
                              transform: menuOpen ? 'translateY(6.5px) rotate(45deg)' : 'none' }} />
-              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : cream,
+              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : inkText,
                              borderRadius: 2, transition: 'all 0.25s',
                              opacity: menuOpen ? 0 : 1 }} />
-              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : cream,
+              <span style={{ display: 'block', height: 1.5, background: menuOpen ? gold : inkText,
                              borderRadius: 2, transition: 'all 0.25s',
                              transform: menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none' }} />
             </button>
@@ -322,12 +332,12 @@ export default function HomePage() {
 
         {/* Mobile drawer */}
         {menuOpen && (
-          <div style={{ background: 'rgba(12,9,6,0.98)', borderTop: `1px solid ${gold}20`,
+          <div style={{ background: 'rgba(245,240,232,0.99)', borderTop: `1px solid ${gold}20`,
                         padding: '1.5rem 2rem 2rem', display: 'flex', flexDirection: 'column', gap: '0' }}>
             {navLinks.map((item, i) => (
               <a key={item.label} href={item.href}
                  onClick={() => setMenuOpen(false)}
-                 style={{ fontFamily: sans, fontSize: '16px', color: `${cream}cc`,
+                 style={{ fontFamily: sans, fontSize: '19px', color: inkText,
                           textDecoration: 'none', padding: '1rem 0',
                           borderBottom: i < navLinks.length - 1 ? `1px solid ${gold}15` : 'none',
                           letterSpacing: '0.02em', display: 'block' }}>
@@ -335,7 +345,7 @@ export default function HomePage() {
               </a>
             ))}
             <a href={appSignin} onClick={() => setMenuOpen(false)}
-               style={{ fontFamily: sans, fontSize: '14px', color: gold,
+               style={{ fontFamily: sans, fontSize: '17px', color: gold,
                         textDecoration: 'none', padding: '1.25rem 0 0',
                         letterSpacing: '0.1em', textTransform: 'uppercase', display: 'block' }}>
               {t.signIn} →
@@ -364,7 +374,7 @@ export default function HomePage() {
             </span>
           </div>
 
-          <h1 style={{ position: 'relative', fontFamily: serif, fontSize: 'clamp(2.5rem,5vw,3.75rem)',
+          <h1 style={{ position: 'relative', fontFamily: serif, fontSize: 'clamp(3rem,5vw,4.5rem)',
                        fontWeight: 600, color: 'white', lineHeight: 1.1, letterSpacing: '-0.01em',
                        marginBottom: '2rem', maxWidth: 480,
                        textShadow: '0 1px 12px rgba(0,0,0,0.9), 0 4px 32px rgba(0,0,0,0.7)' }}>
@@ -373,8 +383,8 @@ export default function HomePage() {
             <span style={{ color: gold, fontStyle: 'italic' }}>{t.headline[2]}</span>
           </h1>
 
-          <p style={{ position: 'relative', fontFamily: serif, fontSize: '1.1rem', color: 'rgba(255,255,255,0.9)',
-                      lineHeight: 1.7, maxWidth: 420, marginBottom: '3rem',
+          <p style={{ position: 'relative', fontFamily: serif, fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)',
+                      lineHeight: 1.8, maxWidth: 420, marginBottom: '3rem',
                       textShadow: '0 1px 8px rgba(0,0,0,1), 0 2px 20px rgba(0,0,0,0.9)' }}>
             {t.sub}
           </p>
@@ -383,8 +393,8 @@ export default function HomePage() {
             {t.features.map(text => (
               <div key={text} style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
                 <span style={{ color: gold, fontSize: '10px', marginTop: 4, flexShrink: 0 }}>✦</span>
-                <p style={{ fontFamily: sans, fontSize: '14px', color: 'rgba(255,255,255,0.85)',
-                            lineHeight: 1.6, textShadow: '0 1px 6px rgba(0,0,0,0.9)', margin: 0 }}>
+                <p style={{ fontFamily: sans, fontSize: '17px', color: 'rgba(255,255,255,0.85)',
+                            lineHeight: 1.75, textShadow: '0 1px 6px rgba(0,0,0,0.9)', margin: 0 }}>
                   {text}
                 </p>
               </div>
@@ -408,11 +418,11 @@ export default function HomePage() {
         {/* Right — CTA */}
         <div style={{ width: 'min(100%, 480px)', display: 'flex', flexDirection: 'column',
                       justifyContent: 'center', padding: '4rem 3.5rem',
-                      background: '#160F08', borderLeft: `1px solid ${gold}1a` }}>
-          <p style={{ fontFamily: serif, fontSize: '1.5rem', color: cream, marginBottom: '0.25rem' }}>
+                      background: subtle, borderLeft: `1px solid ${gold}30` }}>
+          <p style={{ fontFamily: serif, fontSize: '1.5rem', color: inkText, marginBottom: '0.25rem' }}>
             {lang === 'en' ? 'Start your legacy today.' : 'Comienza tu legado hoy.'}
           </p>
-          <p style={{ fontFamily: sans, fontSize: '12px', color: `${cream}66`, marginBottom: '2.5rem' }}>
+          <p style={{ fontFamily: sans, fontSize: '18px', color: muted, marginBottom: '2.5rem' }}>
             {lang === 'en' ? 'Free to start. Your story, forever preserved.' : 'Gratis para empezar. Tu historia, preservada para siempre.'}
           </p>
 
@@ -428,67 +438,67 @@ export default function HomePage() {
           </a>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', margin: '1rem 0' }}>
-            <div style={{ flex: 1, height: 1, background: `${cream}14` }} />
-            <span style={{ fontFamily: sans, fontSize: '10px', color: `${cream}40`,
+            <div style={{ flex: 1, height: 1, background: `${inkText}12` }} />
+            <span style={{ fontFamily: sans, fontSize: '12px', color: `${inkText}40`,
                            textTransform: 'uppercase', letterSpacing: '0.1em' }}>
               {lang === 'en' ? 'or' : 'o'}
             </span>
-            <div style={{ flex: 1, height: 1, background: `${cream}14` }} />
+            <div style={{ flex: 1, height: 1, background: `${inkText}12` }} />
           </div>
 
           <a href={appSignin}
              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      height: 56, border: `1px solid ${cream}26`, color: `${cream}99`,
+                      height: 56, border: `1px solid ${inkText}20`, color: inkText,
                       fontFamily: serif, fontSize: '1rem', borderRadius: 12,
                       textDecoration: 'none', transition: 'border-color 0.2s' }}>
             {t.btnSignIn}
           </a>
 
           <div style={{ marginTop: '3rem', paddingTop: '2rem',
-                        borderTop: `1px solid ${cream}0d`, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+                        borderTop: `1px solid ${inkText}10`, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {(lang === 'en'
               ? ['🔒  Your story is private and encrypted', '📖  Download your book as PDF anytime', '📦  Printed hardcover delivered to your door']
               : ['🔒  Tu historia es privada y cifrada', '📖  Descarga tu libro en PDF cuando quieras', '📦  Libro de tapa dura entregado en tu puerta']
             ).map(txt => (
-              <p key={txt} style={{ fontFamily: sans, fontSize: '15px', color: `${cream}80`, margin: 0 }}>{txt}</p>
+              <p key={txt} style={{ fontFamily: sans, fontSize: '18px', color: muted, margin: 0 }}>{txt}</p>
             ))}
           </div>
         </div>
       </section>
 
       {/* ── What you'll create ───────────────────────────────────────────── */}
-      <section id="how" style={{ background: ink, padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="how" style={{ background: cream, padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
               <div style={{ width: 64, height: 1, background: `${gold}4d` }} />
-              <span style={{ fontFamily: sans, fontSize: '10px', color: `${gold}99`,
+              <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                              letterSpacing: '0.3em', textTransform: 'uppercase' }}>
                 {t.section2Eye}
               </span>
               <div style={{ width: 64, height: 1, background: `${gold}4d` }} />
             </div>
-            <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.5rem)',
-                         fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '1rem' }}>
+            <h2 style={{ fontFamily: serif, fontSize: 'clamp(2.5rem,4vw,3rem)',
+                         fontWeight: 600, color: inkText, lineHeight: 1.2, marginBottom: '1rem' }}>
               {t.section2H[0]}<br />
               <span style={{ color: gold, fontStyle: 'italic' }}>{t.section2H[1]}</span>
             </h2>
-            <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}80`,
-                        maxWidth: 400, margin: '0 auto', lineHeight: 1.7 }}>
+            <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
+                        maxWidth: 400, margin: '0 auto', lineHeight: 1.8 }}>
               {t.section2Sub}
             </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '2rem' }}>
             {t.steps.map(s => (
-              <div key={s.num} style={{ border: `1px solid ${gold}26`, borderRadius: 16, padding: '2rem' }}>
-                <span style={{ fontFamily: serif, fontSize: '2.5rem', color: `${gold}33`, fontWeight: 600 }}>
+              <div key={s.num} style={{ border: `1px solid ${gold}30`, borderRadius: 16, padding: '2rem', background: subtle }}>
+                <span style={{ fontFamily: serif, fontSize: '2.5rem', color: gold, fontWeight: 600 }}>
                   {s.num}
                 </span>
-                <h3 style={{ fontFamily: serif, fontSize: '1.25rem', color: cream,
+                <h3 style={{ fontFamily: serif, fontSize: '1.25rem', color: inkText,
                              fontWeight: 600, margin: '1rem 0 0.75rem' }}>
                   {s.title}
                 </h3>
-                <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}80`, lineHeight: 1.7, margin: 0 }}>
+                <p style={{ fontFamily: sans, fontSize: '17px', color: muted, lineHeight: 1.8, margin: 0 }}>
                   {s.body}
                 </p>
               </div>
@@ -498,11 +508,11 @@ export default function HomePage() {
       </section>
 
       {/* ── Their Stories ────────────────────────────────────────────────── */}
-      <section style={{ background: '#0A0704', padding: '6rem 5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section style={{ background: cream, padding: '6rem 5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '3.5rem' }}>
             <div style={{ width: 32, height: 1, background: `${gold}4d` }} />
-            <span style={{ fontFamily: sans, fontSize: '10px', color: `${gold}80`,
+            <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                            letterSpacing: '0.3em', textTransform: 'uppercase' }}>
               {lang === 'en' ? 'Their Stories' : 'Sus Historias'}
             </span>
@@ -541,18 +551,18 @@ export default function HomePage() {
                 <div>
                   <div style={{ color: `${gold}40`, fontSize: '3rem', fontFamily: serif,
                                 lineHeight: 1, marginBottom: '0.5rem' }}>"</div>
-                  <p style={{ fontFamily: serif, fontSize: 'clamp(1.1rem,2vw,1.35rem)',
-                              color: cream, lineHeight: 1.5, marginBottom: '1rem' }}>
+                  <p style={{ fontFamily: serif, fontSize: 'clamp(1.25rem,2vw,1.6rem)',
+                              color: inkText, lineHeight: 1.5, marginBottom: '1rem' }}>
                     {card.quote[0]}<br />{card.quote[1]}<br />
                     <span style={{ color: gold, fontStyle: 'italic' }}>{card.quote[2]}</span>
                   </p>
-                  <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}66`,
-                              lineHeight: 1.7, margin: 0 }}>
+                  <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
+                              lineHeight: 1.8, margin: 0 }}>
                     {card.body}
                   </p>
                   <div style={{ marginTop: '1.25rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                     <div style={{ width: 24, height: 1, background: `${gold}66` }} />
-                    <p style={{ fontFamily: sans, fontSize: '10px', color: `${gold}66`,
+                    <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
                                 textTransform: 'uppercase', letterSpacing: '0.2em', margin: 0 }}>
                       {card.tag}
                     </p>
@@ -587,7 +597,7 @@ export default function HomePage() {
 
       {/* ── The Book ─────────────────────────────────────────────────────── */}
 
-      <section id="books" style={{ background: '#0A0704', padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="books" style={{ background: cream, padding: '8rem 5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex',
                       flexWrap: 'wrap', alignItems: 'center', gap: '4rem' }}>
           {/* Mockup */}
@@ -631,36 +641,36 @@ export default function HomePage() {
           <div style={{ flex: 1, minWidth: 280 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
               <div style={{ width: 32, height: 1, background: `${gold}4d` }} />
-              <span style={{ fontFamily: sans, fontSize: '10px', color: `${gold}99`,
+              <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                              letterSpacing: '0.3em', textTransform: 'uppercase' }}>
                 {t.bookEye}
               </span>
             </div>
-            <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,3.5vw,2.5rem)',
-                         fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '1rem' }}>
+            <h2 style={{ fontFamily: serif, fontSize: 'clamp(2.5rem,3.5vw,3rem)',
+                         fontWeight: 600, color: inkText, lineHeight: 1.2, marginBottom: '1rem' }}>
               {t.bookH[0]}<br />
               <span style={{ color: gold, fontStyle: 'italic' }}>{t.bookH[1]}</span>
             </h2>
-            <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}80`,
-                        lineHeight: 1.7, maxWidth: 400, marginBottom: '1.5rem' }}>
+            <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
+                        lineHeight: 1.8, maxWidth: 400, marginBottom: '1.5rem' }}>
               {t.bookSub}
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
               {t.specs.map(s => (
-                <div key={s.label} style={{ border: `1px solid ${gold}1a`, borderRadius: 12,
+                <div key={s.label} style={{ border: `1px solid ${gold}25`, borderRadius: 12,
                                             padding: '0.75rem 1rem' }}>
-                  <p style={{ fontFamily: sans, fontSize: '10px', color: `${gold}80`,
+                  <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
                                textTransform: 'uppercase', letterSpacing: '0.1em', margin: '0 0 0.25rem' }}>
                     {s.label}
                   </p>
-                  <p style={{ fontFamily: sans, fontSize: '14px', color: cream, margin: 0 }}>{s.value}</p>
+                  <p style={{ fontFamily: sans, fontSize: '17px', color: inkText, margin: 0 }}>{s.value}</p>
                 </div>
               ))}
             </div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', marginBottom: '1.5rem' }}>
               <span style={{ fontFamily: serif, fontSize: '3rem', color: gold, fontWeight: 600 }}>$79</span>
-              <span style={{ fontFamily: serif, fontSize: '1.5rem', color: `${gold}99`, marginBottom: '0.25rem' }}>.99</span>
-              <span style={{ fontFamily: sans, fontSize: '12px', color: `${cream}66`, marginBottom: '0.5rem', marginLeft: '0.5rem' }}>
+              <span style={{ fontFamily: serif, fontSize: '1.5rem', color: gold, marginBottom: '0.25rem' }}>.99</span>
+              <span style={{ fontFamily: sans, fontSize: '15px', color: muted, marginBottom: '0.5rem', marginLeft: '0.5rem' }}>
                 {lang === 'en' ? 'per printed copy' : 'por copia impresa'}
               </span>
             </div>
@@ -709,20 +719,20 @@ export default function HomePage() {
       </section>
 
       {/* ── App section ──────────────────────────────────────────────────── */}
-      <section id="app" style={{ background: '#080604', borderTop: `1px solid ${gold}1a`, padding: '5rem 2rem' }}>
+      <section id="app" style={{ background: cream, borderTop: `1px solid ${gold}1a`, padding: '5rem 2rem' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex',
                       flexWrap: 'wrap', alignItems: 'center', gap: '3.5rem' }}>
           <div style={{ flex: 1, minWidth: 280 }}>
-            <p style={{ fontFamily: sans, fontSize: '10px', color: `${gold}99`,
+            <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
                         textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '1rem' }}>
               {t.appEye}
             </p>
-            <h2 style={{ fontFamily: serif, fontSize: 'clamp(1.75rem,3vw,2.25rem)',
-                         color: cream, lineHeight: 1.3, marginBottom: '1.25rem' }}>
+            <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,3vw,2.75rem)',
+                         color: inkText, lineHeight: 1.3, marginBottom: '1.25rem' }}>
               {t.appH[0]}<br /><span style={{ color: gold, fontStyle: 'italic' }}>{t.appH[1]}</span>
             </h2>
-            <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}66`,
-                        lineHeight: 1.7, maxWidth: 400, marginBottom: '1.5rem' }}>
+            <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
+                        lineHeight: 1.8, maxWidth: 400, marginBottom: '1.5rem' }}>
               {lang === 'en'
                 ? 'Answer guided questions, review your chapters, and order your printed book — all from the MyLifeStory app.'
                 : 'Responde preguntas guiadas, revisa tus capítulos y pide tu libro impreso — todo desde la app MyLifeStory.'}
@@ -731,7 +741,7 @@ export default function HomePage() {
               {t.appFeatures.map(item => (
                 <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: gold, flexShrink: 0 }} />
-                  <span style={{ fontFamily: sans, fontSize: '14px', color: `${cream}80` }}>{item}</span>
+                  <span style={{ fontFamily: sans, fontSize: '17px', color: muted }}>{item}</span>
                 </li>
               ))}
             </ul>
@@ -743,28 +753,28 @@ export default function HomePage() {
       </section>
 
       {/* ── Our Story ────────────────────────────────────────────────────── */}
-      <section id="story" style={{ background: '#0A0704', padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="story" style={{ background: cream, padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
-            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+            <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                            letterSpacing: '0.3em', textTransform: 'uppercase' }}>
               {t.storyEye}
             </span>
           </div>
-          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
-                       fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '1rem' }}>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2.5rem,4vw,3.2rem)',
+                       fontWeight: 600, color: inkText, lineHeight: 1.2, marginBottom: '1rem' }}>
             {t.storyH[0]}<br />
             <span style={{ color: gold, fontStyle: 'italic' }}>{t.storyH[1]}</span>
           </h2>
-          <p style={{ fontFamily: sans, fontSize: '16px', color: `${cream}80`,
-                      lineHeight: 1.7, marginBottom: '3rem' }}>
+          <p style={{ fontFamily: sans, fontSize: '19px', color: muted,
+                      lineHeight: 1.8, marginBottom: '3rem' }}>
             {t.storySub}
           </p>
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
             {t.storyBody.map((para, i) => (
-              <p key={i} style={{ fontFamily: sans, fontSize: '16px', color: `${cream}99`,
+              <p key={i} style={{ fontFamily: sans, fontSize: '19px', color: `${inkText}d9`,
                                   lineHeight: 1.8 }}>
                 {para}
               </p>
@@ -781,26 +791,26 @@ export default function HomePage() {
                                     background: `linear-gradient(135deg, ${gold}cc, #8a6830, ${gold}cc, #6b5025)`,
                                     borderRadius: '6px',
                                     boxShadow: '0 12px 48px rgba(0,0,0,0.6), 0 2px 8px rgba(0,0,0,0.4)' }}>
-                <div style={{ background: '#110e09', borderRadius: '3px', padding: '2rem 2rem 1.5rem', height: '100%' }}>
-                  <div style={{ border: `1px solid ${gold}30`, borderRadius: '2px', padding: '1.75rem 1.75rem 1.25rem', height: '100%',
+                <div style={{ background: '#F5F0E8', borderRadius: '3px', padding: '2rem 2rem 1.5rem', height: '100%' }}>
+                  <div style={{ border: `1px solid ${gold}40`, borderRadius: '2px', padding: '1.75rem 1.75rem 1.25rem', height: '100%',
                                 display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
                       <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                        <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
-                        <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                        <span style={{ color: gold, fontSize: '10px' }}>✦</span>
+                        <span style={{ color: gold, fontSize: '10px' }}>✦</span>
                       </div>
-                      <p style={{ fontFamily: serif, fontSize: 'clamp(1rem,2vw,1.2rem)', fontStyle: 'italic',
-                                  color: cream, lineHeight: 1.7, textAlign: 'center', marginBottom: '1.25rem' }}>
+                      <p style={{ fontFamily: serif, fontSize: 'clamp(1.25rem,2vw,1.6rem)', fontStyle: 'italic',
+                                  color: inkText, lineHeight: 1.75, textAlign: 'center', marginBottom: '1.25rem' }}>
                         {quote}
                       </p>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
-                      <p style={{ fontFamily: sans, fontSize: '11px', color: `${gold}80`,
+                      <span style={{ color: gold, fontSize: '10px' }}>✦</span>
+                      <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
                                   letterSpacing: '0.12em', textTransform: 'uppercase', textAlign: 'center' }}>
                         {author}
                       </p>
-                      <span style={{ color: `${gold}60`, fontSize: '10px' }}>✦</span>
+                      <span style={{ color: gold, fontSize: '10px' }}>✦</span>
                     </div>
                   </div>
                 </div>
@@ -809,8 +819,8 @@ export default function HomePage() {
           </div>
 
           <div style={{ display: 'flex', gap: '3rem', flexWrap: 'wrap', marginTop: '3rem',
-                        padding: '2rem', border: `1px solid ${gold}1a`, borderRadius: '1rem',
-                        background: `${gold}08` }}>
+                        padding: '2rem', border: `1px solid ${gold}25`, borderRadius: '1rem',
+                        background: subtle }}>
             {[
               { icon: '⚡', role: lang === 'en' ? 'The Builder' : 'El Constructor', detail: lang === 'en' ? 'Zero code experience, built with AI' : 'Sin código, construido con IA' },
               { icon: '✦', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision, a lifetime of stories' : '8 años de visión, toda una vida de historias' },
@@ -822,9 +832,9 @@ export default function HomePage() {
                               fontSize: '1.2rem', marginBottom: '0.75rem' }}>
                   {p.icon}
                 </div>
-                <p style={{ fontFamily: sans, fontSize: '12px', color: gold, textTransform: 'uppercase',
+                <p style={{ fontFamily: sans, fontSize: '14px', color: gold, textTransform: 'uppercase',
                             letterSpacing: '0.1em', marginBottom: '0.25rem' }}>{p.role}</p>
-                <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}60` }}>{p.detail}</p>
+                <p style={{ fontFamily: sans, fontSize: '16px', color: muted }}>{p.detail}</p>
               </div>
             ))}
           </div>
@@ -832,33 +842,33 @@ export default function HomePage() {
       </section>
 
       {/* ── VS Competitors ───────────────────────────────────────────────── */}
-      <section id="vs" style={{ background: '#0A0704', padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="vs" style={{ background: cream, padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
-            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+            <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                            letterSpacing: '0.3em', textTransform: 'uppercase' }}>
               {t.vsEye}
             </span>
           </div>
-          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
-                       fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '0.75rem' }}>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2.5rem,4vw,3.2rem)',
+                       fontWeight: 600, color: inkText, lineHeight: 1.2, marginBottom: '0.75rem' }}>
             {t.vsH[0]}<br />
             <span style={{ color: gold, fontStyle: 'italic' }}>{t.vsH[1]}</span>
           </h2>
-          <p style={{ fontFamily: sans, fontSize: '16px', color: `${cream}80`,
-                      lineHeight: 1.7, marginBottom: '3rem' }}>
+          <p style={{ fontFamily: sans, fontSize: '19px', color: muted,
+                      lineHeight: 1.8, marginBottom: '3rem' }}>
             {t.vsSub}
           </p>
 
           {/* Table */}
-          <div style={{ overflowX: 'auto', borderRadius: '16px', border: `1px solid ${gold}25`,
-                        boxShadow: '0 8px 40px rgba(0,0,0,0.4)' }}>
+          <div style={{ overflowX: 'auto', borderRadius: '16px', border: `1px solid ${gold}30`,
+                        boxShadow: '0 4px 24px rgba(28,24,20,0.08)' }}>
             <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: sans, minWidth: 520 }}>
               <thead>
-                <tr style={{ background: '#0d0a06' }}>
-                  <th style={{ textAlign: 'left', padding: '1.1rem 1.25rem', fontSize: '11px',
-                               color: `${cream}40`, fontWeight: 500, letterSpacing: '0.1em',
+                <tr style={{ background: subtle }}>
+                  <th style={{ textAlign: 'left', padding: '1.1rem 1.25rem', fontSize: '13px',
+                               color: `${inkText}60`, fontWeight: 500, letterSpacing: '0.1em',
                                textTransform: 'uppercase', borderBottom: `1px solid ${gold}20`,
                                width: '38%' }}>
                     {lang === 'en' ? 'Feature' : 'Característica'}
@@ -873,7 +883,7 @@ export default function HomePage() {
                       textAlign: 'center', padding: '1.1rem 0.75rem',
                       fontSize: col.highlight ? '13px' : '12px',
                       fontWeight: col.highlight ? 700 : 500,
-                      color: col.highlight ? gold : `${cream}50`,
+                      color: col.highlight ? gold : `${inkText}50`,
                       borderBottom: `1px solid ${gold}20`,
                       background: col.highlight ? `rgba(184,146,74,0.12)` : 'transparent',
                       borderLeft: col.highlight ? `2px solid ${gold}60` : 'none',
@@ -896,11 +906,11 @@ export default function HomePage() {
               <tbody>
                 {t.vsRows.map((row, i) => (
                   <tr key={i} style={{
-                    borderBottom: `1px solid ${gold}0f`,
-                    background: i % 2 === 0 ? 'rgba(255,255,255,0.01)' : 'transparent',
+                    borderBottom: `1px solid ${gold}15`,
+                    background: i % 2 === 0 ? 'rgba(184,146,74,0.04)' : 'transparent',
                   }}>
-                    <td style={{ padding: '1rem 1.25rem', fontSize: '14px',
-                                 color: `${cream}cc`, fontWeight: 400, lineHeight: 1.4 }}>
+                    <td style={{ padding: '1rem 1.25rem', fontSize: '17px',
+                                 color: inkText, fontWeight: 400, lineHeight: 1.4 }}>
                       {row.feature}
                     </td>
                     {[
@@ -924,7 +934,7 @@ export default function HomePage() {
                           : <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
                                            width: 26, height: 26, borderRadius: '50%',
                                            background: 'transparent',
-                                           color: `${cream}20`, fontSize: '13px' }}>✗</span>
+                                           color: muted, fontSize: '13px' }}>✗</span>
                         }
                       </td>
                     ))}
@@ -933,9 +943,9 @@ export default function HomePage() {
               </tbody>
               {/* Score row */}
               <tfoot>
-                <tr style={{ background: '#0d0a06', borderTop: `1px solid ${gold}25` }}>
-                  <td style={{ padding: '1rem 1.25rem', fontSize: '12px',
-                               color: `${cream}40`, fontWeight: 600, letterSpacing: '0.05em',
+                <tr style={{ background: subtle, borderTop: `1px solid ${gold}25` }}>
+                  <td style={{ padding: '1rem 1.25rem', fontSize: '17px',
+                               color: `${inkText}60`, fontWeight: 600, letterSpacing: '0.05em',
                                textTransform: 'uppercase' }}>
                     {lang === 'en' ? 'Total' : 'Total'}
                   </td>
@@ -953,7 +963,7 @@ export default function HomePage() {
                       borderBottom: cell.highlight ? `2px solid ${gold}60` : 'none',
                     }}>
                       <span style={{ fontFamily: serif, fontSize: cell.highlight ? '1.4rem' : '1.1rem',
-                                     fontWeight: 700, color: cell.highlight ? gold : `${cream}30` }}>
+                                     fontWeight: 700, color: cell.highlight ? gold : `${inkText}40` }}>
                         {cell.count}<span style={{ fontSize: '0.7em', opacity: 0.6 }}>/{t.vsRows.length}</span>
                       </span>
                     </td>
@@ -962,7 +972,7 @@ export default function HomePage() {
               </tfoot>
             </table>
           </div>
-          <p style={{ fontFamily: sans, fontSize: '11px', color: `${cream}30`,
+          <p style={{ fontFamily: sans, fontSize: '13px', color: muted,
                       marginTop: '1rem', textAlign: 'right', letterSpacing: '0.03em' }}>
             {lang === 'en'
               ? 'Based on publicly available information. Last reviewed May 2025.'
@@ -972,51 +982,51 @@ export default function HomePage() {
       </section>
 
       {/* ── Pricing ──────────────────────────────────────────────────────── */}
-      <section id="pricing" style={{ background: '#07050302', padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="pricing" style={{ background: cream, padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 800, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
-            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+            <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                            letterSpacing: '0.3em', textTransform: 'uppercase' }}>
               {t.pricingEye}
             </span>
           </div>
-          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
-                       fontWeight: 600, color: cream, lineHeight: 1.2, marginBottom: '0.75rem' }}>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2.5rem,4vw,3.2rem)',
+                       fontWeight: 600, color: inkText, lineHeight: 1.2, marginBottom: '0.75rem' }}>
             {t.pricingH[0]}<br />
             {t.pricingH[1] && <span style={{ color: gold, fontStyle: 'italic' }}>{t.pricingH[1]}</span>}
           </h2>
-          <p style={{ fontFamily: sans, fontSize: '16px', color: `${cream}80`,
-                      lineHeight: 1.7, marginBottom: '3rem' }}>
+          <p style={{ fontFamily: sans, fontSize: '19px', color: muted,
+                      lineHeight: 1.8, marginBottom: '3rem' }}>
             {t.pricingSub}
           </p>
 
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
 
             {/* Free tier */}
-            <div style={{ flex: '1 1 280px', border: `1px solid ${gold}20`, borderRadius: '16px',
-                          padding: '2rem', background: `${gold}05` }}>
-              <p style={{ fontFamily: sans, fontSize: '11px', color: `${gold}80`,
+            <div style={{ flex: '1 1 280px', border: `1px solid ${gold}25`, borderRadius: '16px',
+                          padding: '2rem', background: subtle }}>
+              <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
                           letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
                 {t.pricingFree}
               </p>
-              <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: cream,
+              <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: inkText,
                           lineHeight: 1, marginBottom: '0.25rem' }}>$0</p>
-              <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}50`,
+              <p style={{ fontFamily: sans, fontSize: '16px', color: muted,
                           marginBottom: '1.75rem' }}>{t.pricingFreeSub}</p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
                            flexDirection: 'column', gap: '0.75rem' }}>
                 {t.pricingFreeFeatures.map(f => (
                   <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                     <span style={{ color: `${gold}60`, marginTop: 2, flexShrink: 0 }}>✦</span>
-                    <span style={{ fontFamily: sans, fontSize: '14px', color: `${cream}70` }}>{f}</span>
+                    <span style={{ fontFamily: sans, fontSize: '17px', color: muted }}>{f}</span>
                   </li>
                 ))}
               </ul>
               <a href={appSignup}
                  style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
                           border: `1px solid ${gold}40`, borderRadius: '10px', fontFamily: sans,
-                          fontSize: '14px', fontWeight: 600, color: gold, textDecoration: 'none',
+                          fontSize: '17px', fontWeight: 600, color: gold, textDecoration: 'none',
                           transition: 'all 0.2s' }}>
                 {t.pricingCta}
               </a>
@@ -1033,18 +1043,18 @@ export default function HomePage() {
                             padding: '5px 14px', borderBottomLeftRadius: '10px' }}>
                 {lang === 'en' ? 'Best Value' : 'Mejor Valor'}
               </div>
-              <p style={{ fontFamily: sans, fontSize: '11px', color: gold,
+              <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
                           letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
                 {t.pricingPro}
               </p>
               <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', marginBottom: '0.1rem' }}>
-                <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: cream, lineHeight: 1 }}>
+                <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: inkText, lineHeight: 1 }}>
                   $9.99
                 </p>
-                <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}60`,
+                <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
                             marginBottom: '0.4rem' }}>{t.pricingMonth}</p>
               </div>
-              <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}50`, marginBottom: '0.5rem' }}>
+              <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '0.5rem' }}>
                 {t.pricingOr}{' '}
                 <strong style={{ color: gold }}>$99.99{t.pricingYear}</strong>
                 {' '}
@@ -1054,21 +1064,21 @@ export default function HomePage() {
                   {t.pricingSave}
                 </span>
               </p>
-              <p style={{ fontFamily: sans, fontSize: '13px', color: `${cream}50`,
+              <p style={{ fontFamily: sans, fontSize: '16px', color: muted,
                           marginBottom: '1.75rem' }}>{t.pricingProSub}</p>
               <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
                            flexDirection: 'column', gap: '0.75rem' }}>
                 {t.pricingProFeatures.map(f => (
                   <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
                     <span style={{ color: gold, marginTop: 2, flexShrink: 0 }}>✦</span>
-                    <span style={{ fontFamily: sans, fontSize: '14px', color: `${cream}90` }}>{f}</span>
+                    <span style={{ fontFamily: sans, fontSize: '17px', color: inkText }}>{f}</span>
                   </li>
                 ))}
               </ul>
               <a href={appSignup}
                  style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
                           background: gold, borderRadius: '10px', fontFamily: sans,
-                          fontSize: '14px', fontWeight: 700, color: ink, textDecoration: 'none' }}>
+                          fontSize: '17px', fontWeight: 700, color: ink, textDecoration: 'none' }}>
                 {t.pricingProCta}
               </a>
             </div>
@@ -1078,26 +1088,26 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section id="faq" style={{ background: ink, padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
+      <section id="faq" style={{ background: cream, padding: '8rem 2.5rem', borderTop: `1px solid ${gold}1a` }}>
         <div style={{ maxWidth: 720, margin: '0 auto' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
             <div style={{ width: 40, height: 1, background: `${gold}4d` }} />
-            <span style={{ fontFamily: sans, fontSize: '11px', color: `${gold}99`,
+            <span style={{ fontFamily: sans, fontSize: '13px', color: gold,
                            letterSpacing: '0.3em', textTransform: 'uppercase' }}>
               {t.faqEye}
             </span>
           </div>
-          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem,4vw,2.8rem)',
-                       fontWeight: 600, color: cream, marginBottom: '3rem' }}>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2.5rem,4vw,3.2rem)',
+                       fontWeight: 600, color: inkText, marginBottom: '3rem' }}>
             {t.faqH}
           </h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
             {t.faqs.map(({ q, a }, i) => (
-              <div key={i} style={{ borderBottom: `1px solid ${gold}1a`, padding: '2rem 0' }}>
-                <p style={{ fontFamily: serif, fontSize: '1.2rem', fontWeight: 600,
-                            color: cream, marginBottom: '0.75rem' }}>{q}</p>
-                <p style={{ fontFamily: sans, fontSize: '15px', color: `${cream}80`,
-                            lineHeight: 1.7 }}>{a}</p>
+              <div key={i} style={{ borderBottom: `1px solid ${gold}20`, padding: '2rem 0' }}>
+                <p style={{ fontFamily: serif, fontSize: '1.4rem', fontWeight: 600,
+                            color: inkText, marginBottom: '0.75rem' }}>{q}</p>
+                <p style={{ fontFamily: sans, fontSize: '18px', color: muted,
+                            lineHeight: 1.8 }}>{a}</p>
               </div>
             ))}
           </div>
@@ -1105,18 +1115,18 @@ export default function HomePage() {
       </section>
 
       {/* ── App Store badges ─────────────────────────────────────────────── */}
-      <section style={{ background: '#080604', borderTop: `1px solid ${gold}1a`,
+      <section style={{ background: subtle, borderTop: `1px solid ${gold}1a`,
                         padding: '4rem 2.5rem', textAlign: 'center' }}>
         <div style={{ maxWidth: 480, margin: '0 auto' }}>
-          <p style={{ fontFamily: sans, fontSize: '12px', color: `${gold}99`,
+          <p style={{ fontFamily: sans, fontSize: '14px', color: gold,
                       textTransform: 'uppercase', letterSpacing: '0.3em', marginBottom: '0.75rem' }}>
             {t.appSoon}
           </p>
-          <h3 style={{ fontFamily: serif, fontSize: '2rem', color: cream, marginBottom: '0.5rem' }}>
+          <h3 style={{ fontFamily: serif, fontSize: '2rem', color: inkText, marginBottom: '0.5rem' }}>
             {t.appTitle}
           </h3>
-          <p style={{ fontFamily: sans, fontSize: '15px', color: `${cream}80`,
-                      marginBottom: '2rem', lineHeight: 1.7 }}>{t.appSub}</p>
+          <p style={{ fontFamily: sans, fontSize: '18px', color: muted,
+                      marginBottom: '2rem', lineHeight: 1.8 }}>{t.appSub}</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
             {[{ path: 'M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z', label: 'App Store' },
              { path: 'M3.18 23.76c.3.18.65.22.99.1l12.45-7.19-2.77-2.77-10.67 9.86zm-1.9-20.1C1.1 3.9 1 4.18 1 4.5v15c0 .32.1.6.28.84l.09.08 8.4-8.4v-.2L1.37 3.57l-.09.09zm18.42 8.89l-2.38-1.38-3.06 3.06 3.06 3.05 2.4-1.39c.68-.4.68-1.04-.02-1.34zM4.17.24L16.62 7.43l-2.77 2.77L3.18.34C3.52.22 3.87.06 4.17.24z', label: 'Google Play' }
@@ -1125,16 +1135,16 @@ export default function HomePage() {
                    style={{ display: 'flex', alignItems: 'center', gap: '0.75rem',
                             padding: '0.875rem 1.5rem', borderRadius: 12, width: 192,
                             justifyContent: 'center', opacity: 0.5, cursor: 'not-allowed',
-                            border: `1px solid ${cream}1a`, background: `${cream}08` }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill={`${cream}99`}>
+                            border: `1px solid ${inkText}15`, background: `${inkText}05` }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill={`${inkText}60`}>
                   <path d={btn.path} />
                 </svg>
                 <div style={{ textAlign: 'left' }}>
-                  <p style={{ fontFamily: sans, fontSize: '8px', color: `${cream}66`,
+                  <p style={{ fontFamily: sans, fontSize: '11px', color: muted,
                                textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 2 }}>
                     Próximamente
                   </p>
-                  <p style={{ fontFamily: sans, fontSize: '14px', color: `${cream}99`,
+                  <p style={{ fontFamily: sans, fontSize: '16px', color: inkText,
                                fontWeight: 600 }}>{btn.label}</p>
                 </div>
               </div>
@@ -1144,13 +1154,13 @@ export default function HomePage() {
       </section>
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
-      <footer style={{ background: '#050302', borderTop: `1px solid ${gold}14`, padding: '2.5rem' }}>
+      <footer style={{ background: subtle, borderTop: `1px solid ${gold}20`, padding: '2.5rem' }}>
         <div style={{ maxWidth: 960, margin: '0 auto' }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center',
                         justifyContent: 'space-between', gap: '1.5rem', marginBottom: '1.5rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <BookBranchIcon size={16} />
-              <span style={{ fontFamily: sans, fontSize: '12px', color: `${cream}4d`,
+              <span style={{ fontFamily: sans, fontSize: '14px', color: `${inkText}70`,
                              fontWeight: 600, letterSpacing: '0.05em' }}>
                 MyLifeStory™
               </span>
@@ -1163,22 +1173,22 @@ export default function HomePage() {
                 { label: 'Contact',  href: 'mailto:hello@mylegacystoryapp.com' },
               ].map(l => (
                 <a key={l.label} href={l.href}
-                   style={{ fontFamily: sans, fontSize: '12px', color: `${cream}4d`,
+                   style={{ fontFamily: sans, fontSize: '14px', color: `${inkText}60`,
                             textDecoration: 'none' }}>
                   {l.label}
                 </a>
               ))}
             </div>
           </div>
-          <div style={{ borderTop: `1px solid ${cream}0d`, paddingTop: '1.5rem',
+          <div style={{ borderTop: `1px solid ${inkText}10`, paddingTop: '1.5rem',
                         textAlign: 'center', display: 'flex', flexDirection: 'column', gap: '0.375rem' }}>
-            <p style={{ fontFamily: sans, fontSize: '10px', color: `${cream}33`, lineHeight: 1.6 }}>
+            <p style={{ fontFamily: sans, fontSize: '12px', color: `${inkText}40`, lineHeight: 1.6 }}>
               {t.legalLine1(new Date().getFullYear())}
             </p>
-            <p style={{ fontFamily: sans, fontSize: '10px', color: `${cream}26`, lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
+            <p style={{ fontFamily: sans, fontSize: '12px', color: `${inkText}30`, lineHeight: 1.6, maxWidth: 640, margin: '0 auto' }}>
               {t.legalLine2}
             </p>
-            <p style={{ fontFamily: sans, fontSize: '10px', color: `${cream}1f`, lineHeight: 1.6, marginTop: '0.25rem' }}>
+            <p style={{ fontFamily: sans, fontSize: '12px', color: `${inkText}25`, lineHeight: 1.6, marginTop: '0.25rem' }}>
               {t.photoCred}{' '}
               {[
                 { name: 'Yan Krukau',       href: 'https://www.pexels.com/@yankrukau' },
