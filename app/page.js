@@ -362,9 +362,9 @@ export default function HomePage() {
                       justifyContent: 'center', padding: '8rem 5rem 4rem',
                       position: 'relative', overflow: 'hidden', minHeight: '85vh' }}>
           <div style={{ position: 'absolute', inset: 0,
-                        backgroundImage: `url('https://images.pexels.com/photos/8837491/pexels-photo-8837491.jpeg?auto=compress&cs=tinysrgb&w=1400')`,
+                        backgroundImage: `url('https://images.pexels.com/photos/7005687/pexels-photo-7005687.jpeg?auto=compress&cs=tinysrgb&w=1400')`,
                         backgroundSize: 'cover', backgroundPosition: 'center top' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(15,12,8,0.72) 0%, rgba(15,12,8,0.45) 50%, rgba(15,12,8,0.08) 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(15,12,8,0.60) 0%, rgba(15,12,8,0.25) 55%, rgba(15,12,8,0.0) 100%)' }} />
 
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
             <div style={{ width: 48, height: 1, background: gold }} />
