@@ -364,7 +364,7 @@ export default function HomePage() {
           <div style={{ position: 'absolute', inset: 0,
                         backgroundImage: `url('https://images.pexels.com/photos/8837491/pexels-photo-8837491.jpeg?auto=compress&cs=tinysrgb&w=1400')`,
                         backgroundSize: 'cover', backgroundPosition: 'center top' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,12,8,0.92)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(15,12,8,0.72) 0%, rgba(15,12,8,0.45) 50%, rgba(15,12,8,0.08) 100%)' }} />
 
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2.5rem' }}>
             <div style={{ width: 48, height: 1, background: gold }} />
