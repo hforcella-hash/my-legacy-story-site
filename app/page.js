@@ -579,7 +579,7 @@ export default function HomePage() {
         <img src="https://images.pexels.com/photos/32768955/pexels-photo-32768955.jpeg?auto=compress&cs=tinysrgb&w=1800"
              alt="Hands across generations"
              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,12,8,0.90)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,12,8,0.55)' }} />
         <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column',
                       alignItems: 'center', justifyContent: 'center', padding: '2rem', textAlign: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: '1.5rem' }}>
@@ -691,7 +691,7 @@ export default function HomePage() {
         <div style={{ position: 'absolute', inset: 0,
                       backgroundImage: `url('https://images.pexels.com/photos/31224331/pexels-photo-31224331.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
                       backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,12,8,0.95)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(15,12,8,0.55)' }} />
         <div style={{ maxWidth: 640, margin: '0 auto', position: 'relative' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center',
                         gap: '1rem', marginBottom: '2.5rem' }}>
