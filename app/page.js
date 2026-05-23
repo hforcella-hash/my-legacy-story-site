@@ -1191,10 +1191,10 @@ export default function HomePage() {
             <p style={{ fontFamily: sans, fontSize: '12px', color: `${inkText}25`, lineHeight: 1.6, marginTop: '0.25rem' }}>
               {t.photoCred}{' '}
               {[
-                { name: 'Yan Krukau',       href: 'https://www.pexels.com/@yankrukau' },
-                { name: 'KCN Photographie', href: 'https://www.pexels.com/@kcn-photographie' },
-                { name: 'Karola G',         href: 'https://www.pexels.com/@karolg' },
-                { name: 'Eyupcan Timur',    href: 'https://www.pexels.com/@eyupcan-timur' },
+                { name: 'Yan Krukau',       href: 'https://www.pexels.com/@yankrukov/' },
+                { name: 'KCN Photographie', href: 'https://www.pexels.com/@kcn-photographie-2152963411/' },
+                { name: 'Karola G',         href: 'https://www.pexels.com/@karola-g/' },
+                { name: 'Eyupcan Timur',    href: 'https://www.pexels.com/@eyupcan-timur-424989336/' },
               ].map((p, i, arr) => (
                 <span key={p.name}>
                   <a href={p.href} target="_blank" rel="noopener noreferrer"
