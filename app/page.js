@@ -69,36 +69,44 @@ const T = {
     storyAuthor:  '— The Builder, Co-founder',
     storyQuote2:  '"A ten year idea finally come true. A dream to write a life story for our loved ones as a legacy of our lives."',
     storyAuthor2: '— The Dreamer, Co-founder',
-    vsEye:        'Why MyLifeStory',
-    vsH:          ['Not just an app.', 'Not just a book.'],
-    vsSub:        'MyLifeStory is the only platform that combines a guided AI experience with a professional printed memoir — connected end to end.',
-    vsRows: [
-      { feature: 'AI writes your full narrative',        mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Connected app + book experience',      mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Guided voice interview',               mls: true,  sw: true,  rm: true,  ms: false },
-      { feature: 'Hardcover book included',              mls: true,  sw: true,  rm: true,  ms: true  },
-      { feature: 'In-app book preview before ordering',  mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Unlimited photos per chapter',         mls: true,  sw: true,  rm: false, ms: true  },
-      { feature: 'Native iOS mobile app',                mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Bilingual (EN + ES)',                  mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Edit content anytime',                 mls: true,  sw: true,  rm: false, ms: false },
-      { feature: 'No page-count surcharges',             mls: true,  sw: true,  rm: false, ms: true  },
+    vsEye:        'Comparison',
+    vsH:          ['More book,', 'better price.'],
+    vsSub:        'A real AI interview, a native Spanish experience, and the largest color book — with no one-year wall to get it.',
+    vsTable: [
+      { name: 'StoryWorth Basic',     price: '$59/yr',  book: '1 B&W book · up to 480 pp',        mls: false },
+      { name: 'Remento',              price: '$99/yr',  book: '1 hardcover · up to 200 pp',        mls: false },
+      { name: 'MyStories',            price: '$99',     book: '1 color book · up to 500 pp · 6×9', mls: false },
+      { name: 'StoryWorth Color',     price: '$109/yr', book: '1 color book · up to 300 pp',       mls: false },
+      { name: 'StoryWorth Unlimited', price: '$199/yr', book: '2 color books · up to 300 pp',      mls: false },
+      { name: 'My Legacy Story Pro',  price: '$99/yr',  book: '1 color book · up to 500 pp · 8½×11', mls: true },
     ],
+    vsColPlan: 'Plan', vsColPrice: 'Price', vsColBook: 'Book',
+    vsWinsTitle: 'Where we win',
+    vsWins: [
+      'A real AI interview — not a fixed questionnaire',
+      'A native Spanish experience',
+      'No one-year wall to get your book',
+      'Captures your values & beliefs, not only memories',
+    ],
+    vsFootnote: 'Competitor data verified Aug 2, 2026. Prices may change — always check the source.',
     pricingEye:   'Pricing',
     pricingH:     ['Simple, honest', 'pricing.'],
-    pricingSub:   'Start for free. Upgrade when you\'re ready to unlock your full story.',
-    pricingFree:  'Free',
-    pricingPro:   'Pro',
-    pricingFreeSub: 'Begin your story at no cost.',
-    pricingProSub:  'Everything you need to complete and print your book.',
-    pricingMonth:   '/month',
-    pricingYear:    '/year',
+    pricingSub:   'Start free. Upgrade when you\'re ready to unlock your full story.',
+    pricingSave:    '2 months free',
+    pricingPerMonth: '/mo',
+    pricingPerYear:  '/yr',
     pricingOr:      'or',
-    pricingSave:    'Save 2 months',
-    pricingFreeFeatures: ['First chapter free', 'AI interview session', 'Book preview included'],
-    pricingProFeatures:  ['All chapters unlocked', 'Unlimited AI interviews', 'Full book preview', 'Hardcover print & delivery', 'PDF export', 'Priority support'],
-    pricingCta:     'Start Free →',
-    pricingProCta:  'Get Pro →',
+    pricingPlans: [
+      { name: 'Free', price: '$0', sub: 'Write your own book, with limited AI.',
+        features: ['5 AI sessions/mo — first 3 months only', 'No printed book', 'No PDF download'],
+        cta: 'Start Free →', highlight: false },
+      { name: 'Pro', priceM: '$9.90', priceY: '$99', sub: 'AI interview in text and voice.',
+        features: ['20 AI sessions per month', '1 printed color book', 'PDF download'],
+        cta: 'Get Pro →', highlight: true, badge: 'Most popular' },
+      { name: 'Premium', priceM: '$19.90', priceY: '$199', sub: 'Everything, unlimited.',
+        features: ['Unlimited AI sessions', '2 printed color books', 'PDF download'],
+        cta: 'Get Premium →', highlight: false },
+    ],
     faqEye:       'FAQ',
     faqH:         'Common questions.',
     faqs: [
@@ -176,36 +184,44 @@ const T = {
     storyAuthor:  '— El Constructor, Co-fundador',
     storyQuote2:  '"Una idea de diez años finalmente hecha realidad. Un sueño de escribir la historia de vida de nuestros seres queridos como legado de sus vidas."',
     storyAuthor2: '— El Soñador, Co-fundador',
-    vsEye:        'Por qué MyLifeStory',
-    vsH:          ['No solo una app.', 'No solo un libro.'],
-    vsSub:        'MyLifeStory es la única plataforma que combina una experiencia de app guiada por IA con una memoria impresa profesional — conectadas de principio a fin.',
-    vsRows: [
-      { feature: 'IA redacta toda tu narrativa',           mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Experiencia app + libro conectada',      mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Entrevista guiada por voz',              mls: true,  sw: true,  rm: true,  ms: false },
-      { feature: 'Libro de tapa dura incluido',            mls: true,  sw: true,  rm: true,  ms: true  },
-      { feature: 'Vista previa antes de pedir el libro',   mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Fotos ilimitadas por capítulo',          mls: true,  sw: true,  rm: false, ms: true  },
-      { feature: 'App móvil nativa para iOS',              mls: true,  sw: false, rm: true,  ms: false },
-      { feature: 'Bilingüe (EN + ES)',                     mls: true,  sw: false, rm: false, ms: false },
-      { feature: 'Editar el contenido en cualquier momento', mls: true, sw: true, rm: false, ms: false },
-      { feature: 'Sin cargos por páginas extra',           mls: true,  sw: true,  rm: false, ms: true  },
+    vsEye:        'Comparativa',
+    vsH:          ['Más libro,', 'mejor precio.'],
+    vsSub:        'Entrevista con IA real, experiencia en español nativo y el libro a color más grande — sin muro de un año para conseguirlo.',
+    vsTable: [
+      { name: 'StoryWorth Basic',     price: '$59/año',  book: '1 libro B/N · hasta 480 pp',          mls: false },
+      { name: 'Remento',              price: '$99/año',  book: '1 tapa dura · hasta 200 pp',           mls: false },
+      { name: 'MyStories',            price: '$99',      book: '1 libro color · hasta 500 pp · 6×9',   mls: false },
+      { name: 'StoryWorth Color',     price: '$109/año', book: '1 libro color · hasta 300 pp',         mls: false },
+      { name: 'StoryWorth Unlimited', price: '$199/año', book: '2 libros color · hasta 300 pp',        mls: false },
+      { name: 'My Legacy Story Pro',  price: '$99/año',  book: '1 libro color · hasta 500 pp · 8½×11', mls: true },
     ],
+    vsColPlan: 'Plan', vsColPrice: 'Precio', vsColBook: 'Libro',
+    vsWinsTitle: 'Dónde ganamos',
+    vsWins: [
+      'Entrevista con IA real — no un cuestionario fijo',
+      'Experiencia en español nativo',
+      'Sin muro de un año para tu libro',
+      'Captura tus valores y creencias, no solo recuerdos',
+    ],
+    vsFootnote: 'Datos de la competencia verificados el 2 de agosto de 2026. Los precios pueden cambiar — revisa siempre la fuente.',
     pricingEye:   'Precios',
-    pricingH:     ['Simple y honesto.', ''],
-    pricingSub:   'Empieza gratis. Actualiza cuando estés listo para desbloquear tu historia completa.',
-    pricingFree:  'Gratis',
-    pricingPro:   'Pro',
-    pricingFreeSub: 'Empieza tu historia sin costo.',
-    pricingProSub:  'Todo lo que necesitas para completar e imprimir tu libro.',
-    pricingMonth:   '/mes',
-    pricingYear:    '/año',
+    pricingH:     ['Precios simples', 'y honestos.'],
+    pricingSub:   'Empieza gratis. Mejora cuando estés listo para desbloquear tu historia completa.',
+    pricingSave:    '2 meses gratis',
+    pricingPerMonth: '/mes',
+    pricingPerYear:  '/año',
     pricingOr:      'o',
-    pricingSave:    'Ahorra 2 meses',
-    pricingFreeFeatures: ['Primer capítulo gratis', 'Sesión de entrevista IA', 'Vista previa del libro'],
-    pricingProFeatures:  ['Todos los capítulos', 'Entrevistas IA ilimitadas', 'Vista previa completa', 'Impresión y envío del libro', 'Exportar PDF', 'Soporte prioritario'],
-    pricingCta:     'Comenzar Gratis →',
-    pricingProCta:  'Obtener Pro →',
+    pricingPlans: [
+      { name: 'Gratis', price: '$0', sub: 'Escribe tu propio libro, con IA limitada.',
+        features: ['5 sesiones de IA al mes — solo los primeros 3 meses', 'Sin libro impreso', 'Sin descarga de PDF'],
+        cta: 'Comenzar gratis →', highlight: false },
+      { name: 'Pro', priceM: '$9.90', priceY: '$99', sub: 'Entrevista con IA en texto y voz.',
+        features: ['20 sesiones de IA al mes', '1 libro impreso a color', 'Descarga del PDF'],
+        cta: 'Obtener Pro →', highlight: true, badge: 'Más popular' },
+      { name: 'Premium', priceM: '$19.90', priceY: '$199', sub: 'Todo, sin límite.',
+        features: ['Sesiones de IA ilimitadas', '2 libros impresos a color', 'Descarga del PDF'],
+        cta: 'Obtener Premium →', highlight: false },
+    ],
     faqEye:       'Preguntas',
     faqH:         'Preguntas frecuentes.',
     faqs: [
@@ -861,122 +877,73 @@ export default function HomePage() {
             {t.vsSub}
           </p>
 
-          {/* Table */}
+          {/* Comparison table — price + book specs */}
           <div style={{ overflowX: 'auto', borderRadius: '16px', border: `1px solid ${gold}30`,
                         boxShadow: '0 4px 24px rgba(28,24,20,0.08)' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: sans, minWidth: 520 }}>
+            <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: sans, minWidth: 480 }}>
               <thead>
                 <tr style={{ background: subtle }}>
-                  <th style={{ textAlign: 'left', padding: '1.1rem 1.25rem', fontSize: '13px',
-                               color: `${inkText}60`, fontWeight: 500, letterSpacing: '0.1em',
-                               textTransform: 'uppercase', borderBottom: `1px solid ${gold}20`,
-                               width: '38%' }}>
-                    {lang === 'en' ? 'Feature' : 'Característica'}
-                  </th>
-                  {[
-                    { label: 'MyLifeStory', highlight: true },
-                    { label: 'Storyworth',  highlight: false },
-                    { label: 'Remento',     highlight: false },
-                    { label: 'MemoryGram',  highlight: false },
-                  ].map(col => (
-                    <th key={col.label} style={{
-                      textAlign: 'center', padding: '1.1rem 0.75rem',
-                      fontSize: col.highlight ? '13px' : '12px',
-                      fontWeight: col.highlight ? 700 : 500,
-                      color: col.highlight ? gold : `${inkText}50`,
-                      borderBottom: `1px solid ${gold}20`,
-                      background: col.highlight ? `rgba(184,146,74,0.12)` : 'transparent',
-                      borderLeft: col.highlight ? `2px solid ${gold}60` : 'none',
-                      borderRight: col.highlight ? `2px solid ${gold}60` : 'none',
-                      position: 'relative',
-                    }}>
-                      {col.highlight && (
-                        <div style={{ fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em',
-                                      color: '#0d0a06', background: gold, borderRadius: '4px',
-                                      padding: '2px 6px', display: 'inline-block',
-                                      marginBottom: '4px', textTransform: 'uppercase' }}>
-                          {lang === 'en' ? 'Best' : 'Mejor'}
-                        </div>
-                      )}
-                      <div>{col.label}</div>
+                  {[t.vsColPlan, t.vsColPrice, t.vsColBook].map((h, i) => (
+                    <th key={i} style={{ textAlign: 'left', padding: '1.1rem 1.25rem', fontSize: '13px',
+                                 color: `${inkText}60`, fontWeight: 500, letterSpacing: '0.1em',
+                                 textTransform: 'uppercase', borderBottom: `1px solid ${gold}20` }}>
+                      {h}
                     </th>
                   ))}
                 </tr>
               </thead>
               <tbody>
-                {t.vsRows.map((row, i) => (
+                {t.vsTable.map((row, i) => (
                   <tr key={i} style={{
                     borderBottom: `1px solid ${gold}15`,
-                    background: i % 2 === 0 ? 'rgba(184,146,74,0.04)' : 'transparent',
+                    background: row.mls ? 'rgba(184,146,74,0.12)' : (i % 2 === 0 ? 'rgba(184,146,74,0.04)' : 'transparent'),
                   }}>
-                    <td style={{ padding: '1rem 1.25rem', fontSize: '17px',
-                                 color: inkText, fontWeight: 400, lineHeight: 1.4 }}>
-                      {row.feature}
+                    <td style={{ padding: '1rem 1.25rem', fontSize: '17px', color: inkText,
+                                 fontWeight: row.mls ? 700 : 400, lineHeight: 1.4 }}>
+                      {row.name}
+                      {row.mls && (
+                        <span style={{ marginLeft: 8, fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em',
+                                       color: '#0d0a06', background: gold, borderRadius: '4px', padding: '2px 6px',
+                                       textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+                          {lang === 'en' ? 'Us' : 'Nosotros'}
+                        </span>
+                      )}
                     </td>
-                    {[
-                      { val: row.mls, highlight: true },
-                      { val: row.sw,  highlight: false },
-                      { val: row.rm,  highlight: false },
-                      { val: row.ms,  highlight: false },
-                    ].map((cell, j) => (
-                      <td key={j} style={{
-                        textAlign: 'center', padding: '1rem 0.75rem',
-                        background: cell.highlight ? `rgba(184,146,74,0.07)` : 'transparent',
-                        borderLeft:  cell.highlight ? `2px solid ${gold}40` : 'none',
-                        borderRight: cell.highlight ? `2px solid ${gold}40` : 'none',
-                      }}>
-                        {cell.val
-                          ? <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                                           width: 26, height: 26, borderRadius: '50%',
-                                           background: cell.highlight ? `${gold}22` : 'rgba(74,222,128,0.1)',
-                                           color: cell.highlight ? gold : '#4ade80',
-                                           fontSize: '13px', fontWeight: 700 }}>✓</span>
-                          : <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                                           width: 26, height: 26, borderRadius: '50%',
-                                           background: 'transparent',
-                                           color: muted, fontSize: '13px' }}>✗</span>
-                        }
-                      </td>
-                    ))}
+                    <td style={{ padding: '1rem 1.25rem', fontSize: '17px', whiteSpace: 'nowrap',
+                                 color: row.mls ? gold : inkText, fontWeight: row.mls ? 700 : 500 }}>
+                      {row.price}
+                    </td>
+                    <td style={{ padding: '1rem 1.25rem', fontSize: '15px',
+                                 color: row.mls ? inkText : muted, lineHeight: 1.4 }}>
+                      {row.book}
+                    </td>
                   </tr>
                 ))}
               </tbody>
-              {/* Score row */}
-              <tfoot>
-                <tr style={{ background: subtle, borderTop: `1px solid ${gold}25` }}>
-                  <td style={{ padding: '1rem 1.25rem', fontSize: '17px',
-                               color: `${inkText}60`, fontWeight: 600, letterSpacing: '0.05em',
-                               textTransform: 'uppercase' }}>
-                    {lang === 'en' ? 'Total' : 'Total'}
-                  </td>
-                  {[
-                    { count: t.vsRows.filter(r => r.mls).length, highlight: true },
-                    { count: t.vsRows.filter(r => r.sw).length,  highlight: false },
-                    { count: t.vsRows.filter(r => r.rm).length,  highlight: false },
-                    { count: t.vsRows.filter(r => r.ms).length,  highlight: false },
-                  ].map((cell, j) => (
-                    <td key={j} style={{
-                      textAlign: 'center', padding: '1rem 0.75rem',
-                      background: cell.highlight ? `rgba(184,146,74,0.12)` : 'transparent',
-                      borderLeft:  cell.highlight ? `2px solid ${gold}60` : 'none',
-                      borderRight: cell.highlight ? `2px solid ${gold}60` : 'none',
-                      borderBottom: cell.highlight ? `2px solid ${gold}60` : 'none',
-                    }}>
-                      <span style={{ fontFamily: serif, fontSize: cell.highlight ? '1.4rem' : '1.1rem',
-                                     fontWeight: 700, color: cell.highlight ? gold : `${inkText}40` }}>
-                        {cell.count}<span style={{ fontSize: '0.7em', opacity: 0.6 }}>/{t.vsRows.length}</span>
-                      </span>
-                    </td>
-                  ))}
-                </tr>
-              </tfoot>
             </table>
           </div>
+
+          {/* Where we win */}
+          <div style={{ marginTop: '2rem', background: subtle, border: `1px solid ${gold}25`,
+                        borderRadius: '16px', padding: '1.75rem 2rem' }}>
+            <p style={{ fontFamily: sans, fontSize: '13px', color: gold, letterSpacing: '0.2em',
+                        textTransform: 'uppercase', marginBottom: '1rem' }}>
+              {t.vsWinsTitle}
+            </p>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid',
+                         gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '0.85rem' }}>
+              {t.vsWins.map(w => (
+                <li key={w} style={{ display: 'flex', gap: '0.6rem', alignItems: 'flex-start' }}>
+                  <span style={{ color: gold, marginTop: 2, flexShrink: 0 }}>✦</span>
+                  <span style={{ fontFamily: sans, fontSize: '16px', color: inkText, lineHeight: 1.5 }}>{w}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <p style={{ fontFamily: sans, fontSize: '13px', color: muted,
                       marginTop: '1rem', textAlign: 'right', letterSpacing: '0.03em' }}>
-            {lang === 'en'
-              ? 'Based on publicly available information. Last reviewed May 2025.'
-              : 'Basado en información pública. Última revisión mayo 2025.'}
+            {t.vsFootnote}
           </p>
         </div>
       </section>
@@ -1002,87 +969,75 @@ export default function HomePage() {
           </p>
 
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-
-            {/* Free tier */}
-            <div style={{ flex: '1 1 280px', border: `1px solid ${gold}25`, borderRadius: '16px',
-                          padding: '2rem', background: subtle }}>
-              <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
-                          letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
-                {t.pricingFree}
-              </p>
-              <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: inkText,
-                          lineHeight: 1, marginBottom: '0.25rem' }}>$0</p>
-              <p style={{ fontFamily: sans, fontSize: '16px', color: muted,
-                          marginBottom: '1.75rem' }}>{t.pricingFreeSub}</p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
-                           flexDirection: 'column', gap: '0.75rem' }}>
-                {t.pricingFreeFeatures.map(f => (
-                  <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <span style={{ color: `${gold}60`, marginTop: 2, flexShrink: 0 }}>✦</span>
-                    <span style={{ fontFamily: sans, fontSize: '17px', color: muted }}>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href={appSignup}
-                 style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
-                          border: `1px solid ${gold}40`, borderRadius: '10px', fontFamily: sans,
-                          fontSize: '17px', fontWeight: 600, color: gold, textDecoration: 'none',
-                          transition: 'all 0.2s' }}>
-                {t.pricingCta}
-              </a>
-            </div>
-
-            {/* Pro tier */}
-            <div style={{ flex: '1 1 280px', border: `2px solid ${gold}`, borderRadius: '16px',
-                          padding: '2rem', background: `linear-gradient(135deg, rgba(184,146,74,0.12), rgba(184,146,74,0.04))`,
-                          position: 'relative', overflow: 'hidden' }}>
-              {/* Best value badge */}
-              <div style={{ position: 'absolute', top: 0, right: 0, background: gold,
-                            color: ink, fontFamily: sans, fontSize: '10px', fontWeight: 700,
-                            letterSpacing: '0.15em', textTransform: 'uppercase',
-                            padding: '5px 14px', borderBottomLeftRadius: '10px' }}>
-                {lang === 'en' ? 'Best Value' : 'Mejor Valor'}
-              </div>
-              <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
-                          letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
-                {t.pricingPro}
-              </p>
-              <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', marginBottom: '0.1rem' }}>
-                <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: inkText, lineHeight: 1 }}>
-                  $9.99
+            {t.pricingPlans.map(plan => (
+              <div key={plan.name} style={{
+                flex: '1 1 240px',
+                border: plan.highlight ? `2px solid ${gold}` : `1px solid ${gold}25`,
+                borderRadius: '16px', padding: '2rem',
+                background: plan.highlight
+                  ? `linear-gradient(135deg, rgba(184,146,74,0.12), rgba(184,146,74,0.04))`
+                  : subtle,
+                position: 'relative', overflow: 'hidden',
+              }}>
+                {plan.badge && (
+                  <div style={{ position: 'absolute', top: 0, right: 0, background: gold,
+                                color: ink, fontFamily: sans, fontSize: '10px', fontWeight: 700,
+                                letterSpacing: '0.15em', textTransform: 'uppercase',
+                                padding: '5px 14px', borderBottomLeftRadius: '10px' }}>
+                    {plan.badge}
+                  </div>
+                )}
+                <p style={{ fontFamily: sans, fontSize: '13px', color: gold,
+                            letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '1rem' }}>
+                  {plan.name}
                 </p>
-                <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
-                            marginBottom: '0.4rem' }}>{t.pricingMonth}</p>
+                {plan.price ? (
+                  <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: inkText,
+                              lineHeight: 1, marginBottom: '0.25rem' }}>{plan.price}</p>
+                ) : (
+                  <>
+                    <div style={{ display: 'flex', alignItems: 'flex-end', gap: '0.5rem', marginBottom: '0.1rem' }}>
+                      <p style={{ fontFamily: serif, fontSize: '3rem', fontWeight: 700, color: inkText, lineHeight: 1 }}>
+                        {plan.priceM}
+                      </p>
+                      <p style={{ fontFamily: sans, fontSize: '17px', color: muted, marginBottom: '0.4rem' }}>
+                        {t.pricingPerMonth}
+                      </p>
+                    </div>
+                    <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '0.5rem' }}>
+                      {t.pricingOr}{' '}
+                      <strong style={{ color: gold }}>{plan.priceY}{t.pricingPerYear}</strong>
+                      {' '}
+                      <span style={{ display: 'inline-block', background: `${gold}22`, color: gold,
+                                     fontSize: '10px', fontWeight: 700, padding: '2px 8px',
+                                     borderRadius: '4px', letterSpacing: '0.05em' }}>
+                        {t.pricingSave}
+                      </span>
+                    </p>
+                  </>
+                )}
+                <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '1.75rem' }}>
+                  {plan.sub}
+                </p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
+                             flexDirection: 'column', gap: '0.75rem' }}>
+                  {plan.features.map(f => (
+                    <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                      <span style={{ color: plan.highlight ? gold : `${gold}60`, marginTop: 2, flexShrink: 0 }}>✦</span>
+                      <span style={{ fontFamily: sans, fontSize: '17px', color: plan.highlight ? inkText : muted }}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href={appSignup}
+                   style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
+                            borderRadius: '10px', fontFamily: sans, fontSize: '17px', textDecoration: 'none',
+                            ...(plan.highlight
+                              ? { background: gold, color: ink, fontWeight: 700 }
+                              : { border: `1px solid ${gold}40`, color: gold, fontWeight: 600 }) }}>
+                  {plan.cta}
+                </a>
               </div>
-              <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '0.5rem' }}>
-                {t.pricingOr}{' '}
-                <strong style={{ color: gold }}>$99.99{t.pricingYear}</strong>
-                {' '}
-                <span style={{ display: 'inline-block', background: `${gold}22`, color: gold,
-                               fontSize: '10px', fontWeight: 700, padding: '2px 8px',
-                               borderRadius: '4px', letterSpacing: '0.05em' }}>
-                  {t.pricingSave}
-                </span>
-              </p>
-              <p style={{ fontFamily: sans, fontSize: '16px', color: muted,
-                          marginBottom: '1.75rem' }}>{t.pricingProSub}</p>
-              <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 2rem', display: 'flex',
-                           flexDirection: 'column', gap: '0.75rem' }}>
-                {t.pricingProFeatures.map(f => (
-                  <li key={f} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <span style={{ color: gold, marginTop: 2, flexShrink: 0 }}>✦</span>
-                    <span style={{ fontFamily: sans, fontSize: '17px', color: inkText }}>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href={appSignup}
-                 style={{ display: 'block', textAlign: 'center', padding: '0.9rem',
-                          background: gold, borderRadius: '10px', fontFamily: sans,
-                          fontSize: '17px', fontWeight: 700, color: ink, textDecoration: 'none' }}>
-                {t.pricingProCta}
-              </a>
-            </div>
-
+            ))}
           </div>
         </div>
       </section>
