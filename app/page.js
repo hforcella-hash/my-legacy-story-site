@@ -96,6 +96,11 @@ const T = {
     pricingPerMonth: '/mo',
     pricingPerYear:  '/yr',
     pricingOr:      'or',
+    navGift:      'Gift',
+    giftEye:      'A gift that lasts forever',
+    giftH:        'Give someone the gift of their story',
+    giftSub:      'Help a parent or grandparent turn a lifetime of memories into a beautiful hardcover book — guided, in their own words. One payment, one year, no account needed to buy.',
+    giftBtn:      'Give a gift →',
     pricingPlans: [
       { name: 'Free', price: '$0', sub: 'Write your own book, with limited AI.',
         features: ['5 AI sessions/mo — first 3 months only', 'No printed book', 'No PDF download'],
@@ -211,6 +216,11 @@ const T = {
     pricingPerMonth: '/mes',
     pricingPerYear:  '/año',
     pricingOr:      'o',
+    navGift:      'Regalar',
+    giftEye:      'Un regalo que dura para siempre',
+    giftH:        'Regálale a alguien la historia de su vida',
+    giftSub:      'Ayuda a tu papá, mamá o abuelos a convertir toda una vida de recuerdos en un hermoso libro de tapa dura — guiados, con sus propias palabras. Un solo pago, un año, y no necesitas cuenta para comprar.',
+    giftBtn:      'Hacer un regalo →',
     pricingPlans: [
       { name: 'Gratis', price: '$0', sub: 'Escribe tu propio libro, con IA limitada.',
         features: ['5 sesiones de IA al mes — solo los primeros 3 meses', 'Sin libro impreso', 'Sin descarga de PDF'],
@@ -252,6 +262,7 @@ export default function HomePage() {
   const t = T[lang]
   const appSignup = `${APP_URL}/signup`
   const appSignin = `${APP_URL}/signin`
+  const giftUrl   = `${APP_URL}/gift`
 
   const navLinks = [
     { label: t.navHow,     href: '#how' },
@@ -320,6 +331,15 @@ export default function HomePage() {
                              letterSpacing: '0.15em', color: lang === 'es' ? gold : `${inkText}50` }}>ES</span>
             </button>
 
+            {/* Gift — visible entry point to the app's public gift flow */}
+            <a href={giftUrl}
+               style={{ fontFamily: sans, fontSize: '13px', fontWeight: 600, color: gold,
+                        textDecoration: 'none', letterSpacing: '0.04em', display: 'flex',
+                        alignItems: 'center', gap: '5px', padding: '6px 12px', borderRadius: '9px',
+                        border: `1px solid ${gold}55` }}>
+              🎁 {t.navGift}
+            </a>
+
             {/* Sign in — hidden on mobile */}
             <a href={appSignin} className="desktop-signin"
                style={{ fontFamily: sans, fontSize: '13px', color: `${inkText}70`,
@@ -360,6 +380,13 @@ export default function HomePage() {
                 {item.label}
               </a>
             ))}
+            <a href={giftUrl} onClick={() => setMenuOpen(false)}
+               style={{ fontFamily: sans, fontSize: '19px', fontWeight: 600, color: gold,
+                        textDecoration: 'none', padding: '1rem 0',
+                        borderBottom: `1px solid ${gold}15`,
+                        letterSpacing: '0.02em', display: 'block' }}>
+              🎁 {t.navGift}
+            </a>
             <a href={appSignin} onClick={() => setMenuOpen(false)}
                style={{ fontFamily: sans, fontSize: '17px', color: gold,
                         textDecoration: 'none', padding: '1.25rem 0 0',
@@ -1039,6 +1066,34 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Gift ─────────────────────────────────────────────────────────── */}
+      <section id="gift" style={{ background: ink, padding: '7rem 2.5rem' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <div style={{ width: 36, height: 1, background: gold }} />
+            <span style={{ fontFamily: sans, fontSize: '10px', color: `${gold}cc`,
+                           letterSpacing: '0.3em', textTransform: 'uppercase' }}>
+              {t.giftEye}
+            </span>
+            <div style={{ width: 36, height: 1, background: gold }} />
+          </div>
+          <h2 style={{ fontFamily: serif, fontSize: 'clamp(2rem, 4vw, 3rem)', color: cream,
+                       fontWeight: 600, lineHeight: 1.1, margin: 0 }}>
+            {t.giftH}
+          </h2>
+          <p style={{ fontFamily: sans, fontSize: '17px', color: `${cream}b0`, lineHeight: 1.7,
+                      maxWidth: 560, margin: '1.5rem auto 2.5rem' }}>
+            {t.giftSub}
+          </p>
+          <a href={giftUrl}
+             style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
+                      padding: '1rem 2.25rem', borderRadius: '11px', background: gold, color: ink,
+                      fontFamily: sans, fontSize: '17px', fontWeight: 700, textDecoration: 'none' }}>
+            🎁 {t.giftBtn}
+          </a>
         </div>
       </section>
 
