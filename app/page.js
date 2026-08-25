@@ -35,7 +35,7 @@ const T = {
     bookH:        ['Hold your story', 'in your hands.'],
     bookSub:      'A museum-quality hardcover printed by our trusted partners — the same printers used by publishers worldwide. Your memories, bound to last a lifetime.',
     specs:        [{ label: 'Format', value: 'Hardcover · Linen' }, { label: 'Size', value: '8½ × 11 in' }, { label: 'Print', value: 'Premium Color' }, { label: 'Delivery', value: '5–10 business days' }],
-    btnStart:     "Start Writing — It's Free",
+    btnStart:     'Start Writing',
     finalQ:       ['Every family deserves to know', 'where they came from.'],
     finalSub:     'Your story is worth telling. Your family deserves to hear it.',
     btnFinal:     'Begin Your Legacy Story',
@@ -91,7 +91,7 @@ const T = {
     vsFootnote: 'Competitor data verified Aug 2, 2026. Prices may change — always check the source.',
     pricingEye:   'Pricing',
     pricingH:     ['Simple, honest', 'pricing.'],
-    pricingSub:   'Start free. Upgrade when you\'re ready to unlock your full story.',
+    pricingSub:   'Start for $3.99/mo. Upgrade when you\'re ready to unlock your full story.',
     pricingSave:    '2 months free',
     pricingPerMonth: '/mo',
     pricingPerYear:  '/yr',
@@ -102,9 +102,9 @@ const T = {
     giftSub:      'Help a parent or grandparent turn a lifetime of memories into a beautiful hardcover book — guided, in their own words. One payment, one year, no account needed to buy.',
     giftBtn:      'Give a gift →',
     pricingPlans: [
-      { name: 'Free', price: '$0', sub: 'Write your own book, with limited AI.',
-        features: ['5 AI sessions/mo — first 3 months only', 'No printed book', 'No PDF download'],
-        cta: 'Start Free →', highlight: false },
+      { name: 'Basic', priceM: '$3.99', sub: 'Start writing your story.',
+        features: ['5 AI sessions/mo — first 3 months', 'Guided interviews', 'No printed book or PDF'],
+        cta: 'Get Basic →', highlight: false },
       { name: 'Pro', priceM: '$9.90', priceY: '$99', sub: 'AI interview in text and voice.',
         features: ['20 AI sessions per month', '1 printed color book', 'PDF download'],
         cta: 'Get Pro →', highlight: true, badge: 'Most popular' },
@@ -155,7 +155,7 @@ const T = {
     bookH:        ['Sostén tu historia', 'en tus manos.'],
     bookSub:      'Un libro de tapa dura de calidad museística impreso por nuestros socios de confianza — las mismas imprentas que usan editores de todo el mundo. Tus memorias, encuadernadas para durar toda una vida.',
     specs:        [{ label: 'Formato', value: 'Tapa dura · Lino' }, { label: 'Tamaño', value: '22 × 28 cm' }, { label: 'Impresión', value: 'Color Premium' }, { label: 'Envío', value: '5–10 días hábiles' }],
-    btnStart:     'Comienza a Escribir — Es Gratis',
+    btnStart:     'Comienza a Escribir',
     finalQ:       ['Toda familia merece saber', 'de dónde viene.'],
     finalSub:     'Tu historia vale la pena contar. Tu familia merece escucharla.',
     btnFinal:     'Comienza Tu Historia de Legado',
@@ -211,7 +211,7 @@ const T = {
     vsFootnote: 'Datos de la competencia verificados el 2 de agosto de 2026. Los precios pueden cambiar — revisa siempre la fuente.',
     pricingEye:   'Precios',
     pricingH:     ['Precios simples', 'y honestos.'],
-    pricingSub:   'Empieza gratis. Mejora cuando estés listo para desbloquear tu historia completa.',
+    pricingSub:   'Empieza por $3.99/mes. Mejora cuando estés listo para desbloquear tu historia completa.',
     pricingSave:    '2 meses gratis',
     pricingPerMonth: '/mes',
     pricingPerYear:  '/año',
@@ -222,9 +222,9 @@ const T = {
     giftSub:      'Ayuda a tu papá, mamá o abuelos a convertir toda una vida de recuerdos en un hermoso libro de tapa dura — guiados, con sus propias palabras. Un solo pago, un año, y no necesitas cuenta para comprar.',
     giftBtn:      'Hacer un regalo →',
     pricingPlans: [
-      { name: 'Gratis', price: '$0', sub: 'Escribe tu propio libro, con IA limitada.',
-        features: ['5 sesiones de IA al mes — solo los primeros 3 meses', 'Sin libro impreso', 'Sin descarga de PDF'],
-        cta: 'Comenzar gratis →', highlight: false },
+      { name: 'Basic', priceM: '$3.99', sub: 'Empieza a escribir tu historia.',
+        features: ['5 sesiones de IA al mes — primeros 3 meses', 'Entrevistas guiadas', 'Sin libro impreso ni PDF'],
+        cta: 'Obtener Basic →', highlight: false },
       { name: 'Pro', priceM: '$9.90', priceY: '$99', sub: 'Entrevista con IA en texto y voz.',
         features: ['20 sesiones de IA al mes', '1 libro impreso a color', 'Descarga del PDF'],
         cta: 'Obtener Pro →', highlight: true, badge: 'Más popular' },
@@ -466,7 +466,7 @@ export default function HomePage() {
             {lang === 'en' ? 'Start your legacy today.' : 'Comienza tu legado hoy.'}
           </p>
           <p style={{ fontFamily: sans, fontSize: '18px', color: muted, marginBottom: '2.5rem' }}>
-            {lang === 'en' ? 'Free to start. Your story, forever preserved.' : 'Gratis para empezar. Tu historia, preservada para siempre.'}
+            {lang === 'en' ? 'Your story, forever preserved.' : 'Tu historia, preservada para siempre.'}
           </p>
 
           <a href={appSignup}
@@ -1031,16 +1031,18 @@ export default function HomePage() {
                         {t.pricingPerMonth}
                       </p>
                     </div>
-                    <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '0.5rem' }}>
-                      {t.pricingOr}{' '}
-                      <strong style={{ color: gold }}>{plan.priceY}{t.pricingPerYear}</strong>
-                      {' '}
-                      <span style={{ display: 'inline-block', background: `${gold}22`, color: gold,
-                                     fontSize: '10px', fontWeight: 700, padding: '2px 8px',
-                                     borderRadius: '4px', letterSpacing: '0.05em' }}>
-                        {t.pricingSave}
-                      </span>
-                    </p>
+                    {plan.priceY && (
+                      <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '0.5rem' }}>
+                        {t.pricingOr}{' '}
+                        <strong style={{ color: gold }}>{plan.priceY}{t.pricingPerYear}</strong>
+                        {' '}
+                        <span style={{ display: 'inline-block', background: `${gold}22`, color: gold,
+                                       fontSize: '10px', fontWeight: 700, padding: '2px 8px',
+                                       borderRadius: '4px', letterSpacing: '0.05em' }}>
+                          {t.pricingSave}
+                        </span>
+                      </p>
+                    )}
                   </>
                 )}
                 <p style={{ fontFamily: sans, fontSize: '16px', color: muted, marginBottom: '1.75rem' }}>
