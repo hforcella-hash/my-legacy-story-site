@@ -1,16 +1,16 @@
 export const metadata = {
-  title: 'Help & Support — MyLifeStory',
-  description: 'Get help with MyLifeStory. Find answers to common questions or contact our support team.',
+  title: 'Help & Support — MyLifeStory™',
+  description: 'Get help with MyLifeStory™. Find answers to common questions or contact our support team.',
 }
 
 const faqs = [
   {
-    q: 'How does MyLifeStory work?',
-    a: 'MyLifeStory guides you through your life story using an AI-powered interview. You speak or type your answers, and the app organizes them into beautifully written chapters. When you\'re ready, you can preview your book and order a professional hardcover.',
+    q: 'How does MyLifeStory™ work?',
+    a: 'MyLifeStory™ guides you through your life story using an AI-powered interview. You speak or type your answers, and the app organizes them into beautifully written chapters. When you\'re ready, you can preview your book and order a professional hardcover.',
   },
   {
     q: 'What languages is the app available in?',
-    a: 'MyLifeStory is available in English and Spanish. You can switch languages from the Profile section inside the app.',
+    a: 'MyLifeStory™ is available in English and Spanish. You can switch languages from the Profile section inside the app.',
   },
   {
     q: 'How do I order my printed book?',
@@ -57,7 +57,7 @@ export default function HelpPage() {
         justifyContent: 'space-between',
       }}>
         <a href="/" style={{ color: '#B8924A', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 600 }}>
-          ← MyLifeStory
+          ← MyLifeStory™
         </a>
         <a href="mailto:hello@mylegacystoryapp.com" style={{ color: '#B8924A', textDecoration: 'none', fontSize: '0.85rem' }}>
           hello@mylegacystoryapp.com
@@ -76,7 +76,7 @@ export default function HelpPage() {
           Help & Support
         </h1>
         <p style={{ color: '#B8924A', fontSize: '1.1rem', marginBottom: '3rem' }}>
-          Answers to common questions about MyLifeStory.
+          Answers to common questions about MyLifeStory™.
         </p>
 
         {/* FAQs */}

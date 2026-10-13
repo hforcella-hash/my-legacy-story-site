@@ -25,7 +25,7 @@ export const metadata = {
     title: 'MyLifeStory™',
     description: 'Your story, preserved forever. Leave your family more than memories.',
     url: 'https://mylegacystoryapp.com',
-    siteName: 'MyLifeStory',
+    siteName: 'MyLifeStory™',
     locale: 'en_US',
     type: 'website',
   },

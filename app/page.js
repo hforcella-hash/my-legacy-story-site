@@ -6,9 +6,9 @@ const APP_URL = process.env.NEXT_PUBLIC_APP_URL || 'https://my-legacy-story.verc
 
 const T = {
   en: {
-    comingSoon:  'Coming soon to App Store',
+    comingSoon:  'Download on App Store',
     signIn:      'Sign In',
-    eyebrow:     'MyLifeStory',
+    eyebrow:     'MyLifeStory™',
     headline:    ['The most', 'important book', "you'll ever write."],
     sub:         "Your children will ask about your life long after you're gone. Leave them more than memories — leave them your story, in your own words, bound in a hardcover book that lasts generations.",
     features:    [
@@ -28,7 +28,7 @@ const T = {
       { num: '03', title: 'Printed & Delivered',     body: 'Order your hardcover legacy book at any time. Premium color print, linen wrap cover, delivered to your door in 5–10 business days.' },
     ],
     portraitQ:    ['My father was a brilliant man.', 'But I never truly knew his story —', 'until it was too late to ask.'],
-    portraitBody: "MyLifeStory was built for men and women who have built something worth remembering — a career, a family, a set of values. People who understand that the most lasting gift they can give their children is not money. It's the truth of who they are.",
+    portraitBody: "MyLifeStory™ was built for men and women who have built something worth remembering — a career, a family, a set of values. People who understand that the most lasting gift they can give their children is not money. It's the truth of who they are.",
     portraitTag:  'For the generation that follows',
     dividerQ:     ['The stories we leave behind become', ' the stories they live by.'],
     bookEye:      'The Legacy Book',
@@ -39,9 +39,9 @@ const T = {
     finalQ:       ['Every family deserves to know', 'where they came from.'],
     finalSub:     'Your story is worth telling. Your family deserves to hear it.',
     btnFinal:     'Begin Your Legacy Story',
-    appSoon:      'Coming soon',
-    appTitle:     'The native app is on its way.',
-    appSub:       'In the meantime, write your story from any web browser. The iPhone and Android app is coming very soon.',
+    appSoon:      'Available now',
+    appTitle:     'Your legacy, always in your pocket.',
+    appSub:       'Download the MyLifeStory™ app for iPhone and write your story on the go. With native voice interviews, offline support, and seamless book ordering.',
     appFeatures:  ['AI-guided interview questions', 'Review and edit every chapter', 'Order your hardcover with one tap'],
     appH:         ['Your legacy,', 'always in your pocket.'],
     appEye:       'More than a book',
@@ -56,18 +56,18 @@ const T = {
     navPricing:   'Pricing',
     storyEye:     'Our Story',
     storyH:       ['Born from a handshake', 'in Atlanta.'],
-    storySub:     'MyLifeStory didn\'t start in a boardroom. It started in a convention hall, between two colleagues who share a passion — and a dream.',
+    storySub:     'MyLifeStory™ didn\'t start in a boardroom. It started in a convention hall, between two colleagues who share a passion — and a dream.',
     storyBody:    [
       'It was at an industry expo in Atlanta. Two colleagues who had spent years working together managing international markets found themselves at the same company booth, greeting visitors.',
-      'One of them was going on about AI — the things it could do, the doors it was opening. The other listened, then said something that changed everything: "I\'ve had a project in my head for over 8 years. I\'ve told many people about it. Everyone says \'wow, great idea\' — but nobody ever does anything."',
+      'One of them was going on about AI — the things it could do, the doors it was opening. The other listened, then said something that changed everything: "I\'ve had a project in my head for over 10 years. I\'ve told many people about it. Everyone says \'wow, great idea\' — but nobody ever does anything."',
       'The idea was simple and profound: a way for people to preserve their life story as a real, beautiful book. Something their children and grandchildren could hold in their hands long after they were gone.',
       '"If you help me find the right AI tools, I\'ll help you build it." They shook hands.',
-      'One of them had no computer of his own. No programming experience. Just a fascination with AI and a willingness to learn everything from scratch. The other had a lifetime of stories and a dream that had waited long enough — over 8 years.',
-      'That handshake became MyLifeStory.',
+      'One of them had no computer of his own. No programming experience. Just a fascination with AI and a willingness to learn everything from scratch. The other had a lifetime of stories and a dream that had waited long enough — over 10 years.',
+      'That handshake became MyLifeStory™.',
     ],
     storyQuote:   '"No computer. No code experience. Just the conviction that this dream deserved to exist."',
     storyAuthor:  '— The Builder, Co-founder',
-    storyQuote2:  '"A ten year idea finally come true. A dream to write a life story for our loved ones as a legacy of our lives."',
+    storyQuote2:  '"A 10-year idea finally come true. A dream to write a life story for our loved ones as a legacy of our lives."',
     storyAuthor2: '— The Dreamer, Co-founder',
     vsEye:        'Comparison',
     vsH:          ['More book,', 'better price.'],
@@ -115,20 +115,20 @@ const T = {
     faqEye:       'FAQ',
     faqH:         'Common questions.',
     faqs: [
-      { q: 'Do I need any technical experience?', a: 'None at all. MyLifeStory is designed for anyone — you simply speak or type your answers and the app does the rest.' },
+      { q: 'Do I need any technical experience?', a: 'None at all. MyLifeStory™ is designed for anyone — you simply speak or type your answers and the app does the rest.' },
       { q: 'How long does it take to complete my book?', a: 'At your own pace. Some people finish in a weekend, others write a chapter a month. Your story waits for you.' },
       { q: 'Who owns my story?', a: 'You do. Always. We never share, sell, or use your content for anything other than creating your book.' },
       { q: 'What does the printed book look like?', a: 'A premium hardcover, 8½×11 inches, with a linen-wrap cover and full-color interior. Printed by our trusted partners, the same printers used by professional publishers worldwide.' },
-      { q: 'Can I write in Spanish?', a: 'Yes. MyLifeStory is fully bilingual — English and Spanish. The AI interview adapts to whichever language you choose.' },
+      { q: 'Can I write in Spanish?', a: 'Yes. MyLifeStory™ is fully bilingual — English and Spanish. The AI interview adapts to whichever language you choose.' },
       { q: 'Is there a free version?', a: 'Yes. You can start for free, complete your first chapter, and preview your book. Upgrade to Pro to unlock all chapters and order your hardcover.' },
     ],
     legalLine1:   (y) => `© ${y} My Legacy Story LLC. All rights reserved. MyLifeStory™ is a trademark of My Legacy Story LLC.`,
     legalLine2:   'MyLifeStory™ and the My Legacy Story logo are trademarks pending registration with the United States Patent and Trademark Office. My Legacy Story LLC is a Florida limited liability company.',
   },
   es: {
-    comingSoon:  'Próximamente en App Store',
+    comingSoon:  'Descargar en App Store',
     signIn:      'Iniciar sesión',
-    eyebrow:     'MyLifeStory',
+    eyebrow:     'MyLifeStory™',
     headline:    ['El libro más', 'importante que', 'jamás escribirás.'],
     sub:         'Tus hijos preguntarán sobre tu vida mucho después de que te hayas ido. Déjales algo más que recuerdos — déjales tu historia, en tus propias palabras, en un libro de tapa dura que dure generaciones.',
     features:    [
@@ -148,7 +148,7 @@ const T = {
       { num: '03', title: 'Impresa y entregada',     body: 'Pide tu libro de legado en tapa dura cuando quieras. Impresión a color premium, cubierta de lino, entregado en tu puerta en 5–10 días hábiles.' },
     ],
     portraitQ:    ['Mi padre era un hombre brillante.', 'Pero nunca conocí verdaderamente su historia —', 'hasta que fue demasiado tarde para preguntar.'],
-    portraitBody: 'MyLifeStory fue creado para hombres y mujeres que han construido algo que vale la pena recordar — una carrera, una familia, unos valores. Personas que entienden que el regalo más duradero que pueden dar a sus hijos no es el dinero. Es la verdad de quiénes son.',
+    portraitBody: 'MyLifeStory™ fue creado para hombres y mujeres que han construido algo que vale la pena recordar — una carrera, una familia, unos valores. Personas que entienden que el regalo más duradero que pueden dar a sus hijos no es el dinero. Es la verdad de quiénes son.',
     portraitTag:  'Para la generación que sigue',
     dividerQ:     ['Las historias que dejamos atrás se convierten en', ' las historias por las que ellos viven.'],
     bookEye:      'El Libro del Legado',
@@ -159,9 +159,9 @@ const T = {
     finalQ:       ['Toda familia merece saber', 'de dónde viene.'],
     finalSub:     'Tu historia vale la pena contar. Tu familia merece escucharla.',
     btnFinal:     'Comienza Tu Historia de Legado',
-    appSoon:      'Próximamente',
-    appTitle:     'La app nativa llega pronto.',
-    appSub:       'Mientras tanto, escribe tu historia desde cualquier navegador web. La app para iPhone y Android llega muy pronto.',
+    appSoon:      'Disponible ahora',
+    appTitle:     'Tu legado, siempre en tu bolsillo.',
+    appSub:       'Descarga la app de MyLifeStory™ para iPhone y escribe tu historia en movimiento. Con entrevistas nativas por voz, soporte offline y pedidos de libros sin problemas.',
     appFeatures:  ['Preguntas de entrevista guiadas por IA', 'Revisa y edita cada capítulo', 'Pide tu tapa dura con un toque'],
     appH:         ['Tu legado,', 'siempre en tu bolsillo.'],
     appEye:       'Más que un libro',
@@ -176,14 +176,14 @@ const T = {
     navPricing:   'Precios',
     storyEye:     'Nuestra Historia',
     storyH:       ['Nació de un apretón de manos', 'en Atlanta.'],
-    storySub:     'MyLifeStory no empezó en una sala de reuniones. Empezó en un stand de exposición, entre dos colegas que comparten una pasión — y un sueño.',
+    storySub:     'MyLifeStory™ no empezó en una sala de reuniones. Empezó en un stand de exposición, entre dos colegas que comparten una pasión — y un sueño.',
     storyBody:    [
       'Era una expo del sector en Atlanta. Dos colegas que llevaban años trabajando juntos gestionando mercados internacionales coincidieron en el stand de la empresa, atendiendo a los visitantes.',
-      'Uno de ellos hablaba con entusiasmo sobre la IA — lo que podía hacer, las puertas que abría. El otro escuchó, y entonces dijo algo que lo cambió todo: "Llevo más de 8 años con un proyecto en la cabeza. Se lo he contado a mucha gente. Todos dicen \'qué buena idea\' — pero nadie hace nada."',
+      'Uno de ellos hablaba con entusiasmo sobre la IA — lo que podía hacer, las puertas que abría. El otro escuchó, y entonces dijo algo que lo cambió todo: "Llevo más de 10 años con un proyecto en la cabeza. Se lo he contado a mucha gente. Todos dicen \'qué buena idea\' — pero nadie hace nada."',
       'La idea era simple y profunda: una forma de que las personas preserven su historia de vida en un libro real y hermoso. Algo que sus hijos y nietos pudieran tener en las manos mucho después de que ellos se fueran.',
       '"Si me ayudas a encontrar las herramientas de IA correctas, yo te ayudo a construirlo." Se estrecharon la mano.',
-      'Uno de ellos no tenía computadora propia. Sin experiencia en programación. Solo una fascinación por la IA y las ganas de aprenderlo todo desde cero. El otro tenía toda una vida de historias y un sueño que había esperado más de 8 años.',
-      'Ese apretón de manos se convirtió en MyLifeStory.',
+      'Uno de ellos no tenía computadora propia. Sin experiencia en programación. Solo una fascinación por la IA y las ganas de aprenderlo todo desde cero. El otro tenía toda una vida de historias y un sueño que había esperado más de 10 años.',
+      'Ese apretón de manos se convirtió en MyLifeStory™.',
     ],
     storyQuote:   '"Sin computadora. Sin código. Solo la convicción de que este sueño merecía existir."',
     storyAuthor:  '— El Constructor, Co-fundador',
@@ -235,11 +235,11 @@ const T = {
     faqEye:       'Preguntas',
     faqH:         'Preguntas frecuentes.',
     faqs: [
-      { q: '¿Necesito experiencia técnica?', a: 'Para nada. MyLifeStory está diseñado para cualquier persona — simplemente hablas o escribes tus respuestas y la app hace el resto.' },
+      { q: '¿Necesito experiencia técnica?', a: 'Para nada. MyLifeStory™ está diseñado para cualquier persona — simplemente hablas o escribes tus respuestas y la app hace el resto.' },
       { q: '¿Cuánto tiempo tarda en completarse el libro?', a: 'A tu propio ritmo. Algunos terminan en un fin de semana, otros escriben un capítulo al mes. Tu historia te espera.' },
       { q: '¿De quién es mi historia?', a: 'Tuya. Siempre. Nunca compartimos, vendemos ni usamos tu contenido para nada que no sea crear tu libro.' },
       { q: '¿Cómo es el libro impreso?', a: 'Una tapa dura premium, 22×28 cm, con cubierta de lino y interior a todo color. Impreso por nuestros socios de confianza, las mismas imprentas que usan editores profesionales en todo el mundo.' },
-      { q: '¿Puedo escribir en español?', a: 'Sí. MyLifeStory es completamente bilingüe — inglés y español. La entrevista de IA se adapta al idioma que elijas.' },
+      { q: '¿Puedo escribir en español?', a: 'Sí. MyLifeStory™ es completamente bilingüe — inglés y español. La entrevista de IA se adapta al idioma que elijas.' },
       { q: '¿Hay versión gratuita?', a: 'Sí. Puedes comenzar gratis, completar tu primer capítulo y previsualizar tu libro. Actualiza a Pro para desbloquear todos los capítulos y pedir tu tapa dura.' },
     ],
     legalLine1:   (y) => `© ${y} My Legacy Story LLC. Todos los derechos reservados. MyLifeStory™ es una marca comercial de My Legacy Story LLC.`,
@@ -296,13 +296,6 @@ export default function HomePage() {
                       background: menuOpen ? 'rgba(245,240,232,0.99)' : 'rgba(245,240,232,0.97)' }}>
           <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none' }}>
             <LogoBookBranch size="sm" variant="dark" showName={true} />
-            <span style={{ fontFamily: sans, fontSize: '9px', fontWeight: 700,
-                           padding: '2px 6px', borderRadius: '5px',
-                           background: `${gold}26`, color: gold,
-                           border: `1px solid ${gold}44`, letterSpacing: '0.08em',
-                           textTransform: 'uppercase', lineHeight: 1.2 }}>
-              Beta
-            </span>
           </a>
 
           {/* Desktop links */}
@@ -577,8 +570,8 @@ export default function HomePage() {
                   ? ['"I built a business, raised a family,', 'and almost let my story', 'disappear with me."']
                   : ['"Construí un negocio, crié a mi familia,', 'y casi dejo que mi historia', 'desapareciera conmigo."'],
                 body: lang === 'en'
-                  ? 'MyLifeStory is for every person who has lived a life worth remembering — and who wants their children and grandchildren to truly know who they were, what they stood for, and what they loved.'
-                  : 'MyLifeStory es para toda persona que ha vivido una vida que vale la pena recordar — y que quiere que sus hijos y nietos sepan de verdad quién fue, en qué creyó y qué amó.',
+                  ? 'MyLifeStory™ is for every person who has lived a life worth remembering — and who wants their children and grandchildren to truly know who they were, what they stood for, and what they loved.'
+                  : 'MyLifeStory™ es para toda persona que ha vivido una vida que vale la pena recordar — y que quiere que sus hijos y nietos sepan de verdad quién fue, en qué creyó y qué amó.',
                 tag: lang === 'en' ? 'For every generation' : 'Para cada generación',
                 italic: false,
               },
@@ -777,10 +770,10 @@ export default function HomePage() {
             <p style={{ fontFamily: sans, fontSize: '17px', color: muted,
                         lineHeight: 1.8, maxWidth: 400, marginBottom: '1.5rem' }}>
               {lang === 'en'
-                ? 'Answer guided questions, review your chapters, and order your printed book — all from the MyLifeStory app.'
-                : 'Responde preguntas guiadas, revisa tus capítulos y pide tu libro impreso — todo desde la app MyLifeStory.'}
+                ? 'Answer guided questions, review your chapters, and order your printed book — all from the MyLifeStory™ app.'
+                : 'Responde preguntas guiadas, revisa tus capítulos y pide tu libro impreso — todo desde la app MyLifeStory™.'}
             </p>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '2.5rem' }}>
               {t.appFeatures.map(item => (
                 <li key={item} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <div style={{ width: 6, height: 6, borderRadius: '50%', background: gold, flexShrink: 0 }} />
@@ -788,6 +781,33 @@ export default function HomePage() {
                 </li>
               ))}
             </ul>
+
+            {/* Download buttons */}
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              {[
+                { path: 'M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z', label: 'App Store', href: 'https://apps.apple.com/us/app/id6770076121', active: true },
+                { path: 'M3.18 23.76c.3.18.65.22.99.1l12.45-7.19-2.77-2.77-10.67 9.86zm-1.9-20.1C1.1 3.9 1 4.18 1 4.5v15c0 .32.1.6.28.84l.09.08 8.4-8.4v-.2L1.37 3.57l-.09.09zm18.42 8.89l-2.38-1.38-3.06 3.06 3.06 3.05 2.4-1.39c.68-.4.68-1.04-.02-1.34zM4.17.24L16.62 7.43l-2.77 2.77L3.18.34C3.52.22 3.87.06 4.17.24z', label: 'Google Play', href: '#', active: false }
+              ].map(btn => (
+                <a key={btn.label} href={btn.href} target={btn.active ? '_blank' : undefined} rel={btn.active ? 'noopener noreferrer' : undefined}
+                   style={{ display: 'flex', alignItems: 'center', gap: '0.75rem',
+                            padding: '0.875rem 1.5rem', borderRadius: 12,
+                            justifyContent: 'center', opacity: btn.active ? 1 : 0.6, cursor: btn.active ? 'pointer' : 'not-allowed',
+                            border: `1px solid ${gold}4d`, background: btn.active ? gold + '22' : `${inkText}08`,
+                            textDecoration: 'none', transition: 'all 0.2s', minWidth: 160 }}>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill={btn.active ? gold : `${inkText}40`}>
+                    <path d={btn.path} />
+                  </svg>
+                  <div style={{ textAlign: 'left' }}>
+                    <p style={{ fontFamily: sans, fontSize: '10px', color: btn.active ? gold : muted,
+                                 textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: 1 }}>
+                      {btn.active ? 'Download' : (lang === 'es' ? 'Próximamente' : 'Coming soon')}
+                    </p>
+                    <p style={{ fontFamily: sans, fontSize: '14px', color: btn.active ? gold : inkText,
+                                 fontWeight: 600 }}>{btn.label}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* iPhone carousel */}
@@ -866,7 +886,7 @@ export default function HomePage() {
                         background: subtle }}>
             {[
               { icon: '⚡', role: lang === 'en' ? 'The Builder' : 'El Constructor', detail: lang === 'en' ? 'Zero code experience, built with AI' : 'Sin código, construido con IA' },
-              { icon: '✦', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '8 years of vision, a lifetime of stories' : '8 años de visión, toda una vida de historias' },
+              { icon: '✦', role: lang === 'en' ? 'The Dreamer' : 'El Soñador', detail: lang === 'en' ? '10 years of vision, a lifetime of stories' : '10 años de visión, toda una vida de historias' },
             ].map(p => (
               <div key={p.role} style={{ flex: 1, minWidth: 160 }}>
                 <div style={{ width: 48, height: 48, borderRadius: '50%',
@@ -1140,26 +1160,28 @@ export default function HomePage() {
           <p style={{ fontFamily: sans, fontSize: '18px', color: muted,
                       marginBottom: '2rem', lineHeight: 1.8 }}>{t.appSub}</p>
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
-            {[{ path: 'M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z', label: 'App Store' },
-             { path: 'M3.18 23.76c.3.18.65.22.99.1l12.45-7.19-2.77-2.77-10.67 9.86zm-1.9-20.1C1.1 3.9 1 4.18 1 4.5v15c0 .32.1.6.28.84l.09.08 8.4-8.4v-.2L1.37 3.57l-.09.09zm18.42 8.89l-2.38-1.38-3.06 3.06 3.06 3.05 2.4-1.39c.68-.4.68-1.04-.02-1.34zM4.17.24L16.62 7.43l-2.77 2.77L3.18.34C3.52.22 3.87.06 4.17.24z', label: 'Google Play' }
+            {[
+              { path: 'M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z', label: 'App Store', href: 'https://apps.apple.com/us/app/id6770076121', active: true },
+              { path: 'M3.18 23.76c.3.18.65.22.99.1l12.45-7.19-2.77-2.77-10.67 9.86zm-1.9-20.1C1.1 3.9 1 4.18 1 4.5v15c0 .32.1.6.28.84l.09.08 8.4-8.4v-.2L1.37 3.57l-.09.09zm18.42 8.89l-2.38-1.38-3.06 3.06 3.06 3.05 2.4-1.39c.68-.4.68-1.04-.02-1.34zM4.17.24L16.62 7.43l-2.77 2.77L3.18.34C3.52.22 3.87.06 4.17.24z', label: 'Google Play', href: '#', active: false }
             ].map(btn => (
-              <div key={btn.label}
-                   style={{ display: 'flex', alignItems: 'center', gap: '0.75rem',
-                            padding: '0.875rem 1.5rem', borderRadius: 12, width: 192,
-                            justifyContent: 'center', opacity: 0.5, cursor: 'not-allowed',
-                            border: `1px solid ${inkText}15`, background: `${inkText}05` }}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill={`${inkText}60`}>
+              <a key={btn.label} href={btn.href} target={btn.active ? '_blank' : undefined} rel={btn.active ? 'noopener noreferrer' : undefined}
+                 style={{ display: 'flex', alignItems: 'center', gap: '0.75rem',
+                          padding: '0.875rem 1.5rem', borderRadius: 12, width: 192,
+                          justifyContent: 'center', opacity: btn.active ? 1 : 0.5, cursor: btn.active ? 'pointer' : 'not-allowed',
+                          border: `1px solid ${inkText}15`, background: btn.active ? gold + '15' : `${inkText}05`,
+                          textDecoration: 'none', transition: 'all 0.2s' }}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill={btn.active ? gold : `${inkText}60`}>
                   <path d={btn.path} />
                 </svg>
                 <div style={{ textAlign: 'left' }}>
-                  <p style={{ fontFamily: sans, fontSize: '11px', color: muted,
+                  <p style={{ fontFamily: sans, fontSize: '11px', color: btn.active ? gold : muted,
                                textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 2 }}>
-                    Próximamente
+                    {btn.active ? 'Download' : (lang === 'es' ? 'Próximamente' : 'Coming soon')}
                   </p>
-                  <p style={{ fontFamily: sans, fontSize: '16px', color: inkText,
+                  <p style={{ fontFamily: sans, fontSize: '16px', color: btn.active ? gold : inkText,
                                fontWeight: 600 }}>{btn.label}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Terms of Service — MyLifeStory',
-  description: 'Terms and conditions for using the MyLifeStory app and services.',
+  title: 'Terms of Service — MyLifeStory™',
+  description: 'Terms and conditions for using the MyLifeStory™ app and services.',
 }
 
 const SECTIONS = [
@@ -8,7 +8,7 @@ const SECTIONS = [
     title: '1. Acceptance of Terms',
     body: `By creating an account or using the MyLifeStory™ app or website, you agree to these Terms of Service. If you do not agree, please do not use our services.
 
-These terms apply to all users of MyLifeStory, including the mobile app, the web app at app.mylegacystoryapp.com, and the marketing site at mylegacystoryapp.com.`,
+These terms apply to all users of MyLifeStory™, including the mobile app, the web app at app.mylegacystoryapp.com, and the marketing site at mylegacystoryapp.com.`,
   },
   {
     title: '2. Description of Service',
@@ -23,7 +23,7 @@ The Free plan includes access to your first chapter and a book preview. The Pro 
   },
   {
     title: '3. Accounts and Registration',
-    body: `You must provide a valid email address and create a password to use MyLifeStory. You are responsible for:
+    body: `You must provide a valid email address and create a password to use MyLifeStory™. You are responsible for:
 
 • Maintaining the confidentiality of your account credentials
 • All activity that occurs under your account
@@ -33,7 +33,7 @@ You must be at least 18 years old to create an account. We reserve the right to 
   },
   {
     title: '4. Subscriptions and Billing',
-    body: `MyLifeStory Pro is available as a monthly subscription ($9.99/month) or an annual subscription ($99.99/year), billed through the Apple App Store.
+    body: `MyLifeStory™ Pro is available as a monthly subscription ($9.99/month) or an annual subscription ($99.99/year), billed through the Apple App Store.
 
 • Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period
 • You can manage and cancel your subscription at any time through your Apple ID settings (Settings → Apple ID → Subscriptions)
@@ -56,7 +56,7 @@ You are responsible for ensuring your book content is complete and correct befor
   },
   {
     title: '6. Your Content',
-    body: `You retain full ownership of all stories, memories, photos, and content you create in MyLifeStory. By using our service, you grant My Legacy Story LLC a limited license to store, process, and display your content solely for the purpose of providing the service to you.
+    body: `You retain full ownership of all stories, memories, photos, and content you create in MyLifeStory™. By using our service, you grant My Legacy Story LLC a limited license to store, process, and display your content solely for the purpose of providing the service to you.
 
 We do not:
 • Sell your content to third parties
@@ -67,7 +67,7 @@ You are responsible for ensuring your content does not infringe on the rights of
   },
   {
     title: '7. AI-Generated Content',
-    body: `MyLifeStory uses artificial intelligence (powered by OpenAI) to help shape your answers into memoir chapters. The resulting narrative is based entirely on what you share.
+    body: `MyLifeStory™ uses artificial intelligence (powered by OpenAI) to help shape your answers into memoir chapters. The resulting narrative is based entirely on what you share.
 
 • You are responsible for reviewing all AI-generated chapters before ordering your book
 • AI-generated text may contain inaccuracies — always review your chapters carefully
@@ -76,7 +76,7 @@ You are responsible for ensuring your content does not infringe on the rights of
   },
   {
     title: '8. Prohibited Uses',
-    body: `You agree not to use MyLifeStory to:
+    body: `You agree not to use MyLifeStory™ to:
 
 • Violate any applicable law or regulation
 • Upload content that is defamatory, obscene, or infringes the rights of others
@@ -93,7 +93,7 @@ The app, website design, and all technology underlying the service are the prope
   },
   {
     title: '10. Disclaimers and Limitation of Liability',
-    body: `MyLifeStory is provided "as is" without warranties of any kind. We do not guarantee that the service will be uninterrupted, error-free, or that AI-generated content will be perfectly accurate.
+    body: `MyLifeStory™ is provided "as is" without warranties of any kind. We do not guarantee that the service will be uninterrupted, error-free, or that AI-generated content will be perfectly accurate.
 
 To the maximum extent permitted by applicable law, My Legacy Story LLC shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the service, including loss of data or inability to access your content.
 
@@ -109,7 +109,7 @@ We reserve the right to suspend or terminate your account if you violate these t
     title: '12. Changes to These Terms',
     body: `We may update these Terms of Service from time to time. When we do, we will update the "Last updated" date at the top of this page and, for significant changes, notify you by email.
 
-Your continued use of MyLifeStory after changes take effect constitutes your acceptance of the new terms.`,
+Your continued use of MyLifeStory™ after changes take effect constitutes your acceptance of the new terms.`,
   },
   {
     title: '13. Governing Law',
@@ -143,7 +143,7 @@ export default function TermsPage() {
         justifyContent: 'space-between',
       }}>
         <a href="/" style={{ color: '#B8924A', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 600 }}>
-          ← MyLifeStory
+          ← MyLifeStory™
         </a>
         <a href="mailto:hello@mylegacystoryapp.com" style={{ color: '#B8924A', textDecoration: 'none', fontSize: '0.85rem' }}>
           hello@mylegacystoryapp.com

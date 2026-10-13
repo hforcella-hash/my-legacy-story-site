@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Privacy Policy — MyLifeStory',
-  description: 'How MyLifeStory handles your personal information. Your stories are sacred.',
+  title: 'Privacy Policy — MyLifeStory™',
+  description: 'How MyLifeStory™ handles your personal information. Your stories are sacred.',
 }
 
 const SECTIONS = [
@@ -102,7 +102,7 @@ export default function PrivacyPage() {
         justifyContent: 'space-between',
       }}>
         <a href="/" style={{ color: '#B8924A', textDecoration: 'none', fontSize: '0.85rem', fontWeight: 600 }}>
-          ← MyLifeStory
+          ← MyLifeStory™
         </a>
         <a href="mailto:privacy@mylegacystoryapp.com" style={{ color: '#B8924A', textDecoration: 'none', fontSize: '0.85rem' }}>
           privacy@mylegacystoryapp.com
