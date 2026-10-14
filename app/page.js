@@ -46,6 +46,10 @@ const T = {
     appH:         ['Your legacy,', 'always in your pocket.'],
     appEye:       'More than a book',
     photoCred:    'Photography by',
+    followEye:    'Follow the story',
+    followTitle:  'Be part of the conversation.',
+    followSub:    'Stories, tips for writing your family history, and news from MyLifeStory™.',
+    followLabel:  'Follow us on',
     via:          'via',
     navHow:       'How it works',
     navBooks:     'Our books',
@@ -166,6 +170,10 @@ const T = {
     appH:         ['Tu legado,', 'siempre en tu bolsillo.'],
     appEye:       'Más que un libro',
     photoCred:    'Fotografías por',
+    followEye:    'Sigue la historia',
+    followTitle:  'Sé parte de la conversación.',
+    followSub:    'Historias, consejos para escribir la historia de tu familia y novedades de MyLifeStory™.',
+    followLabel:  'Síguenos en',
     via:          'vía',
     navHow:       'Cómo funciona',
     navBooks:     'Nuestros libros',
@@ -255,6 +263,18 @@ const serif = '"Cormorant Garamond", Georgia, serif'
 const inkText = '#1C1814'   // dark text for light backgrounds
 const muted   = '#6B5A4E'   // muted text for light backgrounds
 const subtle  = '#EDE8DF'   // subtle card/section variant
+
+const SOCIAL = [
+  {
+    name: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61595299414796',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
+        <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.03 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.69.24 2.69.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.88v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z" />
+      </svg>
+    ),
+  },
+]
 
 export default function HomePage() {
   const [lang, setLang] = useState('en')
@@ -1186,6 +1206,35 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* ── Social ───────────────────────────────────────────────────────── */}
+      {SOCIAL.some(s => s.href) && (
+        <section style={{ background: cream, borderTop: `1px solid ${gold}1a`, padding: '5rem 2.5rem', textAlign: 'center' }}>
+          <div style={{ maxWidth: 720, margin: '0 auto' }}>
+            <p style={{ fontFamily: sans, fontSize: 12, fontWeight: 600, letterSpacing: '0.2em', textTransform: 'uppercase', color: gold }}>
+              {t.followEye}
+            </p>
+            <h2 style={{ fontFamily: serif, fontSize: 36, fontWeight: 600, color: inkText, margin: '0.75rem 0 0.5rem', lineHeight: 1.2 }}>
+              {t.followTitle}
+            </h2>
+            <p style={{ fontFamily: sans, fontSize: 16, color: muted, lineHeight: 1.6 }}>
+              {t.followSub}
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '1rem', marginTop: '2rem' }}>
+              {SOCIAL.filter(s => s.href).map(s => (
+                <a key={s.name} href={s.href} target="_blank" rel="noopener noreferrer"
+                   aria-label={`${t.followLabel} ${s.name}`}
+                   style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.85rem 1.4rem',
+                            border: `1px solid ${gold}55`, borderRadius: 999, color: inkText,
+                            textDecoration: 'none', fontFamily: sans, fontSize: 15, fontWeight: 600 }}>
+                  {s.icon}
+                  {t.followLabel} {s.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer style={{ background: subtle, borderTop: `1px solid ${gold}20`, padding: '2.5rem' }}>
