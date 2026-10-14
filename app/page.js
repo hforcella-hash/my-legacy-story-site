@@ -1205,8 +1205,11 @@ export default function HomePage() {
                 { label: 'Privacy',  href: '/privacy' },
                 { label: 'Terms',    href: '/terms' },
                 { label: 'Contact',  href: 'mailto:hello@mylegacystoryapp.com' },
+                { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61595299414796', external: true },
               ].map(l => (
                 <a key={l.label} href={l.href}
+                   target={l.external ? '_blank' : undefined}
+                   rel={l.external ? 'noopener noreferrer' : undefined}
                    style={{ fontFamily: sans, fontSize: '14px', color: `${inkText}60`,
                             textDecoration: 'none' }}>
                   {l.label}
