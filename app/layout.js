@@ -17,6 +17,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata = {
+  metadataBase: new URL('https://mylifestory.app'),
   title: 'MyLifeStory™ — The most important book you\'ll ever write.',
   description: 'Preserve your life story as a beautifully written, printed hardcover memoir — guided by AI, crafted in your own words, delivered to your door.',
   keywords: 'memoir, legacy book, life story, autobiography, family history, hardcover book',
@@ -24,7 +25,7 @@ export const metadata = {
   openGraph: {
     title: 'MyLifeStory™',
     description: 'Your story, preserved forever. Leave your family more than memories.',
-    url: 'https://mylegacystoryapp.com',
+    url: 'https://mylifestory.app',
     siteName: 'MyLifeStory™',
     locale: 'en_US',
     type: 'website',

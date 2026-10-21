@@ -6,7 +6,7 @@ export const metadata = {
 const SECTIONS = [
   {
     title: "1. Agreement to these Terms",
-    body: `These Terms of Service ("Terms") are a binding agreement between you and My Legacy Story LLC, a Florida limited liability company ("we," "us"), for the MyLifeStory™ iOS app, the web app at app.mylegacystoryapp.com, the website at mylegacystoryapp.com, and related services (together, the "Service"). By creating an account, making a purchase, or using the Service, you agree to these Terms and to our Privacy Policy. If you do not agree, do not use the Service.
+    body: `These Terms of Service ("Terms") are a binding agreement between you and My Legacy Story LLC, a Florida limited liability company ("we," "us"), for the MyLifeStory™ iOS app, the web app at app.mylegacystoryapp.com, the website at mylifestory.app, and related services (together, the "Service"). By creating an account, making a purchase, or using the Service, you agree to these Terms and to our Privacy Policy. If you do not agree, do not use the Service.
 
 For the iOS app, Apple's Licensed Application End User License Agreement also applies to your use of the app, to the extent it does not conflict with these Terms. Apple is not responsible for the Service or its content.`,
   },

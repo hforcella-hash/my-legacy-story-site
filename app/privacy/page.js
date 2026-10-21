@@ -16,7 +16,7 @@ Last updated: October 19, 2026.`,
 
 For questions or privacy requests, email hello@mylegacystoryapp.com with "Privacy request" in the subject line.
 
-This policy applies to the MyLifeStory™ iOS app, the web app at app.mylegacystoryapp.com, and the website at mylegacystoryapp.com (together, the "Service").`,
+This policy applies to the MyLifeStory™ iOS app, the web app at app.mylegacystoryapp.com, and the website at mylifestory.app (together, the "Service").`,
   },
   {
     title: "Information you give us",
