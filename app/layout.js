@@ -23,6 +23,7 @@ export const metadata = {
   description: 'Preserve your life story as a beautifully written, printed hardcover memoir — guided by AI, crafted in your own words, delivered to your door.',
   keywords: 'memoir, legacy book, life story, autobiography, family history, hardcover book',
   icons: { icon: '/icon.svg', apple: '/icon.svg' },
+  verification: { google: 'B5TnQvNxV5q9bmropnWsHgvHvAtHM2wJDC_u_V-lXUw' },
   openGraph: {
     title: 'MyLifeStory™',
     description: 'Your story, preserved forever. Leave your family more than memories.',
